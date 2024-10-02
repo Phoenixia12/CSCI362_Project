@@ -1,48 +1,50 @@
+from django.db import models
+
 class Gym(models.Model):
     gym_id = models.BigIntegerField()
-    owner_id = models.ForeignKey(Owner, on_delete=models.CASCADE)
+    #owner_id = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
 
 class Instructor(models.Model):
     instructor_id=models.IntegerField(primary_key=True)
-    user_id=models.ForeignKey(Staff, on_delete=models.CASCADE)
-    role = models.ManyToManyField(permissions, through="role")
-    rate = models.IntegerField()
-    gym_id=models.ForeignKey(Gym, on_delete=models.CASCADE)
+   # user_id=models.ForeignKey(Staff, on_delete=models.CASCADE)
+    #role = models.ManyToManyField(permissions, through="role")
+    #rate = models.IntegerField()
+    #gym_id=models.ForeignKey(Gym, on_delete=models.CASCADE)
 
 class permissions(models.Model):
     permission_id = models.IntegerField()
-    role = models.BigIntegerField()
-    can_view_schedule = models.BigIntegerField()
-    can_edit_schedule = models.BigIntegerField()
-    can_reset_pswds = models.BigIntegerField()
-    can_create_e_account = models.BigIntegerField()
-    can_edit_e_account = models.BigIntegerField()
+    #role = models.BigIntegerField()
+    #can_view_schedule = models.BigIntegerField()
+    #can_edit_schedule = models.BigIntegerField()
+    #can_reset_pswds = models.BigIntegerField()
+    #can_create_e_account = models.BigIntegerField()
+    #can_edit_e_account = models.BigIntegerField()
 
 class Pass(models.Model):
     user_id = models.BigIntegerField()
-    password = models.CharField(max_length=255)
+   # password = models.CharField(max_length=255)
 
 class Owner(models.Model):
     owner_id=models.BigIntegerField(primary_key=True)
-    gym_id = models.ForeignKey(Gym, on_delete=models.CASCADE)
-    user_id = models.ForeignKey(Pass, on_delete=models.CASCADE)
+    #gym_id = models.ForeignKey(Gym, on_delete=models.CASCADE)
+    #user_id = models.ForeignKey(Pass, on_delete=models.CASCADE)
 
 class Staff(models.Model):
     user_id = models.IntegerField()
-    username = models.CharField(max_length=128)
-    email = models.CharField(max_length=128)
-    account = models.enums()
+    #username = models.CharField(max_length=128)
+    #email = models.CharField(max_length=128)
+    #account = models.enums()
 
 
 
 class Employee(models.Model):
     employee_id = models.IntegerField()
-    user_id = models.ForeignKey(Staff, on_delete=models.CASCADE)
-    role = models.ManyToManyField(permissions, through="role")
-    owner_id = models.ForeignKey(Owner, on_delete=models.CASCADE)
-    salary = models.BigIntegerField()
+    #user_id = models.ForeignKey(Staff, on_delete=models.CASCADE)
+    #role = models.ManyToManyField(permissions, through="role")
+    #owner_id = models.ForeignKey(Owner, on_delete=models.CASCADE)
+    #salary = models.BigIntegerField()
 
-class Salary(models.Model):
-    user_id = models.ForeignKey(Staff, on_delete=models.CASCADE)
-    salary = models.FloatField()
+#class Salary(models.Model):
+    #user_id = models.ForeignKey(Staff, on_delete=models.CASCADE)
+    #salary = models.FloatField()
