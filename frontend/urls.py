@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import index
-from .views import login_view
-from .views import register_view
+
+from .views import *
 
 #from frontend import views
 
@@ -13,8 +12,28 @@ def test_message(request):
 
 
 urlpatterns = [
-    path('home/', test_message),
+    path('home/', home_goer, name = 'home' ),
     path('', index),
     path('login/', login_view, name='login'),  
-    path('register/', register_view, name='register'), 
+    path('select_role/', select_role, name='select_role'),
+    path('register/', register_user, name='register'),
+    
+    path('owner_setup/', owner_setup, name='owner_setup'),
+    path('staff_setup/', staff_setup, name='staff_setup'),
+    path('goer_setup/', goer_setup, name='goer_setup'),
+    
+    path('home_owner/', home_owner, name='home_owner'),
+    path('home_goer/', home_goer, name='home_goer'),
+    path('home_staff/', home_staff, name='home_staff'),
+
+    path('register/test_reg/', register_account, name='register_account'),
+    path('register/', register_account, name='register'),
+    
+    
+    path('logout/', index, name = 'logout'),
+   
+    path('get_classes/', get_classes, name='get_classes'),
+    path('classes/', classes, name='classes'),
+    path('add_class/', add_class, name='add_class'),
+   # path('delete-class/', delete_class, name='delete_class')
 ]

@@ -10,6 +10,18 @@
 <body>
     <div class="login-container">
         <h1>Login</h1>
+
+        <!-- Django Messages System -->
+        {% if messages %}
+            <div id="alert-container">
+                {% for message in messages %}
+                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
         <form method="POST">
             {% csrf_token %}
             <div class="form-group">
@@ -23,10 +35,11 @@
             <button type="submit">Login</button>
         </form>
         <div class="message">
-            <a href="{% url 'register' %}">Don't have an account? Register here</a>
+            <a href="{% url 'register_account' %}">Don't have an account? Register here</a>
         </div>
     </div>
 
+    <!-- Style for Alerts -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -94,6 +107,50 @@
         .message a:hover {
             text-decoration: underline;
         }
+
+        /* Alert Styling */
+        .alert {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: none;
+        }
+
+        .alert-success {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .alert-error {
+            background-color: #f44336;
+            color: white;
+        }
+
+        /* Show the alert */
+        .alert.show {
+            display: block;
+            animation: fadein 1s;
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
+
+    <!-- JavaScript for Alerts -->
+    <script>
+        // Display any message alerts when they are rendered
+        window.onload = function() {
+            var alertContainer = document.getElementById('alert-container');
+            if (alertContainer) {
+                var alerts = alertContainer.getElementsByClassName('alert');
+                for (var i = 0; i < alerts.length; i++) {
+                    alerts[i].classList.add('show'); // Add 'show' class to display the alert
+                }
+            }
+        }
+    </script>
 </body>
 </html>

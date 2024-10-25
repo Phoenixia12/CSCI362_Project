@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    
+    <style>
+        /* General form styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="date"],
+        .form-container input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #e67c12;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #d95d0f;
+        }
+
+        .form-container p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add New Class</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="class_name">Class Name:</label>
+            <input type="text" id="class_name" name="class_name" required>
+
+            <label for="instructor_id">Instructor ID:</label>
+            <input type="number" id="instructor_id" name="instructor_id" required>
+
+            <label for="data_date">Date:</label>
+            <input type="date" id="data_date" name="data_date" required>
+
+            <label for="data_time">Time:</label>
+            <input type="time" id="data_time" name="data_time" required>
+
+            <label for="class_type">Class Type:</label>
+            <input type="text" id="class_type" name="class_type" required>
+
+            <label for="roster_id">Roster ID:</label>
+            <input type="text" id="roster_id" name="roster_id" required>
+
+            <label for="gym_id">Gym ID:</label>
+            <input type="text" id="gym_id" name="gym_id" required>
+
+            <button type="submit">Add Class</button>
+        </form>
+    </div>
+</body>
+</html>
