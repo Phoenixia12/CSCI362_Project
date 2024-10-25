@@ -16,7 +16,6 @@ urlpatterns = [
     path('', index),
     path('login/', login_view, name='login'),  
     path('select_role/', select_role, name='select_role'),
-    path('register/', register_user, name='register'),
     
     path('owner_setup/', owner_setup, name='owner_setup'),
     path('staff_setup/', staff_setup, name='staff_setup'),
@@ -33,7 +32,6 @@ urlpatterns = [
     path('logout/', index, name = 'logout'),
    
     path('get_classes/', get_classes, name='get_classes'),
-    path('classes/', classes, name='classes'),
     path('add_class/', add_class, name='add_class'),
    # path('delete-class/', delete_class, name='delete_class')
 ]

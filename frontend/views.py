@@ -339,8 +339,6 @@ def owner_setup(request):
 
 
 
-
-
 def gym_selection(request):
     conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};'
                 'SERVER=gymassisthost.database.windows.net;'
@@ -801,20 +799,8 @@ def add_class(request):
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
-from .forms import GymOwnerForm, GymForm, GymEmployeeForm, InstructorForm, UserRoleForm, GymGoerForm
 
 
-def register_user(request):
-    if request.method == 'POST':
-        role_form = UserRoleForm(request.POST)
-        if role_form.is_valid():
-            role = role_form.cleaned_data['role']
-            request.session['role'] = role  # Store role in session
-            return redirect('register_%s' % role)
-    else:
-        role_form = UserRoleForm()
-
-    return render(request, 'register_user.html', {'role_form': role_form})
 
 from django.http import JsonResponse
 import datetime
@@ -848,20 +834,3 @@ def get_classes(request):
             return JsonResponse({'error': 'No gym_id provided'}, status=400)
 
 
-
-
-# View for the Classes page
-@login_required
-def classes(request):
-    # Get all class events for the logged-in user
-    class_events = ClassEvent.objects.filter(user=request.user).order_by('start_time')
-    
-    # Pass class events to the template
-    return render(request, 'home1.html', {
-        'class_events': class_events  # Pass to the classes tab in the template
-    })
-
-# View to handle adding a new class (via AJAX or form)
-
-from .forms import ClassEventForm
-from django.http import HttpResponseForbidden
