@@ -1,0 +1,8 @@
+<form method="POST">
+    {% csrf_token %}
+    <label>Select a Gym:</label><br>
+    {% for gym in gyms %}
+        <input type="radio" name="gym_id" value="{{ gym.gym_id }}"> {{ gym.name }}<br>
+    {% endfor %}
+    <input type="submit" value="Join Gym">
+</form>
