@@ -27,7 +27,7 @@ def register_account(request):
         # Extract form data from request
         username = request.POST.get('username')
         email = request.POST.get('email')
-        perm_id = request.POST.get('perm_id')  # Ensure you have this in your form
+        perm_id = 1  # Ensure you have this in your form
         gym_id = 3  # Ensure you have this in your form
         firstname = request.POST.get('firstname')  # Ensure you have this in your form
         lastname = request.POST.get('lastname')  # Ensure you have this in your form
@@ -35,7 +35,7 @@ def register_account(request):
         password_val = request.POST.get('password')  # Ensure you have this in your form
 
         # Connect to the database
-        conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=gymassisthost.database.windows.net;DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!')
+        conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=gymassisthost2.database.windows.net;DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!')
         cursor = conn.cursor()
 
         # Check if username or email already exists
@@ -64,14 +64,14 @@ def register_account(request):
         
         )
         print('insert sucessful')
-        try:
+       # try:
             # Call the stored procedure to add user credentials to the pass table
-            cursor.execute(
-                "EXEC AddUserToPass @user_id=?, @password=?", 
-                (user_acct_id, hashed_password)  # Use the hashed password
-            )
-        except Exception as e:
-            messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
+          #  cursor.execute(
+          #      "EXEC AddUserToPass @user_id=?, @password=?", 
+          #      (user_acct_id, hashed_password)  # Use the hashed password
+        #    )
+       # except Exception as e:
+       #     messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
 
         # Commit the transaction
         conn.commit()
@@ -89,7 +89,7 @@ def register_account(request):
 
 def add_member(request):
      # Connect to the database
-    conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=gymassisthost.database.windows.net;DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!')
+    conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=gymassisthost2.database.windows.net;DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!')
     cursor = conn.cursor()
 
     
@@ -132,14 +132,14 @@ def add_member(request):
         
         )
         print('insert sucessful')
-        try:
+       # try:
             # Call the stored procedure to add user credentials to the pass table
-            cursor.execute(
-                "EXEC AddUserToPass @user_id=?, @password=?", 
-                (user_acct_id, hashed_password)  # Use the hashed password
-            )
-        except Exception as e:
-            messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
+       #     cursor.execute(
+       #         "EXEC AddUserToPass @user_id=?, @password=?", 
+       #         (user_acct_id, hashed_password)  # Use the hashed password
+       #     )
+        #except Exception as e:
+       #     messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
 
         # Commit the transaction
         conn.commit()
@@ -156,7 +156,7 @@ def add_member(request):
 
 def add_employee(request):
      # Connect to the database
-    conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=gymassisthost.database.windows.net;DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!')
+    conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=gymassisthost2.database.windows.net;DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!')
     cursor = conn.cursor()
 
     
@@ -199,14 +199,14 @@ def add_employee(request):
         
         )
         print('insert sucessful')
-        try:
+       # try:
             # Call the stored procedure to add user credentials to the pass table
-            cursor.execute(
-                "EXEC AddUserToPass @user_id=?, @password=?", 
-                (user_acct_id, hashed_password)  # Use the hashed password
-            )
-        except Exception as e:
-            messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
+          #  cursor.execute(
+           #     "EXEC AddUserToPass @user_id=?, @password=?", 
+           #     (user_acct_id, hashed_password)  # Use the hashed password
+          #  )
+       # except Exception as e:
+        #    messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
 
         # Commit the transaction
         conn.commit()
@@ -243,8 +243,8 @@ def login_view(request):
         try:
             conn = pyodbc.connect(
                 'DRIVER={ODBC Driver 18 for SQL Server};'
-                'SERVER=gymassisthost.database.windows.net;'
-                'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+                'SERVER=gymassisthost2.database.windows.net;'
+                'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
             )
             cursor = conn.cursor()
 
@@ -263,8 +263,8 @@ def login_view(request):
                     messages.success(request, 'You are now logged in!')
                     
                     # Check if perm_id is null, if so redirect to role selection
-                    if perm_id is None:  # If perm_id is null
-                        return redirect('select_role')
+                    if gym_id == 3:  # If perm_id is null
+                        return redirect('owner_setup')
                     
                     if perm_id == 1:
                         return redirect('home_owner')  # Redirect to owner's home page
@@ -307,8 +307,8 @@ def select_role(request):
         try:
             conn = pyodbc.connect(
                 'DRIVER={ODBC Driver 18 for SQL Server};'
-                'SERVER=gymassisthost.database.windows.net;'
-                'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+                'SERVER=gymassisthost2.database.windows.net;'
+                'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
             )
             cursor = conn.cursor()
 
@@ -356,8 +356,8 @@ def create_gym(gym_name):
     try:
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;'
             'UID=admin_user;'
             'PWD=lamp4444!'
         )
@@ -386,15 +386,15 @@ def set_owner_for_gym(gym_id, owner_id):
     try:
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;'
             'UID=admin_user;'
             'PWD=lamp4444!'
         )
         cursor = conn.cursor()
 
         # Update the owner_id for the specified gym
-        cursor.execute("UPDATE gym SET owner_id = ? WHERE gym_id = ?", (owner_id, gym_id))
+        cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, owner_id))
         
         # Commit the transaction
         conn.commit()
@@ -420,8 +420,8 @@ def get_user_acct_id_by_username(username):
         # Connect to the database
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
         )
         cursor = conn.cursor()
 
@@ -446,38 +446,54 @@ def get_user_acct_id_by_username(username):
             conn.close()
             
 def owner_setup(request):
-    if request.method == 'POST':
-        gym_name = request.POST.get('gym_name')
-        user_id = request.session.get('user_id')  # Get the user_id from session
-        username = request.POST.get('username')
+    try:
+        # Connect to the database
+        conn = pyodbc.connect(
+            'DRIVER={ODBC Driver 18 for SQL Server};'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
+        )
+        cursor = conn.cursor()
+
+        if request.method == 'POST':
+    
+            gym_name = request.POST.get('gym_name')
+            user_id = request.session.get('user_id')  # Get the user_id from session
+            username = request.POST.get('username')
         
-        if user_id is None:
-            messages.error(request, 'User account ID not found in session.')
-            return redirect('error_page')  # Redirect to an error page or handle appropriately
+            if user_id is None:
+                messages.error(request, 'User account ID not found in session.')
+                return redirect('error_page')  # Redirect to an error page or handle appropriately
        # user_acct_id = get_user_acct_id_by_username(username)
-        convert_user_to_owner(user_id)
+        #convert_user_to_owner(user_id)
         # Step 1: Create a new gym and get the gym_id
-        gym_id, gym_name_created = create_gym(gym_name)
+            gym_id, gym_name_created = create_gym(gym_name)
 
         # Check if gym creation was successful
-        if gym_id is None:
-            messages.error(request, 'Failed to create gym. Please try again.')
-            return redirect('error_page')  # Redirect to an error page if gym creation fails
+            if gym_id is None:
+                messages.error(request, 'Failed to create gym. Please try again.')
+                return redirect('error_page')  # Redirect to an error page if gym creation fails
 
         # Step 2: Set the owner_id for the created gym
-        set_owner_for_gym(gym_id, user_id)
+            set_owner_for_gym(gym_id, user_id)
+            
 
-        messages.success(request, 'Owner setup completed successfully!')
-        return redirect('home_owner')  # Redirect to the owner's home page
-
+            messages.success(request, 'Owner setup completed successfully!')
+            return redirect('home_owner')  # Redirect to the owner's home page
+    finally:
+        # Ensure both cursor and connection are closed safely
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
     return render(request, 'owner_setup.html')  # Render the owner setup page for GET requests
 
 
 
 def gym_selection(request):
     conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};'
-                'SERVER=gymassisthost.database.windows.net;'
-                'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!')
+                'SERVER=gymassisthost2.database.windows.net;'
+                'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!')
     cursor = conn.cursor()
 
     cursor.execute("SELECT gym_id, name FROM gym")
@@ -505,8 +521,8 @@ def staff_setup(request):
         try:
             conn = pyodbc.connect(
                 'DRIVER={ODBC Driver 18 for SQL Server};'
-                'SERVER=gymassisthost.database.windows.net;'
-                'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+                'SERVER=gymassisthost2.database.windows.net;'
+                'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
             )
             cursor = conn.cursor()
 
@@ -539,8 +555,8 @@ def staff_setup(request):
     try:
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
         )
         cursor = conn.cursor()
 
@@ -569,8 +585,8 @@ def goer_setup(request):
         try:
             conn = pyodbc.connect(
                 'DRIVER={ODBC Driver 18 for SQL Server};'
-                'SERVER=gymassisthost.database.windows.net;'
-                'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+                'SERVER=gymassisthost2.database.windows.net;'
+                'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
             )
             cursor = conn.cursor()
 
@@ -603,8 +619,8 @@ def goer_setup(request):
     try:
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
         )
         cursor = conn.cursor()
 
@@ -637,8 +653,8 @@ def home_owner(request):
     try:
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
         )
         cursor = conn.cursor()
 
@@ -677,18 +693,18 @@ def home_owner(request):
             username, perm_id, user_gym_id, email = user  # Get the gym_id here
 
             # Fetch gym information associated with the owner
-            cursor.execute("SELECT gym_name, gym_id FROM gym WHERE owner_id = ?", (user_id,))
+            cursor.execute("SELECT gym_name, gym_id FROM gym WHERE gym_id = ?", (user_gym_id,))
             gyms = cursor.fetchall()
 
             # Print the gym_id(s) for debugging
-            for gym in gyms:
-                print(f"Gym ID: {gym[1]}")  # This should print each gym_id
+            #for gym in gyms:
+                #print(f"Gym ID: {gym[1]}")  # This should print each gym_id
 
             # Fetch members associated with each gym
             members_info = {}
             for gym in gyms:
                 gym_name, gym_id = gym
-                cursor.execute("SELECT user_acct_id, first_name, last_name FROM user_accounts WHERE gym_id = ?", (gym_id,))
+                cursor.execute("SELECT user_acct_id, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
                 members = cursor.fetchall()
                 members_info[gym_name] = members  # List of members for each gym
 
@@ -720,8 +736,8 @@ def convert_user_to_owner(user_id):
         # Connect to the database
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
         )
         cursor = conn.cursor()
 
@@ -763,8 +779,8 @@ def home_staff(request):
     try:
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
         )
         cursor = conn.cursor()
 
@@ -823,8 +839,8 @@ def home_goer(request):
     try:
         conn = pyodbc.connect(
             'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost.database.windows.net;'
-            'DATABASE=gymassistdbfinal;UID=admin_user;PWD=lamp4444!'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
         )
         cursor = conn.cursor()
 

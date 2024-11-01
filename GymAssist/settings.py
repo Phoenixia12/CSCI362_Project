@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'GymAssist.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'gymassistdbfinal',
+        'NAME': 'gymassistdb',
         'USER': 'admin_user',
         'PASSWORD': 'lamp4444!',
-        'HOST': 'gymassisthost.database.windows.net',
+        'HOST': 'gymassisthost2.database.windows.net',
         'PORT': '',
         'OPTIONS': {
             'driver': 'ODBC Driver 18 for SQL Server',
