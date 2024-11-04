@@ -941,10 +941,6 @@ def add_class(request):
     return render(request, 'add_class.html')   #  # Render the form on GET request
 
 
-
-            
-            
-
 # views.pyjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
 
