@@ -27,7 +27,7 @@ def register_account(request):
         # Extract form data from request
         username = request.POST.get('username')
         email = request.POST.get('email')
-        perm_id = 1  # Ensure you have this in your form
+        perm_id = request.POST.get('perm_id')  # Ensure you have this in your form
         gym_id = 3  # Ensure you have this in your form
         firstname = request.POST.get('firstname')  # Ensure you have this in your form
         lastname = request.POST.get('lastname')  # Ensure you have this in your form
@@ -64,14 +64,14 @@ def register_account(request):
         
         )
         print('insert sucessful')
-       # try:
+        try:
             # Call the stored procedure to add user credentials to the pass table
-          #  cursor.execute(
-          #      "EXEC AddUserToPass @user_id=?, @password=?", 
-          #      (user_acct_id, hashed_password)  # Use the hashed password
-        #    )
-       # except Exception as e:
-       #     messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
+            cursor.execute(
+                "EXEC AddUserToPass @user_acct_id=?, @password=?", 
+                (user_acct_id, hashed_password)  # Use the hashed password
+            )
+        except Exception as e:
+            messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
 
         # Commit the transaction
         conn.commit()
@@ -84,6 +84,8 @@ def register_account(request):
         messages.success(request, 'Account registered successfully! Please log in.')
         return redirect('login')
 
+    user_acct_id = request.user.id  # assigns the authenticated user’s ID to user_acct_id
+    
     return render(request, 'register_account.html')
 
 
@@ -132,14 +134,14 @@ def add_member(request):
         
         )
         print('insert sucessful')
-       # try:
+        try:
             # Call the stored procedure to add user credentials to the pass table
-       #     cursor.execute(
-       #         "EXEC AddUserToPass @user_id=?, @password=?", 
-       #         (user_acct_id, hashed_password)  # Use the hashed password
-       #     )
-        #except Exception as e:
-       #     messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
+            cursor.execute(
+                "EXEC AddUserToPass @user_acct_id=?, @password=?", 
+                (user_acct_id, hashed_password)  # Use the hashed password
+            )
+        except Exception as e:
+            messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
 
         # Commit the transaction
         conn.commit()
@@ -199,13 +201,14 @@ def add_employee(request):
         
         )
         print('insert sucessful')
-       # try:
+        # New db does not have pass db 
+        #try:
             # Call the stored procedure to add user credentials to the pass table
-          #  cursor.execute(
-           #     "EXEC AddUserToPass @user_id=?, @password=?", 
-           #     (user_acct_id, hashed_password)  # Use the hashed password
-          #  )
-       # except Exception as e:
+        #    cursor.execute(
+        #        "EXEC AddUserToPass @user_acct_id=?, @password=?", 
+        #        (user_acct_id, hashed_password)  # Use the hashed password
+        #    )
+        #except Exception as e:
         #    messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
 
         # Commit the transaction
@@ -253,18 +256,18 @@ def login_view(request):
             user = cursor.fetchone()
 
             if user:
-                user_id, stored_password_hash, perm_id, gym_id = user
+                user_acct_id, stored_password_hash, perm_id, gym_id = user
                 cache.set('gym_id', gym_id, None)
 
                 # Check if the provided password matches the stored hash
                 if check_password(password, stored_password_hash):
                     # Password matches, log the user in
-                    request.session['user_id'] = user_id  # Store user ID in session
+                    request.session['user_acct_id'] = user_acct_id  # Store user ID in session
                     messages.success(request, 'You are now logged in!')
                     
                     # Check if perm_id is null, if so redirect to role selection
-                    if gym_id == 3:  # If perm_id is null
-                        return redirect('owner_setup')
+                    if perm_id is None:  # If perm_id is null
+                        return redirect('select_role')
                     
                     if perm_id == 1:
                         return redirect('home_owner')  # Redirect to owner's home page
@@ -301,7 +304,7 @@ def select_role(request):
         selected_role = request.POST.get('role')
         
         # Get the current logged-in user's ID from the session
-        user_id = request.session.get('user_id')
+        user_acct_id = request.session.get('user_acct_id')
         
         # Connect to the database
         try:
@@ -324,7 +327,7 @@ def select_role(request):
 
             if perm_id is not None:
                 # Update the user's perm_id in the database
-                cursor.execute("UPDATE user_accounts SET perm_id = ? WHERE user_acct_id = ?", (perm_id, user_id))
+                cursor.execute("UPDATE user_accounts SET perm_id = ? WHERE user_acct_id = ?", (perm_id, user_acct_id))
                 conn.commit()
 
                 # Redirect based on role (e.g., owners go to gym setup, others go to home)
@@ -381,6 +384,8 @@ def create_gym(gym_name):
         if conn:
             conn.close()
 
+# gym db no longer holds owner_id as of 11/5/24
+'''
 def set_owner_for_gym(gym_id, owner_id):
     # Connect to the database
     try:
@@ -393,8 +398,9 @@ def set_owner_for_gym(gym_id, owner_id):
         )
         cursor = conn.cursor()
 
+    
         # Update the owner_id for the specified gym
-        cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, owner_id))
+        cursor.execute("UPDATE gym SET owner_id = ? WHERE gym_id = ?", (owner_id, gym_id))
         
         # Commit the transaction
         conn.commit()
@@ -411,9 +417,10 @@ def set_owner_for_gym(gym_id, owner_id):
     finally:
         # Ensure both cursor and connection are closed safely
         if cursor:
-            cursor.close()
+           cursor.close()
         if conn:
             conn.close()
+'''
 
 def get_user_acct_id_by_username(username):
     try:
@@ -444,48 +451,37 @@ def get_user_acct_id_by_username(username):
             cursor.close()
         if conn:
             conn.close()
-            
-def owner_setup(request):
-    try:
-        # Connect to the database
-        conn = pyodbc.connect(
-            'DRIVER={ODBC Driver 18 for SQL Server};'
-            'SERVER=gymassisthost2.database.windows.net;'
-            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
-        )
-        cursor = conn.cursor()
 
-        if request.method == 'POST':
-    
-            gym_name = request.POST.get('gym_name')
-            user_id = request.session.get('user_id')  # Get the user_id from session
-            username = request.POST.get('username')
+def owner_setup(request):
+    if request.method == 'POST':
+        gym_name = request.POST.get('gym_name')
+        user_acct_id = request.session.get('user_acct_id')  # Get the user_acct_id from session
+        username = request.POST.get('username')
         
-            if user_id is None:
-                messages.error(request, 'User account ID not found in session.')
-                return redirect('error_page')  # Redirect to an error page or handle appropriately
-       # user_acct_id = get_user_acct_id_by_username(username)
-        #convert_user_to_owner(user_id)
+        if user_acct_id is None:
+            messages.error(request, 'User account ID not found in session.')
+            return redirect('error_page')  # Redirect to an error page or handle appropriately
+
+        # user_acct_id = get_user_acct_id_by_username(username)
+        convert_user_to_owner(user_acct_id)
         # Step 1: Create a new gym and get the gym_id
-            gym_id, gym_name_created = create_gym(gym_name)
+        gym_id, gym_name_created = create_gym(gym_name)
 
         # Check if gym creation was successful
-            if gym_id is None:
-                messages.error(request, 'Failed to create gym. Please try again.')
-                return redirect('error_page')  # Redirect to an error page if gym creation fails
+        if gym_id is None:
+            messages.error(request, 'Failed to create gym. Please try again.')
+            return redirect('error_page')  # Redirect to an error page if gym creation fails
 
+        
         # Step 2: Set the owner_id for the created gym
-            set_owner_for_gym(gym_id, user_id)
-            
+        set_owner_for_gym(gym_id, user_acct_id)
 
-            messages.success(request, 'Owner setup completed successfully!')
-            return redirect('home_owner')  # Redirect to the owner's home page
-    finally:
-        # Ensure both cursor and connection are closed safely
-        if cursor:
-            cursor.close()
-        if conn:
-            conn.close()
+
+        messages.success(request, 'Owner setup completed successfully!')
+
+        
+        return redirect('home_owner')  # Redirect to the owner's home page
+
     return render(request, 'owner_setup.html')  # Render the owner setup page for GET requests
 
 
@@ -503,7 +499,7 @@ def gym_selection(request):
         selected_gym_id = request.POST.get('gym_id')
 
         # Update user account with the selected gym_id and perm_id
-        cursor.execute("UPDATE user_accounts SET perm_id = ?, gym_id = ? WHERE user_acct_id = ?", (request.session['perm'], selected_gym_id, request.session['user_id']))
+        cursor.execute("UPDATE user_accounts SET perm_id = ?, gym_id = ? WHERE user_acct_id = ?", (request.session['perm'], selected_gym_id, request.session['user_acct_id']))
 
         conn.commit()
         cursor.close()
@@ -516,7 +512,7 @@ def gym_selection(request):
 def staff_setup(request):
     if request.method == 'POST':
         gym_id = request.POST.get('gym')  # Get the selected gym ID from the form
-        user_id = request.session.get('user_id')  # Get the user ID from the session
+        user_acct_id = request.session.get('user_acct_id')  # Get the user ID from the session
 
         try:
             conn = pyodbc.connect(
@@ -527,10 +523,10 @@ def staff_setup(request):
             cursor = conn.cursor()
 
             # Debugging: Check the values before updating
-            print(f"Updating gym_id: {gym_id} for user_id: {user_id}")
+            print(f"Updating gym_id: {gym_id} for user_acct_id: {user_acct_id}")
 
             # Update the user's gym_id in the database
-            cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, user_id))
+            cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, user_acct_id))
             rows_affected = cursor.rowcount
             conn.commit()
 
@@ -580,7 +576,7 @@ def staff_setup(request):
 def goer_setup(request):
     if request.method == 'POST':
         gym_id = request.POST.get('gym')  # Get the selected gym ID from the form
-        user_id = request.session.get('user_id')  # Get the user ID from the session
+        user_acct_id = request.session.get('user_acct_id')  # Get the user ID from the session
 
         try:
             conn = pyodbc.connect(
@@ -591,10 +587,10 @@ def goer_setup(request):
             cursor = conn.cursor()
 
             # Debugging: Check the values before updating
-            print(f"Updating gym_id: {gym_id} for user_id: {user_id}")
+            print(f"Updating gym_id: {gym_id} for user_acct_id: {user_acct_id}")
 
             # Update the user's gym_id in the database
-            cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, user_id))
+            cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, user_acct_id))
             rows_affected = cursor.rowcount
             conn.commit()
 
@@ -640,10 +636,12 @@ def goer_setup(request):
 
     return render(request, 'goer_setup.html', {'gyms': gyms})
 
+
+
 def home_owner(request):
-    user_id = request.session.get('user_id')
-    print(user_id)
-    if not user_id:
+    user_acct_id = request.session.get('user_acct_id')
+    print(user_acct_id)
+    if not user_acct_id:
         messages.error(request, 'You need to log in to access this page.')
         return redirect('login')
 
@@ -673,7 +671,7 @@ def home_owner(request):
             gym_id = gym_id_row[0]  # Extract the gym_id from the result
 
             # Update the user's gym_id in the database
-            cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, user_id))
+            cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, user_acct_id))
             rows_affected = cursor.rowcount
             conn.commit()
 
@@ -685,37 +683,28 @@ def home_owner(request):
 
             return redirect('home_owner')  # Redirect to refresh the page
 
-        # Query to fetch the user information based on user_id
-        cursor.execute("SELECT username, perm_id, gym_id, email FROM user_accounts WHERE user_acct_id = ?", (user_id,))
+        # Query to fetch the user information based on user_acct_id
+        cursor.execute("SELECT username, perm_id, gym_id, email FROM user_accounts WHERE user_acct_id = ?", (user_acct_id,))
         user = cursor.fetchone()
 
         if user:
             username, perm_id, user_gym_id, email = user  # Get the gym_id here
 
             # Fetch gym information associated with the owner
-            cursor.execute("SELECT gym_name, gym_id FROM gym WHERE gym_id = ?", (user_gym_id,))
+            cursor.execute("SELECT gym_name, gym_id FROM gym WHERE owner_id = ?", (user_acct_id,))
             gyms = cursor.fetchall()
 
             # Print the gym_id(s) for debugging
-            #for gym in gyms:
-                #print(f"Gym ID: {gym[1]}")  # This should print each gym_id
+            for gym in gyms:
+                print(f"Gym ID: {gym[1]}")  # This should print each gym_id
 
             # Fetch members associated with each gym
             members_info = {}
-            employee_info = {}
             for gym in gyms:
                 gym_name, gym_id = gym
-                cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
+                cursor.execute("SELECT user_acct_id, first_name, last_name FROM user_accounts WHERE gym_id = ?", (gym_id,))
                 members = cursor.fetchall()
                 members_info[gym_name] = members  # List of members for each gym
-                cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND (perm_id = ? OR perm_id = ?)", (gym_id, 2, 3))
-                employees = cursor.fetchall()
-                employee_info[gym_name] = employees  # List of members for each gym
-            
-            
-                
-            
-
 
             return render(request, 'home_owner.html', {
                 'username': username,
@@ -724,7 +713,6 @@ def home_owner(request):
                 'userGymId': user_gym_id,  # Add userGymId to the context
                 'gym_info': gyms,
                 'members_info': members_info,
-                'employee_info': employee_info,
             })
         else:
             messages.error(request, 'User not found.')
@@ -740,8 +728,8 @@ def home_owner(request):
         if conn:
             conn.close()
 
-
-def convert_user_to_owner(user_id):
+'''
+def convert_user_to_owner(user_acct_id):
     try:
         # Connect to the database
         conn = pyodbc.connect(
@@ -753,7 +741,7 @@ def convert_user_to_owner(user_id):
 
         # Prepare to execute the stored procedure
         print('test1')
-        cursor.execute("EXEC ConvertUserToOwner2 @user_id = ?", (user_id,))
+        cursor.execute("EXEC ConvertUserToOwner2 @user_acct_id = ?", (user_acct_id,))
 
         # Fetch the result (if needed)
         print('test2')
@@ -776,13 +764,13 @@ def convert_user_to_owner(user_id):
             conn.close()
 
 # Example usage
- 
+ '''
 
 def home_staff(request):
-    user_id = request.session.get('user_id')
+    user_acct_id = request.session.get('user_acct_id')
     
 
-    if not user_id:
+    if not user_acct_id:
         messages.error(request, 'You need to log in to access this page.')
         return redirect('login')
 
@@ -795,7 +783,7 @@ def home_staff(request):
         cursor = conn.cursor()
 
         # Update the query to fetch additional fields
-        cursor.execute("SELECT username, perm_id, gym_id, first_name, last_name, email FROM user_accounts WHERE user_acct_id = ?", (user_id,))
+        cursor.execute("SELECT username, perm_id, gym_id, first_name, last_name, email FROM user_accounts WHERE user_acct_id = ?", (user_acct_id,))
         user = cursor.fetchone()
 
         if user:
@@ -806,7 +794,7 @@ def home_staff(request):
             gym_name = cursor.fetchone()
 
             # Fetch members associated with the user's gym
-            cursor.execute("SELECT username FROM user_accounts WHERE gym_id = ? AND perm_id = 4", (gym_id,))  # Assuming perm_id = 3 corresponds to goers
+            cursor.execute("SELECT username FROM user_accounts WHERE gym_id = ? AND perm_id = 3", (gym_id,))  # Assuming perm_id = 3 corresponds to goers
             members = cursor.fetchall()
             members_list = [member[0] for member in members]  # Create a simple list of usernames
 
@@ -839,10 +827,10 @@ def home_staff(request):
 
 
 def home_goer(request):
-    user_id = request.session.get('user_id')
+    user_acct_id = request.session.get('user_acct_id')
     user_acct_id = request.session.get('user_acct_id')
 
-    if not user_id:
+    if not user_acct_id:
         messages.error(request, 'You need to log in to access this page.')
         return redirect('login')
 
@@ -855,7 +843,7 @@ def home_goer(request):
         cursor = conn.cursor()
 
         # Update the query to fetch additional fields
-        cursor.execute("SELECT username, perm_id, gym_id, email, first_name, last_name FROM user_accounts WHERE user_acct_id = ?", (user_id,))
+        cursor.execute("SELECT username, perm_id, gym_id, email, first_name, last_name FROM user_accounts WHERE user_acct_id = ?", (user_acct_id,))
         user = cursor.fetchone()
 
         if user:
@@ -922,6 +910,12 @@ from django.db import connection
 from django.shortcuts import render, redirect
 from django.db import connection
 
+#view user so can access owner id in add class.
+def view_user(request):
+    return render(request, 'add_class.html', {'user': request.user})
+
+import uuid
+
 def add_class(request):
     if request.method == 'POST':
         instructor_id = request.POST.get('instructor_id')
@@ -929,8 +923,14 @@ def add_class(request):
         data_time = request.POST.get('data_time')
         class_name = request.POST.get('class_name')
         class_type = request.POST.get('class_type')
-        roster_id = request.POST.get('roster_id')
-        gym_id = request.POST.get('gym_id')
+    #    roster_id = request.POST.get('roster_id')
+    #    gym_id = request.POST.get('gym_id')
+
+        # Generating roster_id
+        roster_id = str(uuid.uuid4().fields[-1])[:5]
+
+        # Retrieving gym_id
+        gym_id = request.GET.get('gym_id')
 
         # Get the next class_id by finding the max and adding 1
         with connection.cursor() as cursor:
@@ -949,7 +949,7 @@ def add_class(request):
         return redirect('home_owner')  # Redirect to a success page or home
 
     return render(request, 'add_class.html')   #  # Render the form on GET request
-
+                
 
 # views.pyjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
@@ -990,5 +990,16 @@ def get_classes(request):
             return JsonResponse(events, safe=False)
         else:
             return JsonResponse({'error': 'No gym_id provided'}, status=400)
+
+def get_gymID(request):
+    if request.method == 'GET':
+        gym_id = request.GET.get('gym_id')
+        if gym_id:
+          return JsonResponse({'gym_id': gym_id})
+        else:
+            return JsonResponse({'error': 'No gym_id provided'}, status=400)
+    else:
+        return JsonResponse({'error': 'No gym_id provided'}, status=400)
+        
 
 
