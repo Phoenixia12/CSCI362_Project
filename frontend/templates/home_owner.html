@@ -183,7 +183,7 @@
                 <thead>
                     <tr>
                         <th>Gym Name</th>
-                        <th>User ID</th>
+                        <th>Username</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                     </tr>
@@ -218,23 +218,29 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Employee ID</th>
+                        <th>Gym Name</th>
+                        <th>Username</th>
                         <th>First Name</th>
                         <th>Last Name</th>
-                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for employee in employees %}
-                        <tr>
-                            <td>{{ employee.user_acct_id }}</td>
-                            <td>{{ employee.first_name }}</td>
-                            <td>{{ employee.last_name }}</td>
-                            <td>{{ employee.email }}</td>
-                        </tr>
+                    {% for gym_name, employees in employee_info.items %}
+                        {% for employee in employees %}
+                            <tr>
+                                <td>{{ gym_name }}</td>
+                                <td>{{ employee.0 }}</td>
+                                <td>{{ employee.1 }}</td>
+                                <td>{{ employee.2 }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="4">No members found for this gym.</td>
+                            </tr>
+                        {% endfor %}
                     {% empty %}
                         <tr>
-                            <td colspan="4">No employees found.</td>
+                            <td colspan="4">No members found.</td>
                         </tr>
                     {% endfor %}
                 </tbody>
