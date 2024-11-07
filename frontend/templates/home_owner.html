@@ -235,12 +235,12 @@
                             </tr>
                         {% empty %}
                             <tr>
-                                <td colspan="4">No members found for this gym.</td>
+                                <td colspan="4">No employees found for this gym.</td>
                             </tr>
                         {% endfor %}
                     {% empty %}
                         <tr>
-                            <td colspan="4">No members found.</td>
+                            <td colspan="4">No employees found.</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -287,21 +287,7 @@
         var calendarEl = document.getElementById('calendar');  
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',  
-            events: function(fetchInfo, successCallback, failureCallback) {
-                $.ajax({
-                    url: '/get_classes/',  
-                    data: {
-                        gym_id: userGymID  
-                    },
-                    success: function(data) {
-                        print('success')
-                        successCallback(data);  
-                    },
-                    error: function() {
-                        failureCallback();
-                    }
-                });
-            }
+            events: 
         });
 
         calendar.render();
