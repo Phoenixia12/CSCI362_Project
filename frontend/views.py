@@ -385,6 +385,7 @@ def create_gym(gym_name):
             conn.close()
 
 # gym db no longer holds owner_id as of 11/5/24
+#Test
 '''
 def set_owner_for_gym(gym_id, owner_id):
     # Connect to the database
