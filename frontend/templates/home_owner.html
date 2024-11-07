@@ -172,18 +172,18 @@
             <h2>Classes</h2>
             <div id="calendar"></div>
             <h3>Add a New Class</h3>
-            <button onclick="window.location.href='{% url 'add_class' %}'">Add Class</button>
+            <button onclick="window.location.href='{% url 'add_class' %}';">Add Class</button>
         </div>
 
         <div id="members" class="tab-content">
             <h2>Members</h2>
             <h3>Add a new Member</h3>
-            <button onclick="window.location.href='{% url 'add_member' %}'">Add Member</button>
+            <button onclick="window.location.href='{% url 'add_member' %}';">Add Member</button>
             <table>
                 <thead>
                     <tr>
                         <th>Gym Name</th>
-                        <th>Username</th>
+                        <th>User ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                     </tr>
@@ -213,34 +213,28 @@
 
         <div id="employees" class="tab-content">
             <h3>Add a new Employee</h3>
-            <button onclick="window.location.href='{% url 'add_employee' %}'">Add Employee</button>
+            <button onclick="window.location.href='{% url 'add_employee'%}';">Add Employee</button>
             <h2>Employees</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Gym Name</th>
-                        <th>Username</th>
+                        <th>Employee ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for gym_name, employees in employee_info.items %}
-                        {% for employee in employees %}
-                            <tr>
-                                <td>{{ gym_name }}</td>
-                                <td>{{ employee.0 }}</td>
-                                <td>{{ employee.1 }}</td>
-                                <td>{{ employee.2 }}</td>
-                            </tr>
-                        {% empty %}
-                            <tr>
-                                <td colspan="4">No members found for this gym.</td>
-                            </tr>
-                        {% endfor %}
+                    {% for employee in employees %}
+                        <tr>
+                            <td>{{ employee.user_acct_id }}</td>
+                            <td>{{ employee.first_name }}</td>
+                            <td>{{ employee.last_name }}</td>
+                            <td>{{ employee.email }}</td>
+                        </tr>
                     {% empty %}
                         <tr>
-                            <td colspan="4">No members found.</td>
+                            <td colspan="4">No employees found.</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -254,11 +248,7 @@
 
         <div id="contact" class="tab-content">
             <h2>Contact Us</h2>
-            <div class="section">
-                <p>If you have any questions, feel free to reach out:</p>
-                <p><strong>Email:</strong> support@gymassist.com</p>
-                <p><strong>Phone:</strong> (123) 456-7890</p>
-            </div>
+            <p>Contact information and form (if needed).</p>
         </div>
     </div>
 

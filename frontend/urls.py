@@ -27,7 +27,6 @@ urlpatterns = [
     path('home_goer/', home_goer, name='home_goer'),
     path('home_staff/', home_staff, name='home_staff'),
 
-
     path('register/test_reg/', register_account, name='register_account'),
     path('register/', register_account, name='register'),
     
@@ -36,6 +35,7 @@ urlpatterns = [
     path('logout/', index, name = 'logout'),
    
     path('get_classes/', get_classes, name='get_classes'),
+    path('get_gymID/', get_gymID, name='get_gymID'),
     path('add_class/', add_class, name='add_class'),
    # path('delete-class/', delete_class, name='delete_class')
 ]
