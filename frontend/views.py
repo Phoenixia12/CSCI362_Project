@@ -701,7 +701,6 @@ def home_owner(request):
             # Fetch members associated with each gym
             members_info = {}
             employee_info = {}
-            class_info = {}
             for gym in gyms:
                 gym_name, gym_id = gym
                 cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
@@ -710,9 +709,6 @@ def home_owner(request):
                 cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND (perm_id = ? OR perm_id = ?)", (gym_id, 2, 3))
                 employees = cursor.fetchall()
                 employee_info[gym_name] = employees
-                cursor.execute("SELECT class_name, data_date, data_time FROM class WHERE gym_id = ?", (gym_id))
-                classes = cursor.fetchall()
-                class_info[gym_name] = classes
 
             return render(request, 'home_owner.html', {
                 'username': username,
@@ -933,7 +929,7 @@ def add_class(request):
         class_name = request.POST.get('class_name')
         class_type = request.POST.get('class_type')
     #    roster_id = request.POST.get('roster_id')
-        gym_id = cache.get('gym_id')
+    #    gym_id = request.POST.get('gym_id')
 
         # Generating roster_id
         roster_id = str(uuid.uuid4().fields[-1])[:5]
