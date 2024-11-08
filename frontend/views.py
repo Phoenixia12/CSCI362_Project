@@ -699,17 +699,16 @@ def home_owner(request):
                 print(f"Gym ID: {gym[1]}")  # This should print each gym_id
 
             # Fetch members associated with each gym
-            members_info = {}
-            employee_info = {}
+            gym_id = cache.get('gym_id')
             class_info = {}
+            cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
+            members = cursor.fetchall()
+            cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND (perm_id = ? OR perm_id = ?)", (gym_id, 2, 3))
+            employees = cursor.fetchall()
             for gym in gyms:
                 gym_name, gym_id = gym
                 cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
-                members = cursor.fetchall()
-                members_info[gym_name] = members  # List of members for each gym
-                cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND (perm_id = ? OR perm_id = ?)", (gym_id, 2, 3))
                 employees = cursor.fetchall()
-                employee_info[gym_name] = employees
                 cursor.execute("SELECT class_name, data_date, data_time FROM class WHERE gym_id = ?", (gym_id))
                 classes = cursor.fetchall()
                 class_info[gym_name] = classes
@@ -719,9 +718,8 @@ def home_owner(request):
                 'perm_id': perm_id,
                 'email' : email,
                 'userGymId': user_gym_id,  # Add userGymId to the context
-                'gym_info': gyms,
-                'members_info': members_info,
-                'employee_info': employee_info,
+                'members_info': members,
+                'employee_info': employees,
             })
         else:
             messages.error(request, 'User not found.')
@@ -803,16 +801,15 @@ def home_staff(request):
             gym_name = cursor.fetchone()
 
             # Fetch members associated with the user's gym
-            cursor.execute("SELECT username FROM user_accounts WHERE gym_id = ? AND perm_id = 4", (gym_id,))  # Assuming perm_id = 3 corresponds to goers
+            cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
             members = cursor.fetchall()
-            members_list = [member[0] for member in members]  # Create a simple list of usernames
 
             return render(request, 'home_staff.html', {
                 'username': username,
                 'email': email,
                 'perm_id': perm_id,
                 'gym_info': gym_name,
-                'members': members_list,
+                'members': members,
                 'first_name': first_name,  # Pass the first name
                 'last_name': last_name,    # Pass the last name
             })
