@@ -27,7 +27,7 @@ def register_account(request):
         # Extract form data from request
         username = request.POST.get('username')
         email = request.POST.get('email')
-        perm_id = request.POST.get('perm_id')  # Ensure you have this in your form
+        perm_id = 1 # Ensure you have this in your form
         gym_id = 3  # Ensure you have this in your form
         firstname = request.POST.get('firstname')  # Ensure you have this in your form
         lastname = request.POST.get('lastname')  # Ensure you have this in your form
@@ -64,14 +64,14 @@ def register_account(request):
         
         )
         print('insert sucessful')
-        try:
+        #try:
             # Call the stored procedure to add user credentials to the pass table
-            cursor.execute(
-                "EXEC AddUserToPass @user_acct_id=?, @password=?", 
-                (user_acct_id, hashed_password)  # Use the hashed password
-            )
-        except Exception as e:
-            messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
+            #cursor.execute(
+              #  "EXEC AddUserToPass @user_acct_id=?, @password=?", 
+              #  (user_acct_id, hashed_password)  # Use the hashed password
+           # )
+        #except Exception as e:
+          #  messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
 
         # Commit the transaction
         conn.commit()
@@ -134,14 +134,14 @@ def add_member(request):
         
         )
         print('insert sucessful')
-        try:
+       # try:
             # Call the stored procedure to add user credentials to the pass table
-            cursor.execute(
-                "EXEC AddUserToPass @user_acct_id=?, @password=?", 
-                (user_acct_id, hashed_password)  # Use the hashed password
-            )
-        except Exception as e:
-            messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
+           # cursor.execute(
+           #     "EXEC AddUserToPass @user_acct_id=?, @password=?", 
+           #     (user_acct_id, hashed_password)  # Use the hashed password
+           # )
+        #except Exception as e:
+           # messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
 
         # Commit the transaction
         conn.commit()
@@ -256,18 +256,18 @@ def login_view(request):
             user = cursor.fetchone()
 
             if user:
-                user_acct_id, stored_password_hash, perm_id, gym_id = user
+                user_id, stored_password_hash, perm_id, gym_id = user
                 cache.set('gym_id', gym_id, None)
 
                 # Check if the provided password matches the stored hash
                 if check_password(password, stored_password_hash):
                     # Password matches, log the user in
-                    request.session['user_acct_id'] = user_acct_id  # Store user ID in session
+                    request.session['user_id'] = user_id  # Store user ID in session
                     messages.success(request, 'You are now logged in!')
                     
                     # Check if perm_id is null, if so redirect to role selection
-                    if perm_id is None:  # If perm_id is null
-                        return redirect('select_role')
+                    if gym_id == 3:  # If perm_id is null
+                        return redirect('owner_setup')
                     
                     if perm_id == 1:
                         return redirect('home_owner')  # Redirect to owner's home page
@@ -304,7 +304,7 @@ def select_role(request):
         selected_role = request.POST.get('role')
         
         # Get the current logged-in user's ID from the session
-        user_acct_id = request.session.get('user_acct_id')
+        user_id = request.session.get('user_id')
         
         # Connect to the database
         try:
@@ -327,7 +327,7 @@ def select_role(request):
 
             if perm_id is not None:
                 # Update the user's perm_id in the database
-                cursor.execute("UPDATE user_accounts SET perm_id = ? WHERE user_acct_id = ?", (perm_id, user_acct_id))
+                cursor.execute("UPDATE user_accounts SET perm_id = ? WHERE user_acct_id = ?", (perm_id, user_id))
                 conn.commit()
 
                 # Redirect based on role (e.g., owners go to gym setup, others go to home)
@@ -384,7 +384,7 @@ def create_gym(gym_name):
         if conn:
             conn.close()
 
-# gym db no longer holds owner_id
+# gym db no longer holds owner_id as of 11/5/24
 '''
 def set_owner_for_gym(gym_id, owner_id):
     # Connect to the database
@@ -699,20 +699,27 @@ def home_owner(request):
                 print(f"Gym ID: {gym[1]}")  # This should print each gym_id
 
             # Fetch members associated with each gym
-            members_info = {}
+            gym_id = cache.get('gym_id')
+            class_info = {}
+            cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
+            members = cursor.fetchall()
+            cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND (perm_id = ? OR perm_id = ?)", (gym_id, 2, 3))
+            employees = cursor.fetchall()
             for gym in gyms:
                 gym_name, gym_id = gym
-                cursor.execute("SELECT user_acct_id, first_name, last_name FROM user_accounts WHERE gym_id = ?", (gym_id,))
-                members = cursor.fetchall()
-                members_info[gym_name] = members  # List of members for each gym
+                cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
+                employees = cursor.fetchall()
+                cursor.execute("SELECT class_name, data_date, data_time FROM class WHERE gym_id = ?", (gym_id))
+                classes = cursor.fetchall()
+                class_info[gym_name] = classes
 
             return render(request, 'home_owner.html', {
                 'username': username,
                 'perm_id': perm_id,
                 'email' : email,
                 'userGymId': user_gym_id,  # Add userGymId to the context
-                'gym_info': gyms,
-                'members_info': members_info,
+                'members_info': members,
+                'employee_info': employees,
             })
         else:
             messages.error(request, 'User not found.')
@@ -794,16 +801,15 @@ def home_staff(request):
             gym_name = cursor.fetchone()
 
             # Fetch members associated with the user's gym
-            cursor.execute("SELECT username FROM user_accounts WHERE gym_id = ? AND perm_id = 3", (gym_id,))  # Assuming perm_id = 3 corresponds to goers
+            cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
             members = cursor.fetchall()
-            members_list = [member[0] for member in members]  # Create a simple list of usernames
 
             return render(request, 'home_staff.html', {
                 'username': username,
                 'email': email,
                 'perm_id': perm_id,
                 'gym_info': gym_name,
-                'members': members_list,
+                'members': members,
                 'first_name': first_name,  # Pass the first name
                 'last_name': last_name,    # Pass the last name
             })
@@ -910,7 +916,7 @@ from django.db import connection
 from django.shortcuts import render, redirect
 from django.db import connection
 
-#view user so can access owner id in add class
+#view user so can access owner id in add class.
 def view_user(request):
     return render(request, 'add_class.html', {'user': request.user})
 
@@ -924,13 +930,13 @@ def add_class(request):
         class_name = request.POST.get('class_name')
         class_type = request.POST.get('class_type')
     #    roster_id = request.POST.get('roster_id')
-    #    gym_id = request.POST.get('gym_id')
+        gym_id = cache.get('gym_id')
 
         # Generating roster_id
         roster_id = str(uuid.uuid4().fields[-1])[:5]
 
         # Retrieving gym_id
-        gym_id = request.GET.get('gym_id')
+        #gym_id = request.GET.get('gym_id')
 
         # Get the next class_id by finding the max and adding 1
         with connection.cursor() as cursor:
@@ -950,10 +956,7 @@ def add_class(request):
 
     return render(request, 'add_class.html')   #  # Render the form on GET request
 
-
-
-            
-            
+                
 
 # views.pyjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
