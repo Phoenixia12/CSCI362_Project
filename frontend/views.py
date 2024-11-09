@@ -384,8 +384,7 @@ def create_gym(gym_name):
         if conn:
             conn.close()
 
-# gym db no longer holds owner_id as of 11/5/24
-'''
+
 def set_owner_for_gym(gym_id, owner_id):
     # Connect to the database
     try:
@@ -420,7 +419,7 @@ def set_owner_for_gym(gym_id, owner_id):
            cursor.close()
         if conn:
             conn.close()
-'''
+
 
 def get_user_acct_id_by_username(username):
     try:
@@ -735,7 +734,7 @@ def home_owner(request):
         if conn:
             conn.close()
 
-'''
+
 def convert_user_to_owner(user_acct_id):
     try:
         # Connect to the database
@@ -771,7 +770,7 @@ def convert_user_to_owner(user_acct_id):
             conn.close()
 
 # Example usage
- '''
+ 
 
 def home_staff(request):
     user_acct_id = request.session.get('user_acct_id')
@@ -929,6 +928,7 @@ def add_class(request):
         data_time = request.POST.get('data_time')
         class_name = request.POST.get('class_name')
         class_type = request.POST.get('class_type')
+        price = request.POST.get('price')
     #    roster_id = request.POST.get('roster_id')
         gym_id = cache.get('gym_id')
 
@@ -948,8 +948,8 @@ def add_class(request):
             cursor.execute("""
                 EXEC AddClass1 @class_id = %s, @instructor_id = %s, 
                 @data_date = %s, @roster_id = %s, @class_name = %s, 
-                @data_time = %s, @class_type = %s, @gym_id = %s
-            """, [class_id, instructor_id, data_date, roster_id, class_name, data_time, class_type, gym_id])
+                @data_time = %s, @class_type = %s, @gym_id = %s, @price = %s
+            """, [class_id, instructor_id, data_date, roster_id, class_name, data_time, class_type, gym_id, price])
         
         print('Class added successfully!')
         return redirect('home_owner')  # Redirect to a success page or home
@@ -1008,5 +1008,30 @@ def get_gymID(request):
     else:
         return JsonResponse({'error': 'No gym_id provided'}, status=400)
         
+# Square payment using sandbox token
+
+from square.client import Client
+
+client = Client(
+    access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
+    environment="sandbox"
+)
+
+''' EXAMPLE
+result = client.payments.create_payment({
+    "source_id": "cnon:card-nonce-ok",
+    "idempotency_key": "unique_key_for_each_transaction",
+    "amount_money": {
+        "amount": 1000,  # in the smallest currency unit, e.g., cents for USD
+        "currency": "USD"
+    }
+})
+if result.is_success():
+    print("Payment Success:", result.body)
+else:
+    print("Payment Failed:", result.errors)
+'''
+
+
 
 
