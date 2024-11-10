@@ -1012,25 +1012,34 @@ def get_gymID(request):
 
 from square.client import Client
 
-client = Client(
-    access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
-    environment="sandbox"
-)
+def submit_payment(request):
+    client = Client(
+        access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
+        environment="sandbox"
+    )
 
-''' EXAMPLE
-result = client.payments.create_payment({
+    #create_payment method returns object with transaction details
+    result = client.payments.create_payment({
+
+    #unique identifier represents authorized payment
+    #replace with card nonce from frontend payment form
     "source_id": "cnon:card-nonce-ok",
+
+    #unique key for each transaction so payment is only processed once
+    #replace  "unique_key_for_each_transaction"?
     "idempotency_key": "unique_key_for_each_transaction",
     "amount_money": {
+        #pull amount from SQL class price. pull from cache?
         "amount": 1000,  # in the smallest currency unit, e.g., cents for USD
         "currency": "USD"
-    }
-})
-if result.is_success():
-    print("Payment Success:", result.body)
-else:
-    print("Payment Failed:", result.errors)
-'''
+        }
+    })
+    if result.is_success():
+        print("Payment Success:", result.body)
+    else:
+        print("Payment Failed:", result.errors)
+
+
 
 
 
