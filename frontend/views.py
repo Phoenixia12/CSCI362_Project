@@ -7,6 +7,10 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.core.cache import cache
 from django.db import connection
+from django.utils.safestring import mark_safe
+import calendar
+import datetime
+
 
 def add_account(user_acct_id, perm_id, username, email, gym_id, firstname, lastname, datejoined, password_val):
     with connection.cursor() as cursor:
@@ -704,13 +708,15 @@ def home_owner(request):
             members = cursor.fetchall()
             cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND (perm_id = ? OR perm_id = ?)", (gym_id, 2, 3))
             employees = cursor.fetchall()
+            cursor.execute("SELECT class_name, data_date, data_time FROM class WHERE gym_id = ?", (gym_id))
+            classes = cursor.fetchall()
             for gym in gyms:
                 gym_name, gym_id = gym
                 cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
                 employees = cursor.fetchall()
                 cursor.execute("SELECT class_name, data_date, data_time FROM class WHERE gym_id = ?", (gym_id))
                 classes = cursor.fetchall()
-                class_info[gym_name] = classes
+                
 
             return render(request, 'home_owner.html', {
                 'username': username,
@@ -719,6 +725,7 @@ def home_owner(request):
                 'userGymId': user_gym_id,  # Add userGymId to the context
                 'members_info': members,
                 'employee_info': employees,
+                'class_info': classes,
             })
         else:
             messages.error(request, 'User not found.')
@@ -968,33 +975,46 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 from django.http import JsonResponse
-import datetime
+
 
 def get_classes(request):
     if request.method == 'GET':
-        gym_id = request.GET.get('gym_id')  # Get gym ID from the request
+        gym_id = cache.get("gym_id")  # Get gym ID from the request
+        events = []
         if gym_id:
-            cursor = connection.cursor()
+            try:
+                conn = pyodbc.connect(
+                'DRIVER={ODBC Driver 18 for SQL Server};'
+                'SERVER=gymassisthost2.database.windows.net;'
+                'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
+                )
+        
+                cursor = connection.cursor()
             # Fetch classes from the database based on gym_id
-            query = """
-                SELECT class_name, data_date, data_time
-                FROM class
-                WHERE gym_id = %s
-            """
-            cursor.execute(query, [gym_id])
-            sql_results = cursor.fetchall()
+                query = """
+                    SELECT class_name, data_date, data_time
+                    FROM class
+                    WHERE gym_id = %s
+                """
+                cursor.execute(query, [gym_id])
+                sql_results = cursor.fetchall()
 
-            events = []
+                
             # Convert SQL results to the format required by FullCalendar
-            for event in sql_results:
-                class_name, data_date, data_time = event
-                events.append({
-                    'title': class_name,
-                    'start': f"{data_date}T{data_time}",  # Format for FullCalendar
-                    'end': f"{data_date}T{data_time}"    # Adjust end time if needed
-                })
+                for event in sql_results:
+                    class_name, data_date, data_time = event
+                    events.append({
+                        'title': class_name,
+                        'start': f"{data_date}T{data_time}",  # Format for FullCalendar
+                        'end': f"{data_date}T{data_time}"    # Adjust end time if needed
+                    })
 
-            return JsonResponse(events, safe=False)
+                return JsonResponse(events, safe=False)
+            finally:
+                if cursor:
+                    cursor.close()
+                if conn:
+                    conn.close()
         else:
             return JsonResponse({'error': 'No gym_id provided'}, status=400)
 

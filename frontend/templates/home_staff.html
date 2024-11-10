@@ -264,6 +264,9 @@
             if (activeLink) {
                 activeLink.classList.add('active'); // Add active class to selected link
             }
+            if (tabId === 'classes') {
+            initializeCalendar(); 
+        }
         }
 
         // Logout function
@@ -273,25 +276,44 @@
         }
 
         // FullCalendar initialization
-        document.addEventListener('DOMContentLoaded', function() {
-            const calendarEl = document.getElementById('calendar');
-            const calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                events: [
-                    // Event data can be fetched from the backend
-                    {
-                        title: 'Yoga Class',
-                        start: '2024-10-25T10:00:00',
+        function initializeCalendar() {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: function(start, callback){
+                $.ajax({
+                    url: "{% url 'get_classes' %}",
+                    dataType: 'json',
+                    data: {
+                        
                     },
-                    {
-                        title: 'Spin Class',
-                        start: '2024-10-27T12:00:00',
-                    },
-                    // Add more events as needed
-                ]
-            });
-            calendar.render();
+                    success: function(data) {
+                        var events = [];
+
+                        for (var i=0; i<data.length; i++){
+                            events.push({
+                                title: data[i].title,
+                                start: data[i].start,
+                            });
+                        }
+
+                   //adding the callback
+                        callback(events);
+
+                    }
+                });
+            },
+            editable: true,
+            selectable: true,
+            dateClick: function(info) {
+                alert('Selected Date: ' + info.dateStr);
+            }
         });
+        
+       
+        calendar.render();
+        
+    }
 
         // Modal functionality
         function closeModal() {

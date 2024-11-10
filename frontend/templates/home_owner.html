@@ -170,9 +170,12 @@
 
         <div id="classes" class="tab-content">
             <h2>Classes</h2>
-            <div id="calendar"></div>
+            <div id="calendar">
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            </div>
             <h3>Add a New Class</h3>
             <button onclick="window.location.href='{% url 'add_class' %}'">Add Class</button>
+            
         </div>
 
         <div id="members" class="tab-content">
@@ -259,29 +262,9 @@
             form.submit();
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');  
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',  
-            events: function(fetchInfo, successCallback, failureCallback) {
-                $.ajax({
-                    url: '/get_classes/',  
-                    data: {
-                        gym_id: userGymID  
-                    },
-                    success: function(data) {
-                        print('success')
-                        successCallback(data);  
-                    },
-                    error: function() {
-                        failureCallback();
-                    }
-                });
-            }
-        });
+        
 
-        calendar.render();
-    });
+   
 
     function showTab(tabId) {
         const tabs = document.querySelectorAll('.tab-content');
@@ -303,20 +286,57 @@
             initializeCalendar(); 
         }
     }
-
+    
+    //function getEvents(){
+        //window.classevents = new Array();
+            //for(class_event in class_info){
+               // var locevent = 
+                //{'title': class_event.class_name,
+               // 'start': class_event.data_date};
+               // classevents.push(JSON.parse(locevent));
+        
+           // }
+    //}
     function initializeCalendar() {
         const calendarEl = document.getElementById('calendar');
         const calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
-            events: [],
+            events: function(start, callback){
+                $.ajax({
+                    url: "{% url 'get_classes' %}",
+                    dataType: 'json',
+                    data: {
+                        
+                    },
+                    success: function(data) {
+                        var events = [];
+
+                        for (var i=0; i<data.length; i++){
+                            events.push({
+                                title: data[i].title,
+                                start: data[i].start,
+                            });
+                        }
+
+                   //adding the callback
+                        callback(events);
+
+                    }
+                });
+            },
             editable: true,
             selectable: true,
             dateClick: function(info) {
                 alert('Selected Date: ' + info.dateStr);
             }
         });
+        
+       
         calendar.render();
+        
     }
+
+
 
     showTab('home');
 
