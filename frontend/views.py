@@ -926,6 +926,9 @@ from django.db import connection
 def view_user(request):
     return render(request, 'add_class.html', {'user': request.user})
 
+def view_class_info(request):
+    return render(request, 'view_class_info', {'user': request.User})
+
 import uuid
 
 def add_class(request):

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    
+    <style>
+        /* General form styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="date"],
+        .form-container input[type="time"], 
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container .float-left {
+            float: left;
+            width: 48%;
+            margin-right: 2%;
+        }
+
+        .form-container .float-right {
+            float: right;
+            width: 48%;
+        }
+          
+        
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #e67c12;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #d95d0f;
+        }
+
+        .button_top_left{
+            float: left;
+            width: 20%;
+
+        }
+        .form-container p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+   
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            z-index: 1;
+        }
+
+        .dropdown-content div {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .dropdown-content div:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown input:focus + .dropdown-content {
+            display: block;
+        }
+
+        input {
+            width: 200px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+    
+    
+</head>
+
+</script>
+    <div class="form-container">
+        
+        <h2>Class Information</h2>
+        
+    </div>
+</body>
+</html>
