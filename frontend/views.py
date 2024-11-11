@@ -262,6 +262,7 @@ def login_view(request):
             if user:
                 user_id, stored_password_hash, perm_id, gym_id = user
                 cache.set('gym_id', gym_id, None)
+                cache.set('user_id', user_id, None)
 
                 # Check if the provided password matches the stored hash
                 if check_password(password, stored_password_hash):
@@ -375,6 +376,7 @@ def create_gym(gym_name):
         conn.commit()
 
         print(f'Created gym: {gym_name} with ID: {gym_id}')
+        cache.set('gym_id', gym_id, None)
         return gym_id, gym_name  # Return the gym ID and name
 
     except Exception as e:
@@ -389,7 +391,7 @@ def create_gym(gym_name):
             conn.close()
 
 # gym db no longer holds owner_id as of 11/5/24
-'''
+
 def set_owner_for_gym(gym_id, owner_id):
     # Connect to the database
     try:
@@ -404,7 +406,7 @@ def set_owner_for_gym(gym_id, owner_id):
 
     
         # Update the owner_id for the specified gym
-        cursor.execute("UPDATE gym SET owner_id = ? WHERE gym_id = ?", (owner_id, gym_id))
+        cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, owner_id))
         
         # Commit the transaction
         conn.commit()
@@ -424,7 +426,7 @@ def set_owner_for_gym(gym_id, owner_id):
            cursor.close()
         if conn:
             conn.close()
-'''
+
 
 def get_user_acct_id_by_username(username):
     try:
@@ -459,15 +461,15 @@ def get_user_acct_id_by_username(username):
 def owner_setup(request):
     if request.method == 'POST':
         gym_name = request.POST.get('gym_name')
-        user_acct_id = request.session.get('user_acct_id')  # Get the user_acct_id from session
+        user_acct_id = cache.get('user_id')  # Get the user_acct_id from session
         username = request.POST.get('username')
         
         if user_acct_id is None:
             messages.error(request, 'User account ID not found in session.')
             return redirect('error_page')  # Redirect to an error page or handle appropriately
 
-        # user_acct_id = get_user_acct_id_by_username(username)
-        convert_user_to_owner(user_acct_id)
+        #user_acct_id = get_user_acct_id_by_username(username)
+        #convert_user_to_owner(user_acct_id)
         # Step 1: Create a new gym and get the gym_id
         gym_id, gym_name_created = create_gym(gym_name)
 
@@ -643,7 +645,7 @@ def goer_setup(request):
 
 
 def home_owner(request):
-    user_acct_id = request.session.get('user_acct_id')
+    user_acct_id = cache.get('user_id')
     print(user_acct_id)
     if not user_acct_id:
         messages.error(request, 'You need to log in to access this page.')
