@@ -1009,7 +1009,10 @@ def get_classes(request):
                     events.append({
                         'title': class_name,
                         'start': f"{data_date}T{data_time}",  # Format for FullCalendar
-                        'end': f"{data_date}T{data_time}"    # Adjust end time if needed
+                        'end': f"{data_date}T{data_time}",    # Adjust end time if needed
+                        'id': class_id.id,
+                        'url': f'/view_class_info/',
+                        #'url': f'/view_class_info/{class_id.id}',
                     })
 
                 return JsonResponse(events, safe=False)

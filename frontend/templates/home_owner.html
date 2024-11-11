@@ -277,6 +277,10 @@
                         failureCallback();
                     }
                 });
+            },
+            eventClick: function(info){
+                // Redirect to view_class_info when clicked
+                window.location.href = info.event.extendedProps.url;
             }
         });
 
