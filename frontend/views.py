@@ -262,6 +262,7 @@ def login_view(request):
             if user:
                 user_id, stored_password_hash, perm_id, gym_id = user
                 cache.set('gym_id', gym_id, None)
+                cache.set('user_id', user_id, None)
 
                 # Check if the provided password matches the stored hash
                 if check_password(password, stored_password_hash):
@@ -375,6 +376,7 @@ def create_gym(gym_name):
         conn.commit()
 
         print(f'Created gym: {gym_name} with ID: {gym_id}')
+        cache.set('gym_id', gym_id, None)
         return gym_id, gym_name  # Return the gym ID and name
 
     except Exception as e:
@@ -388,6 +390,7 @@ def create_gym(gym_name):
         if conn:
             conn.close()
 
+# gym db no longer holds owner_id as of 11/5/24
 
 def set_owner_for_gym(gym_id, owner_id):
     # Connect to the database
@@ -403,7 +406,7 @@ def set_owner_for_gym(gym_id, owner_id):
 
     
         # Update the owner_id for the specified gym
-        cursor.execute("UPDATE gym SET owner_id = ? WHERE gym_id = ?", (owner_id, gym_id))
+        cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, owner_id))
         
         # Commit the transaction
         conn.commit()
@@ -458,15 +461,15 @@ def get_user_acct_id_by_username(username):
 def owner_setup(request):
     if request.method == 'POST':
         gym_name = request.POST.get('gym_name')
-        user_acct_id = request.session.get('user_acct_id')  # Get the user_acct_id from session
+        user_acct_id = cache.get('user_id')  # Get the user_acct_id from session
         username = request.POST.get('username')
         
         if user_acct_id is None:
             messages.error(request, 'User account ID not found in session.')
             return redirect('error_page')  # Redirect to an error page or handle appropriately
 
-        # user_acct_id = get_user_acct_id_by_username(username)
-        convert_user_to_owner(user_acct_id)
+        #user_acct_id = get_user_acct_id_by_username(username)
+        #convert_user_to_owner(user_acct_id)
         # Step 1: Create a new gym and get the gym_id
         gym_id, gym_name_created = create_gym(gym_name)
 
@@ -642,7 +645,7 @@ def goer_setup(request):
 
 
 def home_owner(request):
-    user_acct_id = request.session.get('user_acct_id')
+    user_acct_id = cache.get('user_id')
     print(user_acct_id)
     if not user_acct_id:
         messages.error(request, 'You need to log in to access this page.')
@@ -742,6 +745,8 @@ def home_owner(request):
             conn.close()
 
 
+
+'''
 def convert_user_to_owner(user_acct_id):
     try:
         # Connect to the database
@@ -777,7 +782,7 @@ def convert_user_to_owner(user_acct_id):
             conn.close()
 
 # Example usage
- 
+ '''
 
 def home_staff(request):
     user_acct_id = request.session.get('user_acct_id')
@@ -926,9 +931,6 @@ from django.db import connection
 def view_user(request):
     return render(request, 'add_class.html', {'user': request.user})
 
-def view_class_info(request):
-    return render(request, 'view_class_info', {'user': request.User})
-
 import uuid
 
 def add_class(request):
@@ -938,7 +940,6 @@ def add_class(request):
         data_time = request.POST.get('data_time')
         class_name = request.POST.get('class_name')
         class_type = request.POST.get('class_type')
-        price = request.POST.get('price')
     #    roster_id = request.POST.get('roster_id')
         gym_id = cache.get('gym_id')
 
@@ -958,8 +959,8 @@ def add_class(request):
             cursor.execute("""
                 EXEC AddClass1 @class_id = %s, @instructor_id = %s, 
                 @data_date = %s, @roster_id = %s, @class_name = %s, 
-                @data_time = %s, @class_type = %s, @gym_id = %s, @price = %s
-            """, [class_id, instructor_id, data_date, roster_id, class_name, data_time, class_type, gym_id, price])
+                @data_time = %s, @class_type = %s, @gym_id = %s
+            """, [class_id, instructor_id, data_date, roster_id, class_name, data_time, class_type, gym_id])
         
         print('Class added successfully!')
         return redirect('home_owner')  # Redirect to a success page or home
@@ -1009,10 +1010,7 @@ def get_classes(request):
                     events.append({
                         'title': class_name,
                         'start': f"{data_date}T{data_time}",  # Format for FullCalendar
-                        'end': f"{data_date}T{data_time}",    # Adjust end time if needed
-                        'id': class_id.id,
-                        'url': f'/view_class_info/',
-                        #'url': f'/view_class_info/{class_id.id}',
+                        'end': f"{data_date}T{data_time}"    # Adjust end time if needed
                     })
 
                 return JsonResponse(events, safe=False)
@@ -1034,67 +1032,5 @@ def get_gymID(request):
     else:
         return JsonResponse({'error': 'No gym_id provided'}, status=400)
         
-# Square payment using sandbox token
-
-from square.client import Client
-from django import forms
-
-def pay_class(request):
-    if request.method == "POST":
-        client = Client(
-            access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
-            environment="sandbox"
-        )
-
-        test_amount = request.POST.get('test_amount'),
-        #first_name = request.POST.get('first_name'),
-        #last_name = request.POST.get('last_name'),
-        card_number = request.POST.get('card_number'),
-        #card_cvv = request.POST.get('card_cvv')
-        #location_id = ???
-
-        #check if valid
-
-        #payment parameters
-        body = {
-            #creates unique key for each transaction
-            "idempotency_key": str(uuid.uuid4()),
-            "source_id": card_number,
-            "ammount_money":{
-                "amount": test_amount,
-                "currency": "USD"
-            },
-            #"location_id": location_id
-            
-        }
-        #API call
-        payments_api = client.paymentsresult = payments_api.create_payment(body)
-        #create_payment method returns object with transaction details
-
-        if result.is_success():
-            print("Payment Success:", result.body)
-        else:
-            print("Payment Failed:", result.errors)
-
-
-    return render(request, "pay_class.html")
-'''
-            result = client.payments.create_payment({
-        #unique identifier represents authorized payment
-        #replace with card nonce from frontend payment form
-        "source_id": "cnon:card-nonce-ok",
-
-        #unique key for each transaction so payment is only processed once
-        #replace  "unique_key_for_each_transaction"?
-        "idempotency_key": "unique_key_for_each_transaction",
-        "amount_money": {
-            #pull amount from SQL class price. pull from cache?
-            "amount": 1000,  # in the smallest currency unit, e.g., cents for USD
-            "currency": "USD"
-            }
-        })
-'''
-
-
 
 
