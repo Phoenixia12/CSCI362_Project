@@ -7,7 +7,7 @@
     {% load static %}
     <link rel="stylesheet" href="/reference/sdks/web/static/styles/code-preview.css" preload>
 
-<!--
+
     <style>
         /* General form styling */
         body {
@@ -131,136 +131,103 @@
             box-sizing: border-box;
         }
     </style>
--->   
-    
-    <!--imports Square's SDK for testing in sandbox env --> 
-    <script src="https://sandbox.web.squarecdn.com/v2/square.js"></script>
 
 
 </head>
-<body>
-  <div id="payment-form">
-    <div type="number" id="payment-status-container"></div>
-    <div type="number" id="card-container"></div>
-    <button id="card-button" type="button">Pay</button>
-  </div>
-  <script type="module">
-    // initialize square payments object w/ application ID and seller location ID
-    const payments = Square.payments('sandbox-sq0idb-l1OvnKtKdAGby_ooCMWr-w', 'LQRBC20NRTG0Y');
-    // card instance -- has properties needed to take payment
-    const card = await payments.card();
-    // card instance attatched to empty DOM element -- payment card form renders into empty elem
-    await card.attach('#card-container');
 
-    //
-    const cardButton = document.getElementById('card-button');
-    cardButton.addEventListener('click', async () => {
-      const statusContainer = document.getElementById('payment-status-container');
+    <body>
+        <div class="form-container">
+            <h1>Payment Form</h1>
+        </div>
 
-      try {
-        // Retrieves payment from token from card instance by calling tokenize method
-        const result = await card.tokenize();
-        if (result.status === 'OK') {
-          console.log(`Payment token is ${result.token}`);
-          statusContainer.innerHTML = "Payment Successful";
-        } else {
-          let errorMessage = `Tokenization failed with status: ${result.status}`;
-          if (result.errors) {
-            errorMessage += ` and errors: ${JSON.stringify(
-              result.errors
-            )}`;
-          }
-
-          throw new Error(errorMessage);
-        }
-      } catch (e) {
-        console.error(e);
-        statusContainer.innerHTML = "Payment Failed";
-      }
-    });
-  </script>
-</body>
-<!--
-<body>
-
-    <div class="form-container">
-    
-        <div id="payment-form">
-            <div id="payment-status-container"></div>
-            <div id="card-container"></div>
-            <button id="card-button" type="button">Pay</button>
-          </div>
-
-    <!-- initialize Square payment object 
-    <script type="module">
-        const payments = Square.payments('sandbox-sq0idb-RT3u-HhCpNdbMiGg5aXuVg', 'TC4Z3ZEBKRXRH');
-        // create card payment method object: tokenizes card info
-        const card = await payments.card();
-        // Square's card container form
-        await card.attach('#card-container');
-
-        const cardButton = document.getElementById('card-button')
-        cardButton.addEventListener('click', async () => {
-            const statusContainer = document.getElementById('payment-status-container');
-
-            try{
-                const result = await card.tokenize();
-                if(result.status === 'OK'){
-                    console.log('Payment token is ${result.token}');
-                    statusContainer.innerHTML = "Payment Succesful";
-
-                } 
-            else {
-                let errorMessage = 'Tokenization failed with status: ${result.status}';
-                if (result.errors){
-                    errorMessage += ' and errors: ${JSON.stringify( result.errors)}';
-                }        
-            throw new Error(errorMessage);                
-            }
-        } catch (e){
-            console.error(e);
-            statusContainer.innerHTML = "Payment Failed";
-        }
-    });
-
-    </script>
-    <!--
-        <h2>Payment Information</h2>
-        <form method="POST" > 
+        <form method="POST" action="{% url 'pay_class' %}">
             {% csrf_token %}
-
-            <label for="test_amount">Test Amount:</label>
-            <input type="number" id="test_amount" name="test_amount" required>
-
-            <label for="card_number">Card Number:</label>
-            <input type="number" id="card_number" name="card_number" required>
-        
-        -->
-            <!-- Square's card container form -->
-
-
-            <!--
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
-
-            <label for="card_number">Card Number:</label>
-            <input type="number" id="card_number" name="card_number" size="16"required>
-
-            <label for="card_cvv">CVV:</label>
-            <input type="number" id="card_cvv" name="card_cvv" size="3"required>
-
-            <button type="submit">Add Class</button>
-            <br>
-            </div>
-                <div class="form-container">
-                <h2>Billing Information</h2>
+            <input type="text" id="name" required>
+            <div id="card-element"></div>
     
-            </div>
-            -->
-        
-            <button type="submit">Submit Payment</button>
+            <div id="card-errors" role="alert"></div>
+            
+            <button id="submit-button" type="submit">Pay</button>
         </form>
+
+    <!--imports Stripe.js library for testing in sandbox env --> 
+    <script src="https://js.stripe.com/v3/"></script>
+<!--
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize Stripe with your publishable key
+                const stripe = Stripe('pk_test_51QKk4CQV8qrqlej6IdZo42X5hUkrtouf6CsqzfoU6gVoYvvjmkJWmMtY99xHGERaAsBtS3EQ7UGE7zOwf4iMtLgh00e06hBUhM');
     
-</body>
--->
+                // Create an instance of Stripe Elements
+                const elements = stripe.elements();
+    
+                // Create a Card Element and mount it to the #card-element div
+                const card = elements.create('card');
+                card.mount('#card-element');
+    
+                // Handle the form submission
+                const paymentButton = document.getElementById('submit-button');
+                paymentButton.addEventListener('click', async function(event) {
+                    event.preventDefault(); // Prevent the default form submission
+    
+                    // Disable the button to prevent multiple submissions
+                    paymentButton.disabled = true;
+    
+                    // Tokenize the card details
+                    const { token, error } = await stripe.createToken(card);
+    
+                    if (error) {
+                        // Display error message
+                        document.getElementById('card-errors').textContent = error.message;
+                        paymentButton.disabled = false;
+                    } else {
+                        // Token created successfully
+                        console.log('Token:', token.id);
+    
+                        // Send the token to the Django backend
+                        try {
+                            const response = await fetch('/pay_class/', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': getCookie('csrftoken'), // Include CSRF token for security
+                                },
+                                body: JSON.stringify({ token: token.id }),
+                            });
+    
+                            const data = await response.json();
+                            if (data.success) {
+                                alert('Payment Successful!');
+                            } else {
+                                alert('Payment Failed: ' + data.message);
+                            }
+                        } catch (err) {
+                            console.error('Error sending token to the server:', err);
+                        } finally {
+                            paymentButton.disabled = false;
+                        }
+                    }
+                });
+            });
+    
+            // Helper function to get the CSRF token from cookies (Django requires it)
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+        </script>
+    -->
+    </body>
+</head>
+
 </html>

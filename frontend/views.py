@@ -466,7 +466,9 @@ def owner_setup(request):
         
         if user_acct_id is None:
             messages.error(request, 'User account ID not found in session.')
-            return redirect('error_page')  # Redirect to an error page or handle appropriately
+            # No URL exists for 'error_page'
+          #  return redirect('error_page')  # Redirect to an error page or handle appropriately
+            return redirect('login')
 
         #user_acct_id = get_user_acct_id_by_username(username)
         #convert_user_to_owner(user_acct_id)
@@ -476,7 +478,8 @@ def owner_setup(request):
         # Check if gym creation was successful
         if gym_id is None:
             messages.error(request, 'Failed to create gym. Please try again.')
-            return redirect('error_page')  # Redirect to an error page if gym creation fails
+            #return redirect('error_page')  # Redirect to an error page if gym creation fails
+            return redirect('login')
 
         
         # Step 2: Set the owner_id for the created gym
@@ -1031,6 +1034,70 @@ def get_gymID(request):
             return JsonResponse({'error': 'No gym_id provided'}, status=400)
     else:
         return JsonResponse({'error': 'No gym_id provided'}, status=400)
-        
 
+# disabling CSRF security for simplicity -- security issues MAKE SURE TO FIX THIS
+#from django.views.decorators.csrf import csrf_exempt
+import stripe
+import json
+
+stripe.api_key = "sk_test_51QKk4CQV8qrqlej6jasdORqdZrgLmXMqMQd5OJUpQJlxPENFhQ3ULjg7V9eVgo5rhGpTkw5WC099j8JSBr9NjSui009NFAH0ac"
+
+def pay_class(request):
+    print(f"Request Method: {request.method}")
+    print(request.POST)
+    if request.method == 'POST':
+        print(f"The method is not POST!!!")
+        try:
+            # check if JSON is used form 'fetch' in pay_class template
+            if request.content_type == 'application/json':
+                data = json.loads(request.body)
+            else:
+                # form data is used so direct POST submission
+                data = request.POST
+            
+            token = data.get('token')
+            if not token:
+                return JsonResponse({'success': False, 'message': 'Token not received'})
+
+            # Use the token to create a payment with Stripe
+            charge = stripe.Charge.create(
+                amount=5000,  # Amount in cents ($50.00)
+                currency="usd",
+                description="Gym Membership",
+                source=token,
+            )
+
+            # Return success response
+            return JsonResponse({'success': True})
+
+        except stripe.error.CardError as e:
+            # Error handling
+            return JsonResponse({'success': False, 'message': str(e)})
+        except json.JSONDecodeError:
+            # Error handling for invalid JSON
+            return JsonResponse({'success': False, 'message': 'Invalid JSON payload'})
+    return JsonResponse({'success': False, 'message': 'GET request not allowed'})
+'''
+    
+    # Error for non-POST request
+    return JsonResponse({'success': False, 'message': 'Invalid request method, not POST'})
+        try:
+            # token used tp create payment with stripe
+            charge = stripe.Charge.create(
+                amount=5000,  # Amount in cents ($50.00)
+                currency="usd",
+                description="Gym Membership",
+                source=token,
+            )
+
+            # success
+            return JsonResponse({'success': True})
+
+        except stripe.error.CardError as e:
+            # error handling
+            return JsonResponse({'success': False, 'message': str(e)})
+
+    # error for non POST request
+    return JsonResponse({'success': False, 'message': 'Invalid request method, not POST'})
+    '''
 

@@ -38,6 +38,5 @@ urlpatterns = [
     path('get_gymID/', get_gymID, name='get_gymID'),
     path('add_class/', add_class, name='add_class'),
     path('pay_class/', pay_class, name='pay_class'),
-    path('view_class_info/', view_class_info, name='view_cass_info')
    # path('delete-class/', delete_class, name='delete_class')
 ]
