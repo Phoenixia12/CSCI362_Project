@@ -1037,35 +1037,63 @@ def get_gymID(request):
 # Square payment using sandbox token
 
 from square.client import Client
+from django import forms
 
-def submit_payment(request):
-    client = Client(
-        access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
-        environment="sandbox"
-    )
+def pay_class(request):
+    if request.method == "POST":
+        client = Client(
+            access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
+            environment="sandbox"
+        )
 
-    #create_payment method returns object with transaction details
-    result = client.payments.create_payment({
+        test_amount = request.POST.get('test_amount'),
+        #first_name = request.POST.get('first_name'),
+        #last_name = request.POST.get('last_name'),
+        card_number = request.POST.get('card_number'),
+        #card_cvv = request.POST.get('card_cvv')
+        #location_id = ???
 
-    #unique identifier represents authorized payment
-    #replace with card nonce from frontend payment form
-    "source_id": "cnon:card-nonce-ok",
+        #check if valid
 
-    #unique key for each transaction so payment is only processed once
-    #replace  "unique_key_for_each_transaction"?
-    "idempotency_key": "unique_key_for_each_transaction",
-    "amount_money": {
-        #pull amount from SQL class price. pull from cache?
-        "amount": 1000,  # in the smallest currency unit, e.g., cents for USD
-        "currency": "USD"
+        #payment parameters
+        body = {
+            #creates unique key for each transaction
+            "idempotency_key": str(uuid.uuid4()),
+            "source_id": card_number,
+            "ammount_money":{
+                "amount": test_amount,
+                "currency": "USD"
+            },
+            #"location_id": location_id
+            
         }
-    })
-    if result.is_success():
-        print("Payment Success:", result.body)
-    else:
-        print("Payment Failed:", result.errors)
+        #API call
+        payments_api = client.paymentsresult = payments_api.create_payment(body)
+        #create_payment method returns object with transaction details
+
+        if result.is_success():
+            print("Payment Success:", result.body)
+        else:
+            print("Payment Failed:", result.errors)
 
 
+    return render(request, "pay_class.html")
+'''
+            result = client.payments.create_payment({
+        #unique identifier represents authorized payment
+        #replace with card nonce from frontend payment form
+        "source_id": "cnon:card-nonce-ok",
+
+        #unique key for each transaction so payment is only processed once
+        #replace  "unique_key_for_each_transaction"?
+        "idempotency_key": "unique_key_for_each_transaction",
+        "amount_money": {
+            #pull amount from SQL class price. pull from cache?
+            "amount": 1000,  # in the smallest currency unit, e.g., cents for USD
+            "currency": "USD"
+            }
+        })
+'''
 
 
 

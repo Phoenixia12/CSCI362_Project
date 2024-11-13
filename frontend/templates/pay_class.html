@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Class</title>
+    <title>Pay Class</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    
+    <link rel="stylesheet" href="/reference/sdks/web/static/styles/code-preview.css" preload>
+
+<!--
     <style>
         /* General form styling */
         body {
@@ -130,21 +131,117 @@
             box-sizing: border-box;
         }
     </style>
+-->   
     
-    
-</head>
+    <!--imports Square's SDK for testing in sandbox env --> 
+    <script src="https://sandbox.web.squarecdn.com/v2/square.js"></script>
 
-</script>
+
+</head>
+<body>
+  <div id="payment-form">
+    <div type="number" id="payment-status-container"></div>
+    <div type="number" id="card-container"></div>
+    <button id="card-button" type="button">Pay</button>
+  </div>
+  <script type="module">
+    // initialize square payments object w/ application ID and seller location ID
+    const payments = Square.payments('sandbox-sq0idb-l1OvnKtKdAGby_ooCMWr-w', 'LQRBC20NRTG0Y');
+    // card instance -- has properties needed to take payment
+    const card = await payments.card();
+    // card instance attatched to empty DOM element -- payment card form renders into empty elem
+    await card.attach('#card-container');
+
+    //
+    const cardButton = document.getElementById('card-button');
+    cardButton.addEventListener('click', async () => {
+      const statusContainer = document.getElementById('payment-status-container');
+
+      try {
+        // Retrieves payment from token from card instance by calling tokenize method
+        const result = await card.tokenize();
+        if (result.status === 'OK') {
+          console.log(`Payment token is ${result.token}`);
+          statusContainer.innerHTML = "Payment Successful";
+        } else {
+          let errorMessage = `Tokenization failed with status: ${result.status}`;
+          if (result.errors) {
+            errorMessage += ` and errors: ${JSON.stringify(
+              result.errors
+            )}`;
+          }
+
+          throw new Error(errorMessage);
+        }
+      } catch (e) {
+        console.error(e);
+        statusContainer.innerHTML = "Payment Failed";
+      }
+    });
+  </script>
+</body>
+<!--
+<body>
+
     <div class="form-container">
-        
+    
+        <div id="payment-form">
+            <div id="payment-status-container"></div>
+            <div id="card-container"></div>
+            <button id="card-button" type="button">Pay</button>
+          </div>
+
+    <!-- initialize Square payment object 
+    <script type="module">
+        const payments = Square.payments('sandbox-sq0idb-RT3u-HhCpNdbMiGg5aXuVg', 'TC4Z3ZEBKRXRH');
+        // create card payment method object: tokenizes card info
+        const card = await payments.card();
+        // Square's card container form
+        await card.attach('#card-container');
+
+        const cardButton = document.getElementById('card-button')
+        cardButton.addEventListener('click', async () => {
+            const statusContainer = document.getElementById('payment-status-container');
+
+            try{
+                const result = await card.tokenize();
+                if(result.status === 'OK'){
+                    console.log('Payment token is ${result.token}');
+                    statusContainer.innerHTML = "Payment Succesful";
+
+                } 
+            else {
+                let errorMessage = 'Tokenization failed with status: ${result.status}';
+                if (result.errors){
+                    errorMessage += ' and errors: ${JSON.stringify( result.errors)}';
+                }        
+            throw new Error(errorMessage);                
+            }
+        } catch (e){
+            console.error(e);
+            statusContainer.innerHTML = "Payment Failed";
+        }
+    });
+
+    </script>
+    <!--
         <h2>Payment Information</h2>
-        <form method="POST">
+        <form method="POST" > 
             {% csrf_token %}
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="test_amount">Test Amount:</label>
+            <input type="number" id="test_amount" name="test_amount" required>
 
             <label for="card_number">Card Number:</label>
             <input type="number" id="card_number" name="card_number" required>
+        
+        -->
+            <!-- Square's card container form -->
+
+
+            <!--
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
 
             <label for="card_number">Card Number:</label>
             <input type="number" id="card_number" name="card_number" size="16"required>
@@ -153,11 +250,17 @@
             <input type="number" id="card_cvv" name="card_cvv" size="3"required>
 
             <button type="submit">Add Class</button>
+            <br>
+            </div>
+                <div class="form-container">
+                <h2>Billing Information</h2>
+    
+            </div>
+            -->
+        
+            <button type="submit">Submit Payment</button>
         </form>
-    </div>
-    <div class="form-container">
-        <h2>Billing Information</h2>
-
-    </div>
+    
 </body>
+-->
 </html>
