@@ -1038,39 +1038,13 @@ def get_gymID(request):
 # disabling CSRF security for simplicity -- security issues MAKE SURE TO FIX THIS
 #from django.views.decorators.csrf import csrf_exempt
 
-'''
-from square.http.auth.o_auth_2 import BearerAuthCredentials
-from square.client import Client
-import os
-
-def make_client_test (request):
-    client = Client(
-        bearer_auth_credentials=BearerAuthCredentials(
-            access_token=os.environ['EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI']
-        ),
-        environment='sandbox')
-
-    result = client.locations.list_locations()
-
-    if result.is_success():
-        for location in result.body['locations']:
-            print(f"{location['id']}: ", end="")
-            print(f"{location['name']}, ", end="")
-            print(f"{location['address']['address_line_1']}, ", end="")
-            print(f"{location['address']['locality']}")
-
-    elif result.is_error():
-        for error in result.errors:
-            print(error['category'])
-            print(error['code'])
-            print(error['detail'])
-'''
 
 from django import forms
 import square
 from square.client import Client
 import json
 
+# From Square: https://developer.squareup.com/explorer/square/payments-api/create-payment
 def pay_class(request):
    # if request.method == "POST":
         client = Client(
@@ -1086,6 +1060,7 @@ def pay_class(request):
         body = {
             #creates unique key for each transaction
             "idempotency_key": str(uuid.uuid4()),
+            # In future, replace  cnon:card-nonce-ok token received from HTML
             "source_id": "cnon:card-nonce-ok",
             "ammount_money":{
                 "amount": test_amount,

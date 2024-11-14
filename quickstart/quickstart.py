@@ -4,7 +4,7 @@ import os
 
 client = Client(
     bearer_auth_credentials=BearerAuthCredentials(
-        access_token=os.environ['EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI']
+        access_token=os.environ['SQUARE_ACCESS_TOKEN']
     ),
     environment='sandbox')
 
