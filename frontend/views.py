@@ -1037,67 +1037,99 @@ def get_gymID(request):
 
 # disabling CSRF security for simplicity -- security issues MAKE SURE TO FIX THIS
 #from django.views.decorators.csrf import csrf_exempt
-import stripe
+
+'''
+from square.http.auth.o_auth_2 import BearerAuthCredentials
+from square.client import Client
+import os
+
+def make_client_test (request):
+    client = Client(
+        bearer_auth_credentials=BearerAuthCredentials(
+            access_token=os.environ['EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI']
+        ),
+        environment='sandbox')
+
+    result = client.locations.list_locations()
+
+    if result.is_success():
+        for location in result.body['locations']:
+            print(f"{location['id']}: ", end="")
+            print(f"{location['name']}, ", end="")
+            print(f"{location['address']['address_line_1']}, ", end="")
+            print(f"{location['address']['locality']}")
+
+    elif result.is_error():
+        for error in result.errors:
+            print(error['category'])
+            print(error['code'])
+            print(error['detail'])
+'''
+
+from django import forms
+import square
+from square.client import Client
 import json
 
-stripe.api_key = "sk_test_51QKk4CQV8qrqlej6jasdORqdZrgLmXMqMQd5OJUpQJlxPENFhQ3ULjg7V9eVgo5rhGpTkw5WC099j8JSBr9NjSui009NFAH0ac"
-
 def pay_class(request):
-    print(f"Request Method: {request.method}")
-    print(request.POST)
-    if request.method == 'POST':
-        print(f"The method is not POST!!!")
-        try:
-            # check if JSON is used form 'fetch' in pay_class template
-            if request.content_type == 'application/json':
-                data = json.loads(request.body)
-            else:
-                # form data is used so direct POST submission
-                data = request.POST
-            
-            token = data.get('token')
-            if not token:
-                return JsonResponse({'success': False, 'message': 'Token not received'})
+   # if request.method == "POST":
+        client = Client(
+            access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
+            environment="sandbox"
+        )
 
-            # Use the token to create a payment with Stripe
-            charge = stripe.Charge.create(
-                amount=5000,  # Amount in cents ($50.00)
-                currency="usd",
-                description="Gym Membership",
-                source=token,
-            )
-
-            # Return success response
-            return JsonResponse({'success': True})
-
-        except stripe.error.CardError as e:
-            # Error handling
-            return JsonResponse({'success': False, 'message': str(e)})
-        except json.JSONDecodeError:
-            # Error handling for invalid JSON
-            return JsonResponse({'success': False, 'message': 'Invalid JSON payload'})
-    return JsonResponse({'success': False, 'message': 'GET request not allowed'})
-'''
+        # payment parameters
+        test_amount = request.POST.get('test_amount'),
+        #card_number = request.POST.get('card_number'),
     
-    # Error for non-POST request
-    return JsonResponse({'success': False, 'message': 'Invalid request method, not POST'})
-        try:
-            # token used tp create payment with stripe
-            charge = stripe.Charge.create(
-                amount=5000,  # Amount in cents ($50.00)
-                currency="usd",
-                description="Gym Membership",
-                source=token,
-            )
+        result = client.payments.create_payment(
+        body = {
+            #creates unique key for each transaction
+            "idempotency_key": str(uuid.uuid4()),
+            "source_id": "cnon:card-nonce-ok",
+            "ammount_money":{
+                "amount": test_amount,
+                "currency": "USD"
+            },
+            "autocomplete": False,
+            "location_id": "LQRBC20NRTG0Y",
+            "accept_partial_authorization": False,
+            "external_details": {
+            "type": "' '",
+            "source": "' '"
+        }
+            
+        })
 
-            # success
-            return JsonResponse({'success': True})
+        if result.is_success():
+            print(result.body)
+        elif result.is_error():
+            print(result.errors)
+        
+        return render(request, "pay_class.html")
 
-        except stripe.error.CardError as e:
-            # error handling
-            return JsonResponse({'success': False, 'message': str(e)})
+'''
+def pay_class_test(request):
+    result = client.payments.create_payment(
+    body = {
+        "source_id": "cnon:card-nonce-ok",
+        "idempotency_key": "e12df9da-3ae1-4a8b-a5ed-7d394866a5ac",
+        "amount_money": {
+        "amount": 100,
+        "currency": "USD"
+        },
+        "autocomplete": False,
+        "location_id": "LQRBC20NRTG0Y",
+        "accept_partial_authorization": False,
+        "external_details": {
+        "type": "' '",
+        "source": "' '"
+        }
+    }
+    )
 
-    # error for non POST request
-    return JsonResponse({'success': False, 'message': 'Invalid request method, not POST'})
-    '''
-
+    if result.is_success():
+        print(result.body)
+    elif result.is_error():
+        print(result.errors)
+'''

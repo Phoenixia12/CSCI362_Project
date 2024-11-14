@@ -1,233 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pay Class</title>
-    {% load static %}
-    <link rel="stylesheet" href="/reference/sdks/web/static/styles/code-preview.css" preload>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pay Class</title>
+        {% load static %}
+        <link rel="stylesheet" href="/reference/sdks/web/static/styles/code-preview.css" preload>
+        <script src="https://sandbox.web.squarecdn.com/v2/square.js"></script>
 
-
-    <style>
-        /* General form styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .form-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .form-container label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        .form-container input[type="text"],
-        .form-container input[type="number"],
-        .form-container input[type="date"],
-        .form-container select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .form-container .float-left {
-            float: left;
-            width: 48%;
-            margin-right: 2%;
-        }
-
-        .form-container .float-right {
-            float: right;
-            width: 48%;
-        }
-          
-        
-        .form-container button {
-            width: 100%;
-            padding: 12px;
-            background-color: #e67c12;
-            border: none;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-
-        .form-container button:hover {
-            background-color: #d95d0f;
-        }
-
-        .button_top_left{
-            float: left;
-            width: 20%;
-
-        }
-        .form-container p {
-            margin-bottom: 10px;
-            color: #666;
-        }
-
-        @media (max-width: 600px) {
-            .form-container {
-                padding: 20px;
+        <style>
+            /* General form styling */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
             }
+    
+            .form-container {
+                max-width: 600px;
+                margin: 50px auto;
+                background-color: #fff;
+                padding: 30px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+    
+            .form-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+    
+            .form-container label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: #555;
+            }
+    
+            .form-container input[type="text"],
+            .form-container input[type="number"],
+            .form-container input[type="date"],
+            .form-container input[type="time"], 
+            .form-container select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+    
+            .form-container .float-left {
+                float: left;
+                width: 48%;
+                margin-right: 2%;
+            }
+    
+            .form-container .float-right {
+                float: right;
+                width: 48%;
+            }
+              
+            
+            .form-container button {
+                width: 100%;
+                padding: 12px;
+                background-color: #e67c12;
+                border: none;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .form-container button:hover {
+                background-color: #d95d0f;
+            }
+    
+            .button_top_left{
+                float: left;
+                width: 20%;
+    
+            }
+            .form-container p {
+                margin-bottom: 10px;
+                color: #666;
+            }
+    
+            @media (max-width: 600px) {
+                .form-container {
+                    padding: 20px;
+                }
+            }
+       
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+    
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                z-index: 1;
+            }
+    
+            .dropdown-content div {
+                padding: 8px;
+                cursor: pointer;
+            }
+    
+            .dropdown-content div:hover {
+                background-color: #f1f1f1;
+            }
+    
+            .dropdown:hover .dropdown-content,
+            .dropdown input:focus + .dropdown-content {
+                display: block;
+            }
+    
+            input {
+                width: 200px;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+        </style>
+
+    <script>
+        const appId = 'sandbox-sq0idb-l1OvnKtKdAGby_ooCMWr-w';
+        const locationId = 'LQRBC20NRTG0Y';
+        
+        async function initializeCard(payments) {
+            const card = await payments.card();
+            await card.attach('#card-container');
+            return card;
         }
-   
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+        
+        document.addEventListener('DOMContentLoaded', async function () {
+            if (!window.Square) {
+            throw new Error('Square.js failed to load properly');
+            }
+            const payments = window.Square.payments(appId, locationId);
+            let card;
+            try {
+            card = await initializeCard(payments);
+            } catch (e) {
+            console.error('Initializing Card failed', e);
+            return;
+            }});
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 160px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            z-index: 1;
-        }
+    </script>
+    </head>
 
-        .dropdown-content div {
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        .dropdown-content div:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content,
-        .dropdown input:focus + .dropdown-content {
-            display: block;
-        }
-
-        input {
-            width: 200px;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-    </style>
-
-
-</head>
-
-    <body>
+      <body>
         <div class="form-container">
-            <h1>Payment Form</h1>
+        
+        <h2>Pay for Class</h2>
+            <form method="POST">
+            {% csrf_token %}
+
+        
+        <div id="payment-form">
+          <div id="payment-status-container"></div>
+          <div id="card-container"></div>
+          <button id="card-button" type="button">Pay</button>
         </div>
 
-        <form method="POST" action="{% url 'pay_class' %}">
-            {% csrf_token %}
-            <input type="text" id="name" required>
-            <div id="card-element"></div>
-    
-            <div id="card-errors" role="alert"></div>
-            
-            <button id="submit-button" type="submit">Pay</button>
-        </form>
-
-    <!--imports Stripe.js library for testing in sandbox env --> 
-    <script src="https://js.stripe.com/v3/"></script>
-<!--
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Initialize Stripe with your publishable key
-                const stripe = Stripe('pk_test_51QKk4CQV8qrqlej6IdZo42X5hUkrtouf6CsqzfoU6gVoYvvjmkJWmMtY99xHGERaAsBtS3EQ7UGE7zOwf4iMtLgh00e06hBUhM');
-    
-                // Create an instance of Stripe Elements
-                const elements = stripe.elements();
-    
-                // Create a Card Element and mount it to the #card-element div
-                const card = elements.create('card');
-                card.mount('#card-element');
-    
-                // Handle the form submission
-                const paymentButton = document.getElementById('submit-button');
-                paymentButton.addEventListener('click', async function(event) {
-                    event.preventDefault(); // Prevent the default form submission
-    
-                    // Disable the button to prevent multiple submissions
-                    paymentButton.disabled = true;
-    
-                    // Tokenize the card details
-                    const { token, error } = await stripe.createToken(card);
-    
-                    if (error) {
-                        // Display error message
-                        document.getElementById('card-errors').textContent = error.message;
-                        paymentButton.disabled = false;
-                    } else {
-                        // Token created successfully
-                        console.log('Token:', token.id);
-    
-                        // Send the token to the Django backend
-                        try {
-                            const response = await fetch('/pay_class/', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'X-CSRFToken': getCookie('csrftoken'), // Include CSRF token for security
-                                },
-                                body: JSON.stringify({ token: token.id }),
-                            });
-    
-                            const data = await response.json();
-                            if (data.success) {
-                                alert('Payment Successful!');
-                            } else {
-                                alert('Payment Failed: ' + data.message);
-                            }
-                        } catch (err) {
-                            console.error('Error sending token to the server:', err);
-                        } finally {
-                            paymentButton.disabled = false;
-                        }
-                    }
-                });
-            });
-    
-            // Helper function to get the CSRF token from cookies (Django requires it)
-            function getCookie(name) {
-                let cookieValue = null;
-                if (document.cookie && document.cookie !== '') {
-                    const cookies = document.cookie.split(';');
-                    for (let i = 0; i < cookies.length; i++) {
-                        const cookie = cookies[i].trim();
-                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                            break;
-                        }
-                    }
+        <script type="module">
+          const payments = Square.payments('sandbox-sq0idb-sandbox-sq0idb-l1OvnKtKdAGby_ooCMWr-w-HhCpNdbMiGg5aXuVg', 'LQRBC20NRTG0Y');
+          const card = await payments.card();
+          await card.attach('#card-container');
+      
+          const cardButton = document.getElementById('card-button');
+          cardButton.addEventListener('click', async () => {
+            const statusContainer = document.getElementById('payment-status-container');
+      
+            try {
+              const result = await card.tokenize();
+              if (result.status === 'OK') {
+                console.log(`Payment token is ${result.token}`);
+                statusContainer.innerHTML = "Payment Successful";
+              } else {
+                let errorMessage = `Tokenization failed with status: ${result.status}`;
+                if (result.errors) {
+                  errorMessage += ` and errors: ${JSON.stringify(
+                    result.errors
+                  )}`;
                 }
-                return cookieValue;
+      
+                throw new Error(errorMessage);
+              }
+            } catch (e) {
+              console.error(e);
+              statusContainer.innerHTML = "Payment Failed";
             }
+          });
         </script>
-    -->
-    </body>
-</head>
+      </body>
+      
 
+<!--
+
+    <head>
+        <link rel="stylesheet" href="/reference/sdks/web/static/styles/code-preview.css" preload>
+        <script src="https://sandbox.web.squarecdn.com/v2/square.js"></script>
+      </head>
+      <body>
+        <div id="payment-form">
+          <div id="payment-status-container"></div>
+          <div id="card-container"></div>
+          <button id="card-button" type="button">Pay</button>
+        </div>
+        <script type="module">
+          const payments = Square.payments(`sandbox-sq0idb-sandbox-sq0idb-l1OvnKtKdAGby_ooCMWr-w-HhCpNdbMiGg5aXuVg`, `LQRBC20NRTG0Y`);
+          const card = await payments.card();
+          await card.attach(`#card-container`);
+      
+          const cardButton = document.getElementById(`card-button`);
+          cardButton.addEventListener(`click`, async () => {
+            const statusContainer = document.getElementById(`payment-status-container`);
+      
+            try {
+              const result = await card.tokenize();
+              if (result.status === `OK`) {
+                console.log(`Payment token is ${result.token}`);
+                statusContainer.innerHTML = "Payment Successful";
+              } else {
+                let errorMessage = `Tokenization failed with status: ${result.status}`;
+                if (result.errors) {
+                  errorMessage += ` and errors: ${JSON.stringify(
+                    result.errors
+                  )}`;
+                }
+      
+                throw new Error(errorMessage);
+              }
+            } catch (e) {
+              console.error(e);
+              statusContainer.innerHTML = "Payment Failed";
+            }
+          });
+        </script>
+      </body>
+    -->      
 </html>
