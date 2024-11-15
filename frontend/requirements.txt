@@ -1,0 +1,5 @@
+squareup==22.0.0.20220921
+configparser
+fastapi
+uvicorn
+aiofiles 

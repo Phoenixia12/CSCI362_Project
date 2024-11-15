@@ -1045,28 +1045,35 @@ from square.client import Client
 import json
 
 # From Square: https://developer.squareup.com/explorer/square/payments-api/create-payment
+#      also check: https://developer.squareup.com/forums/t/python-and-square-payment-form-in-windows/1218 
 def pay_class(request):
-   # if request.method == "POST":
+    if request.method == "POST":
         client = Client(
             access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
             environment="sandbox"
         )
 
+        # get payment token from frontend
+        data = json.loads(request.body)
+        token = data.get('token')
+
+        if not token:
+            return JsonResponse({'success': False, 'message': 'No payment token provided'}, status=400)
+
         # payment parameters
-        test_amount = request.POST.get('test_amount'),
-        #card_number = request.POST.get('card_number'),
-    
+
         result = client.payments.create_payment(
         body = {
             #creates unique key for each transaction
             "idempotency_key": str(uuid.uuid4()),
             # In future, replace  cnon:card-nonce-ok token received from HTML
-            "source_id": "cnon:card-nonce-ok",
+            #           and get amount from db or cache
+            "source_id": token, #"cnon:card-nonce-ok",
             "ammount_money":{
-                "amount": test_amount,
+                "amount": 100,
                 "currency": "USD"
             },
-            "autocomplete": False,
+            "autocomplete": True,
             "location_id": "LQRBC20NRTG0Y",
             "accept_partial_authorization": False,
             "external_details": {
@@ -1077,11 +1084,14 @@ def pay_class(request):
         })
 
         if result.is_success():
-            print(result.body)
+            return JsonResponse({'success': True, 'message': 'Payment processed successfully!', 'data': result.body})
+            #print(result.body)
         elif result.is_error():
-            print(result.errors)
-        
-        return render(request, "pay_class.html")
+            return JsonResponse({'success': False, 'message': 'Payment failed', 'errors': result.errors}, status=400)
+            #print(result.errors)
+
+    # render payment form if method != POST    
+    return render(request, "pay_class.html")
 
 '''
 def pay_class_test(request):
