@@ -1043,78 +1043,91 @@ from django import forms
 import square
 from square.client import Client
 import json
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 # From Square: https://developer.squareup.com/explorer/square/payments-api/create-payment
 #      also check: https://developer.squareup.com/forums/t/python-and-square-payment-form-in-windows/1218 
+
+@csrf_exempt  # Remove this if your CSRF token is working correctly
 def pay_class(request):
     if request.method == "POST":
-        client = Client(
-            access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
-            environment="sandbox"
-        )
-
-        # get payment token from frontend
-        data = json.loads(request.body)
-        token = data.get('token')
-
-        if not token:
-            return JsonResponse({'success': False, 'message': 'No payment token provided'}, status=400)
-
-        # payment parameters
-
-        result = client.payments.create_payment(
-        body = {
-            #creates unique key for each transaction
-            "idempotency_key": str(uuid.uuid4()),
-            # In future, replace  cnon:card-nonce-ok token received from HTML
-            #           and get amount from db or cache
-            "source_id": token, #"cnon:card-nonce-ok",
-            "ammount_money":{
-                "amount": 100,
-                "currency": "USD"
-            },
-            "autocomplete": True,
-            "location_id": "LQRBC20NRTG0Y",
-            "accept_partial_authorization": False,
-            "external_details": {
-            "type": "' '",
-            "source": "' '"
-        }
+        try:
+            logger.debug(f'Request body: {request.body}')  # Log the raw request body
             
-        })
+            # Parse JSON data
+            data = json.loads(request.body)
+            logger.debug(f'Parsed JSON data: {data}')  # Log parsed data
 
-        if result.is_success():
-            return JsonResponse({'success': True, 'message': 'Payment processed successfully!', 'data': result.body})
-            #print(result.body)
-        elif result.is_error():
-            return JsonResponse({'success': False, 'message': 'Payment failed', 'errors': result.errors}, status=400)
-            #print(result.errors)
+            # Retrieve the token from the parsed JSON
+            token = data.get('token')
+            if not token:
+                logger.error('Token not provided in request')
+                return JsonResponse({'success': False, 'message': 'Token not provided'}, status=400)
 
-    # render payment form if method != POST    
+            # Payment logic 
+            client = Client(
+                access_token="EAAAl-QdxeZFdlyEpI398pNIRXIsD34v6jeN2DsHVq5LvzjhDjdsREj1gmu9ycbI",
+                environment="sandbox"
+            )
+
+            # get payment token from frontend
+            #data = json.loads(request.body)
+            #token = data.get('token')
+
+            if not token:
+                return JsonResponse({'success': False, 'message': 'No payment token provided'}, status=400)
+
+            # payment parameters
+
+            result = client.payments.create_payment(
+            body = {
+                #creates unique key for each transaction
+                "idempotency_key": str(uuid.uuid4()),
+                # In future, replace  cnon:card-nonce-ok token received from HTML
+                #           and get amount from db or cache
+                "source_id": token, #"cnon:card-nonce-ok",
+                "amount_money":{
+                    "amount": 100,
+                    "currency": "USD"
+                },
+                "autocomplete": True,
+                "location_id": "LQRBC20NRTG0Y",
+                #"accept_partial_authorization": False,
+                #"external_details": {
+                #"type": "' '",
+                #"source": "' '"
+            }
+                
+          #  }
+            )
+            # For now, we'll simulate a success response for debugging
+            logger.debug(f'Token received: {token}')
+
+            # Example success response
+            # On success, include the redirect URL in the response
+           # messages.success(request, 'Succesfull Payment.')
+          #  return redirect('home_owner')
+            return JsonResponse({
+                'success': True,
+                'message': 'Payment processed successfully!',
+                'redirect_url': '/home_owner/'
+            })
+        
+        except json.JSONDecodeError:
+            logger.error('Failed to decode JSON data')
+            return JsonResponse({'success': False, 'message': 'Invalid JSON data'}, status=400)
+        
+        except Exception as e:
+            logger.exception('An error occurred while processing the payment')
+            return JsonResponse({'success': False, 'message': str(e)}, status=400)
+
     return render(request, "pay_class.html")
-
-'''
-def pay_class_test(request):
-    result = client.payments.create_payment(
-    body = {
-        "source_id": "cnon:card-nonce-ok",
-        "idempotency_key": "e12df9da-3ae1-4a8b-a5ed-7d394866a5ac",
-        "amount_money": {
-        "amount": 100,
-        "currency": "USD"
-        },
-        "autocomplete": False,
-        "location_id": "LQRBC20NRTG0Y",
-        "accept_partial_authorization": False,
-        "external_details": {
-        "type": "' '",
-        "source": "' '"
-        }
-    }
-    )
-
-    if result.is_success():
-        print(result.body)
-    elif result.is_error():
-        print(result.errors)
-'''
+    # If it's not a POST request, return an error
+    #return JsonResponse({'success': False, 'message': 'Invalid request method'}, status=405)
+        
+    
