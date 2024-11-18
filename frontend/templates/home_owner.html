@@ -182,7 +182,7 @@
             </div>
             <h3>Add a New Class</h3>
             <button onclick="window.location.href='{% url 'add_class' %}'">Add Class</button>
-            
+            <button onclick="window.location.href='{% url 'pay_class' %}'">Pay Class Test</button>
         </div>
 
         <div id="members" class="tab-content">
@@ -269,9 +269,33 @@
             form.submit();
         }
 
-        
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');  
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',  
+            events: function(fetchInfo, successCallback, failureCallback) {
+                $.ajax({
+                    url: '/get_classes/',  
+                    data: {
+                        gym_id: userGymID  
+                    },
+                    success: function(data) {
+                        print('success')
+                        successCallback(data);  
+                    },
+                    error: function() {
+                        failureCallback();
+                    }
+                });
+            },
+            eventClick: function(info){
+                // Redirect to view_class_info when clicked
+                window.location.href = info.event.extendedProps.url;
+            }
+        });
 
-   
+        calendar.render();
+    });
 
     function showTab(tabId) {
         const tabs = document.querySelectorAll('.tab-content');
@@ -293,17 +317,7 @@
             initializeCalendar(); 
         }
     }
-    
-    //function getEvents(){
-        //window.classevents = new Array();
-            //for(class_event in class_info){
-               // var locevent = 
-                //{'title': class_event.class_name,
-               // 'start': class_event.data_date};
-               // classevents.push(JSON.parse(locevent));
-        
-           // }
-    //}
+
     function initializeCalendar() {
         const calendarEl = document.getElementById('calendar');
         const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -347,13 +361,8 @@
                 alert('Selected Date: ' + info.dateStr);
             }
         });
-        
-       
         calendar.render();
-        
     }
-
-
 
     showTab('home');
 

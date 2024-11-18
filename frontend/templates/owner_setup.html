@@ -85,7 +85,19 @@
     </style>
 </head>
 <body>
+<!--
+    <script>
+        function randomNumber() {
+    return Math.floor(100000 + Math.random() * 900000);
+}   
 
+    document.addEventListener("DOMContentLoaded", function (){
+        //Generate uinque ID and retreive gym ID when page loads
+        document.getElementById("gym_id").value = randomNumber();
+    });
+
+    </script>
+-->
     <div class="container">
         <h1>Set Up Your Gym</h1>
         <form method="POST">
@@ -95,7 +107,10 @@
         
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required placeholder="Enter your password">
-        
+            
+        <!-- 
+            <input type="hidden" id="gym_id" name="gym_id">
+        -->     
             <button type="submit">Create Gym</button>
         </form>
     </div>
