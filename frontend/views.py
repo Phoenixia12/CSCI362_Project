@@ -942,6 +942,7 @@ def add_class(request):
         class_type = request.POST.get('class_type')
     #    roster_id = request.POST.get('roster_id')
         gym_id = cache.get('gym_id')
+        
 
         # Generating roster_id
         roster_id = str(uuid.uuid4().fields[-1])[:5]
@@ -953,6 +954,7 @@ def add_class(request):
         with connection.cursor() as cursor:
             cursor.execute("SELECT COALESCE(MAX(class_id), 0) + 1 FROM class")
             class_id = cursor.fetchone()[0]  # Fetch the next class_id
+        
 
         # Call the stored procedure to add the class (without gym_id)
         with connection.cursor() as cursor:
@@ -996,7 +998,7 @@ def get_classes(request):
                 cursor = connection.cursor()
             # Fetch classes from the database based on gym_id
                 query = """
-                    SELECT class_name, data_date, data_time
+                    SELECT class_name, data_date, data_time, class_id
                     FROM class
                     WHERE gym_id = %s
                 """
@@ -1006,11 +1008,12 @@ def get_classes(request):
                 
             # Convert SQL results to the format required by FullCalendar
                 for event in sql_results:
-                    class_name, data_date, data_time = event
+                    class_name, data_date, data_time,class_id = event
                     events.append({
                         'title': class_name,
                         'start': f"{data_date}T{data_time}",  # Format for FullCalendar
-                        'end': f"{data_date}T{data_time}"    # Adjust end time if needed
+                        'end': f"{data_date}T{data_time}",    # Adjust end time if needed
+                        'id':class_id
                     })
 
                 return JsonResponse(events, safe=False)
@@ -1031,6 +1034,42 @@ def get_gymID(request):
             return JsonResponse({'error': 'No gym_id provided'}, status=400)
     else:
         return JsonResponse({'error': 'No gym_id provided'}, status=400)
+
+def getClass(request):
+    if request.method == 'GET':
+        gym_id = cache.get('gym_id')
+        class_id = request.GET['class_id']
+        print(class_id)
+        try:
+            conn = pyodbc.connect(
+                'DRIVER={ODBC Driver 18 for SQL Server};'
+                'SERVER=gymassisthost2.database.windows.net;'
+                'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
+                )
+        
+            cursor = conn.cursor()
+           
+            cursor.execute("SELECT class_id, instructor_id, data_date, roster, class_name, class_type FROM class WHERE class_id = ?", (class_id))
+            row = cursor.fetchone()
+            print(row[0])
+            cursor.execute("EXEC GetAccount @user_acct_id = ?", (row[1]))
+            instructor = cursor.fetchone()
+            print(instructor)
+            instructorName = str(instructor[1]) + " " + str(instructor[2])
+            
+        finally:
+            if cursor:
+                cursor.close()
+            if conn:
+                conn.close()
+    return render(request, 'class_view.html', {
+                'class_id': row[0],
+                'instructor_name':instructorName,
+                'data_date': row[2],
+                'roster_id': row[3],
+                'class_name': row[4],
+                'class_type': row[5]
+            })
         
 
 

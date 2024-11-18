@@ -37,5 +37,6 @@ urlpatterns = [
    
     path('get_classes/', get_classes, name='get_classes'),
     path('add_class/', add_class, name='add_class'),
+    path('home_owner/getClass/', getClass, name='getClass')
    # path('delete-class/', delete_class, name='delete_class')
 ]
