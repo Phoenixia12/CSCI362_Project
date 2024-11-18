@@ -231,6 +231,8 @@
             </div>
             <h3>Add a New Class</h3>
             <button onclick="window.location.href='{% url 'add_class' %}'">Add Class</button>
+            <button onclick="window.location.href='{% url 'pay_class' %}'">Pay Class Test</button>
+        </div>
         </div>
 
         <div id="members" class="tab-content">
@@ -333,9 +335,33 @@
             form.submit();
         }
 
-        
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');  
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',  
+            events: function(fetchInfo, successCallback, failureCallback) {
+                $.ajax({
+                    url: '/get_classes/',  
+                    data: {
+                        gym_id: userGymID  
+                    },
+                    success: function(data) {
+                        print('success')
+                        successCallback(data);  
+                    },
+                    error: function() {
+                        failureCallback();
+                    }
+                });
+            },
+            eventClick: function(info){
+                // Redirect to view_class_info when clicked
+                window.location.href = info.event.extendedProps.url;
+            }
+        });
 
-   
+        calendar.render();
+    });
 
     function showTab(tabId) {
         const tabs = document.querySelectorAll('.tab-content');
@@ -357,7 +383,6 @@
             initializeCalendar(); 
         }
     }
-
     function redirectToMemberDetails(user_acct_id) {
         console.log("Redirecting to member details for user_acct_id:", user_acct_id);
         if (user_acct_id) {
@@ -375,8 +400,7 @@
                // classevents.push(JSON.parse(locevent));
         
            // }
-    //}
-    const monthlyData = {{ monthly_user_counts|safe }};
+    //}const monthlyData = {{ monthly_user_counts|safe }};
     
     // Extract months and counts from the monthlyData
     const months = monthlyData.map(item => item['month']);  // Correctly access 'month'
@@ -422,8 +446,6 @@
     });
     
 
-
-
     function initializeCalendar() {
         const calendarEl = document.getElementById('calendar');
         const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -467,12 +489,8 @@
                 alert('Selected Date: ' + info.dateStr);
             }
         });
-        
-       
         calendar.render();
-        
     }
-
 
 
     let inactivityTime = 0;

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lange="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Class</title>
+    <!-- Square JavaScript -->
+    <script
+    type="text/javascript"
+    src="https://sandbox.web.squarecdn.com/v1/square.js"
+    ></script>
+
+  <style>
+    /* General form styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .form-container label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #555;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="number"],
+    .form-container input[type="date"],
+    .form-container input[type="time"], 
+    .form-container select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .form-container .float-left {
+        float: left;
+        width: 48%;
+        margin-right: 2%;
+    }
+
+    .form-container .float-right {
+        float: right;
+        width: 48%;
+    }
+      
+    
+    .form-container button {
+        width: 100%;
+        padding: 12px;
+        background-color: #e67c12;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-container button:hover {
+        background-color: #d95d0f;
+    }
+
+    .button_top_left{
+        float: left;
+        width: 20%;
+
+    }
+    .form-container p {
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    @media (max-width: 600px) {
+        .form-container {
+            padding: 20px;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        z-index: 1;
+    }
+
+    .dropdown-content div {
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .dropdown-content div:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown input:focus + .dropdown-content {
+        display: block;
+    }
+
+    input {
+        width: 200px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+</style>
+
+<meta charset="utf-8" />
+<title>Square Web Payments Quickstart</title>
+</head>
+
+<body>
+  <div class="form-container">
+        
+    <h2>Pay for Class</h2>
+    <form method="POST" action="{% url 'pay_class' %}">
+
+    <!-- {% csrf_token %} needed only when submitting using traditional HTML, trying to use AJAX fetch call so doesn't work. Have to retrieve CSRF manually from cookies -->    
+         
+    <!-- From Square: https://developer.squareup.com/reference/sdks/web/payments/card-payments -->
+
+    <div id="payment-form">
+      <div id="payment-status-container"></div>
+      <div id="card-container"></div>
+      <button id="card-button" type="button">Pay</button>
+    </div>
+
+    <script>
+
+      const appId = 'sandbox-sq0idb-l1OvnKtKdAGby_ooCMWr-w';
+      const locationId = 'LQRBC20NRTG0Y';
+      
+      let card;
+      let cardButton = document.getElementById('card-button');
+
+      // disable button initially
+      cardButton.disabled = true;
+
+      // initializes card form -- attaches Square payment form to #card-container
+      async function initializeCard(payments) {
+          try{
+            const cardObject = await payments.card();
+            await cardObject.attach('#card-container');
+            console.log('Card initialized: ', cardObject);
+            return cardObject;
+          } catch(e){
+            console.error('Error initializing card: ', e);
+            return null;
+          }}
+
+      document.addEventListener('DOMContentLoaded', async function () {
+      console.log('DOMContentLoaded event fired');
+
+      const payments = window.Square.payments(appId, locationId);
+      
+      // Wait for card initialization before enabling button
+      card = await initializeCard(payments);
+      
+      // Check if card was initialized successfully
+      if (!card) {
+          console.error('Card initialization failed.');
+          alert('There was an error initializing the payment form. Please try again later.');
+          return;
+      }
+      
+      // Enable the button after successful card initialization
+      cardButton.disabled = false;
+      console.log('Card form initialized and button enabled.');
+
+      });
+    
+      const csrfToken = getCookie('csrftoken');
+      console.log('CSRF Token:', csrfToken);  // Check if the token is being fetched correctly
+
+      // sends token to backend
+      async function createPayment(token) {
+        console.log('Sending token to server: ', token);
+        try {
+        const response = await fetch('/pay_class/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken,
+            },
+            // send the payment token to the server
+            body: JSON.stringify({ token: token })
+        });
+
+        console.log('Response object:', response);
+
+        // Check if the response is OK
+        if (!response.ok) {
+            console.error('Server responded with an error status:', response.status);
+            throw new Error('Server responded with an error');
+        }
+
+        // Check the content type to ensure it's JSON
+        const contentType = response.headers.get('Content-Type');
+        if (contentType && contentType.includes('application/json')) {
+            // Assign `data` only after ensuring the response is JSON
+            const data = await response.json();
+            console.log('Server response data:', data);
+
+            if (data.success) {
+                alert('Payment processed successfully!');
+                // Redirect if a URL is provided
+                if (data.redirect_url) {
+                    window.location.href = data.redirect_url;
+                }
+            } else {
+                alert('Payment failed: ' + data.message);
+            }
+        } else {
+            throw new Error('Response is not in JSON format');
+        }
+    } catch (error) {
+        console.error('Error processing payment:', error);
+        alert('An error occurred while processing the payment.');
+    }
+}
+
+        
+      // make card-button responsive, generate token and send to views.py
+      document.getElementById('card-button').addEventListener('click', async function () {
+        console.log('Pay button clicked');
+    
+        if (!card) {
+          console.log('Card form not initialized');
+          alert('Card form is not initialized');
+          return;
+        }
+    
+        try {
+            // Generate a card token
+            console.log('trying to tokenize card...');
+            const result = await card.tokenize();
+            console.log('Card tokenization result: ', result);
+            if (result.status === 'OK') {
+                const token = result.token;
+                console.log('card token: ', token);
+                await createPayment(token);
+            } else {
+                console.log('failed to tokenize card! >:( ');
+                alert('Failed to tokenize card. Please try again.');
+            }
+        } catch (e) {
+            console.log('Error durring tokenizaiton')
+            console.error('Error during tokenization:', e);
+        }
+    });
+      
+    // Function to get the CSRF token from cookies (Django-specific)
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    </script>
+  
+</body>
+</html>
