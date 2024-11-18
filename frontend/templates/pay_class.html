@@ -249,29 +249,6 @@
     }
 }
 
-    //      const data = await response.json();  // Correct placement of `data` assignment
-          
-
-        //  if (data.success) {
-        //    alert('Payment processed successfully!');
-            // Check if redirect URL is provided and redirect
-         /*   if (data.redirect_url) {
-              console.log('Redirecting to: ', redirect_url);
-              window.location.href = data.redirect_url;
-            } else {
-                console.error('No redirect URL provided');
-            }
-          
-          } else {
-            alert('Payment failed: ' + data.message);
-          } */
-         /*
-          }}catch (error) {
-          console.error('Error processing payment:', error);
-          alert('An error occurred while processing the payment.');
-        }}
-          */
-      
         
       // make card-button responsive, generate token and send to views.py
       document.getElementById('card-button').addEventListener('click', async function () {
@@ -300,14 +277,6 @@
             console.log('Error durring tokenizaiton')
             console.error('Error during tokenization:', e);
         }
-
-      /*
-        // Attach event listener to the pay button -- why not responsive :(
-        const payButton = document.getElementById('card-button');
-        payButton.addEventListener('click', async function () {
-            await creatPayment(card); // Function to handle payment submission
-        });
-     */
     });
       
     // Function to get the CSRF token from cookies (Django-specific)

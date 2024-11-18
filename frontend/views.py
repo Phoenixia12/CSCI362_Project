@@ -1110,8 +1110,6 @@ def pay_class(request):
 
             # Example success response
             # On success, include the redirect URL in the response
-           # messages.success(request, 'Succesfull Payment.')
-          #  return redirect('home_owner')
             return JsonResponse({
                 'success': True,
                 'message': 'Payment processed successfully!',
