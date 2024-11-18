@@ -1314,7 +1314,8 @@ def get_monthly_user_counts(gym_id):
     SPLUNK_API_URL = 'https://localhost:8089/services/search/jobs/export'
     SPLUNK_USERNAME = 'admin_user'
     SPLUNK_PASSWORD = 'leeward99'
-    
+    print("test")
+    print(gym_id)
     splunk_query = f"""
     search index=* sourcetype="Gym_Assist_logs" gym_id={gym_id}
     | timechart span=1mon count

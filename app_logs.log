@@ -1756,3 +1756,37 @@ Watching for file changes with StatReloader
 "POST /logout/ HTTP/1.1" 200 2524
 "GET /static/css/styles.css HTTP/1.1" 404 1801
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 3194
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16532
+"GET /get_classes/ HTTP/1.1" 200 2
