@@ -37,6 +37,8 @@ urlpatterns = [
    
     path('get_classes/', get_classes, name='get_classes'),
     path('add_class/', add_class, name='add_class'),
+    path('member_details/<int:user_acct_id>/', member_details, name='member_details'),
+    path('edit-gym/<int:gym_id>/', edit_gym_content, name='edit_gym_content'),
     path('home_owner/getClass/', getClass, name='getClass')
    # path('delete-class/', delete_class, name='delete_class')
 ]

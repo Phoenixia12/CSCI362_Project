@@ -1,0 +1,19 @@
+<!-- member_details.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Member Details</h2>
+    <p><strong>Username:</strong> {{ member.username }}</p>
+    <p><strong>First Name:</strong> {{ member.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ member.last_name }}</p>
+    <p><strong>Email:</strong> {{ member.email }}</p>
+    <p><strong>UserID:</strong> {{ member.user_acct_id }}</p>
+
+    <form method="post" action="{% url 'remove_member' %}">
+        {% csrf_token %}
+        <input type="hidden" name="member_id" value="{{ member.user_acct_id }}">
+        <button type="submit">Remove Member from Gym</button>
+    </form>
+
+    <a href="{% url 'members_list' %}">Back to Members List</a>
+{% endblock %}
