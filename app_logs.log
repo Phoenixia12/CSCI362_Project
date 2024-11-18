@@ -1,0 +1,1695 @@
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+User registered with username: testowner9, email: testowner9@gmail.com
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+User registered with username: TestOwner99, email: TestOwner99@gmail.com
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Failed login attempt for non-existent user 'TestOwner11'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt for non-existent user 'TestOwner11'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt for non-existent user 'TestOwner11'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner4' successfully logged in with user_acct_id=463381.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 2765
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 4018
+Failed login attempt for user 'testowner4' - Incorrect password.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt for user 'testowner4' - Incorrect password.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt for user 'testowner4' - Incorrect password.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner4' successfully logged in with user_acct_id=463381.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 2765
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 11322
+Internal Server Error: /get_classes/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 999, in get_classes
+    gym_id = cache.get("gym_id")  # Get gym ID from the request
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\cache\backends\memcached.py", line 75, in get
+    return self._cache.get(key, default)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\hash.py", line 347, in get
+    return self._run_cmd("get", key, default, default=default, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\hash.py", line 322, in _run_cmd
+    return self._safely_run_func(client, func, default_val, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\hash.py", line 211, in _safely_run_func
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\base.py", line 687, in get
+    return self._fetch_cmd(b"get", [key], False, key_prefix=self.key_prefix).get(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\base.py", line 1133, in _fetch_cmd
+    self._connect()
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\base.py", line 424, in _connect
+    sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+"GET /get_classes/ HTTP/1.1" 500 101812
+Internal Server Error: /get_classes/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 999, in get_classes
+    gym_id = cache.get("gym_id")  # Get gym ID from the request
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\cache\backends\memcached.py", line 75, in get
+    return self._cache.get(key, default)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\hash.py", line 347, in get
+    return self._run_cmd("get", key, default, default=default, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\hash.py", line 322, in _run_cmd
+    return self._safely_run_func(client, func, default_val, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\hash.py", line 199, in _safely_run_func
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\base.py", line 687, in get
+    return self._fetch_cmd(b"get", [key], False, key_prefix=self.key_prefix).get(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\base.py", line 1133, in _fetch_cmd
+    self._connect()
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\base.py", line 424, in _connect
+    sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+"GET /get_classes/ HTTP/1.1" 500 102469
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4176
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Error during login process for user 'testowner3': [WinError 10061] No connection could be made because the target machine actively refused it
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4104
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 11495
+"GET /static/styles.css HTTP/1.1" 200 594
+"GET /add_member/ HTTP/1.1" 200 4235
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 11666
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 11666
+"GET /add_member/ HTTP/1.1" 200 4235
+Username or email already exists: username=testgoer5, email=testgoer5@gmail.com
+"POST /add_member/ HTTP/1.1" 200 4244
+Attempting to create account for user testgoer6 (ID: 9155279) at 2024-11-12 21:05:02
+Successfully created account for user testgoer6 (ID: 9155279) and assigned to gym ID: 297577 on 2024-11-12 21:05:02
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5289
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 11837
+"GET /static/styles.css HTTP/1.1" 304 0
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /add_employee/ HTTP/1.1" 200 4579
+"POST /add_employee/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 12026
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4245
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4177
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4177
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4177
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4177
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 13451
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 13451
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 13451
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4163
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4231
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 13451
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 13451
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 13250
+"GET /home_owner/ HTTP/1.1" 200 13252
+"GET /home_owner/ HTTP/1.1" 200 13248
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /add_member/ HTTP/1.1" 200 4235
+Attempting to create account for user testmember3 (ID: 7478765) at 2024-11-13 23:44:42
+Successfully created account for user testmember3 (ID: 7478765) and assigned to gym ID: 297577 on 2024-11-13 23:44:43
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 13421
+"GET /home_owner/ HTTP/1.1" 200 13973
+"GET /home_owner/ HTTP/1.1" 200 13972
+"GET /home_owner/ HTTP/1.1" 200 14181
+"GET /home_owner/ HTTP/1.1" 200 14209
+"GET /home_owner/ HTTP/1.1" 200 14209
+"GET /home_owner/ HTTP/1.1" 200 14210
+"GET /home_owner/ HTTP/1.1" 200 14248
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14248
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14236
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14238
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14180
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14185
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14185
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 14185
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 14185
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 14223
+"GET /add_member/ HTTP/1.1" 200 4235
+Username or email already exists: username=testgoer5, email=testgoer5@gmail.com
+"POST /add_member/ HTTP/1.1" 200 4244
+Attempting to create account for user testgoer7 (ID: 1827919) at 2024-11-14 00:09:33
+Successfully created account for user testgoer7 (ID: 1827919) and assigned to gym ID: 297577 on 2024-11-14 00:09:33
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14400
+"GET /home_owner/ HTTP/1.1" 200 14399
+"GET /home_owner/ HTTP/1.1" 200 14432
+"GET /home_owner/ HTTP/1.1" 200 15093
+"GET /home_owner/ HTTP/1.1" 200 15642
+"GET /home_owner/ HTTP/1.1" 200 15648
+"GET /home_owner/ HTTP/1.1" 200 14460
+"GET /home_owner/ HTTP/1.1" 200 14683
+"GET /home_owner/ HTTP/1.1" 200 14126
+"GET /add_member/ HTTP/1.1" 200 4260
+Attempting to create account for user testgoer8 (ID: 488482) at 2024-11-14 00:22:54
+Successfully created account for user testgoer8 (ID: 488482) and assigned to gym ID: 297577 on 2024-11-14 00:22:54
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14304
+"GET /login/ HTTP/1.1" 200 4220
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4195
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4195
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4195
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14266
+"GET /static/styles.css HTTP/1.1" 304 0
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4195
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4195
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14383
+"GET /home_owner/ HTTP/1.1" 200 14378
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 14598
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 14739
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 15093
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 16474
+"GET /member_details/9155279/ HTTP/1.1" 200 16
+"GET /member_details/1392325/ HTTP/1.1" 200 16
+"GET /member_details/1392325/ HTTP/1.1" 200 16
+"GET /member_details/1392325/ HTTP/1.1" 200 105
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /member_details/1392325/ HTTP/1.1" 200 105
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /member_details/1392325/ HTTP/1.1" 200 105
+"GET /member_details/1392325/ HTTP/1.1" 200 105
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /member_details/1392325/ HTTP/1.1" 200 105
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4278
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15547
+"GET /member_details/488482/ HTTP/1.1" 200 107
+"GET /home_owner/ HTTP/1.1" 200 15032
+"GET /home_owner/ HTTP/1.1" 200 15063
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 200 15168
+Not Found: /home_owner/path_to_image.jpg
+"GET /home_owner/path_to_image.jpg HTTP/1.1" 404 5340
+"GET /home_owner/ HTTP/1.1" 200 15371
+"GET /home_owner/ HTTP/1.1" 200 15187
+"GET /home_owner/ HTTP/1.1" 200 15185
+Not Found: /Users/Diego/Downloads/workout.jpg
+"GET /Users/Diego/Downloads/workout.jpg HTTP/1.1" 404 5355
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 16801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16801
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 200 16801
+"GET /home_owner/ HTTP/1.1" 200 16801
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4357
+"POST /register/test_reg/ HTTP/1.1" 200 4366
+"POST /register/test_reg/ HTTP/1.1" 200 4366
+User registered with username: testowner7, email: testowner7@gmail.com
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner7' successfully logged in with user_acct_id=1513973.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 2765
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Owner setup initiated for user_acct_id: 1513973, gym_name: testowner7's gym
+Gym created successfully with gym_id: 807526, gym_name: testowner7's gym
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14984
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /add_member/ HTTP/1.1" 200 4341
+Attempting to create account for user testgoer71 (ID: 3399428) at 2024-11-14 04:18:43
+Successfully created account for user testgoer71 (ID: 3399428) and assigned to gym ID: 807526 on 2024-11-14 04:18:43
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15232
+"GET /home_owner/ HTTP/1.1" 200 15232
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /home_owner/ HTTP/1.1" 200 15232
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16801
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner7' successfully logged in with user_acct_id=1513973.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15232
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /home_owner/ HTTP/1.1" 200 15232
+"GET /add_member/ HTTP/1.1" 200 4235
+Attempting to create account for user testgoer72 (ID: 9234684) at 2024-11-14 04:34:56
+Successfully created account for user testgoer72 (ID: 9234684) and assigned to gym ID: 807526 on 2024-11-14 04:34:56
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15482
+"GET /get_classes/ HTTP/1.1" 200 2
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+User registered with username: testowner8, email: testowner8@gmail.com
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner8' successfully logged in with user_acct_id=2598790.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 2765
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Owner setup initiated for user_acct_id: 2598790, gym_name: testowner8's gym
+Gym created successfully with gym_id: 328946, gym_name: testowner8's gym
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14984
+"GET /static/styles.css HTTP/1.1" 304 0
+"GET /add_member/ HTTP/1.1" 200 4341
+Successfully created account for user testgoer81 (ID: 9059393) and assigned to gym ID: 328946 on 2024-11-14 12:13:34
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15234
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /home_owner/ HTTP/1.1" 200 15233
+"GET /home_owner/ HTTP/1.1" 200 15233
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16801
+"GET /get_classes/ HTTP/1.1" 200 87
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 1 for user 'testowner3'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 2 for user 'testowner3'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 3 for user 'testowner3'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 4 for user 'testowner3'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' locked out after multiple failed login attempts.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4047
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Locked out user 'testowner3' attempted login.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4038
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Locked out user 'testowner3' attempted login.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4038
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner8' successfully logged in with user_acct_id=2598790.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15233
+"GET /static/styles.css HTTP/1.1" 304 0
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Locked out user 'testowner3' attempted login.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4038
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5289
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+- Broken pipe from ('127.0.0.1', 59187)
+"GET /home_owner/ HTTP/1.1" 200 16801
+"GET /static/styles.css HTTP/1.1" 304 0
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4397
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 1 for user 'testowner8'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 2 for user 'testowner8'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 3 for user 'testowner8'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 4 for user 'testowner8'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner8' locked out after multiple failed login attempts.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4047
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Locked out user 'testowner8' attempted login.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4038
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner7' successfully logged in with user_acct_id=1513973.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15273
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /member_details/3399428/ HTTP/1.1" 200 107
+"GET /member_details/3399428/ HTTP/1.1" 200 107
+"GET /member_details/3399428/ HTTP/1.1" 200 107
+"GET /member_details/3399428/ HTTP/1.1" 200 107
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4245
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14737
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 200 14737
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4245
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4198
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4357
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+User registered with username: testowner999, email: testowner999@gmail.cm
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner999' successfully logged in with user_acct_id=9204723.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 2765
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Owner setup initiated for user_acct_id: 9204723, gym_name: testowner999's gym
+Gym created successfully with gym_id: 993711, gym_name: testowner999's gym
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14769
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4176
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+User registered with username: testowner1000, email: testowner1000@gm
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner1000' successfully logged in with user_acct_id=6065392.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 2765
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Owner setup initiated for user_acct_id: 6065392, gym_name: testowner1000's gym
+Gym created successfully with gym_id: 829116, gym_name: testowner1000's gym
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14848
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /get_classes/ HTTP/1.1" 200 2
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4463
+User registered with username: TestOwner111, email: TestOwner111@gm
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'TestOwner111' successfully logged in with user_acct_id=2659873.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 2765
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Owner setup initiated for user_acct_id: 2659873, gym_name: TestOwner111
+Failed to create gym: TestOwner111 for user_acct_id: 2659873
+Internal Server Error: /owner_setup/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 536, in owner_setup
+    return redirect('error_page')  # Redirect to an error page if gym creation fails
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'error_page' not found. 'error_page' is not a valid view function or pattern name.
+"POST /owner_setup/ HTTP/1.1" 500 94609
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /owner_setup/ HTTP/1.1" 200 2765
+Owner setup initiated for user_acct_id: 2659873, gym_name: TestOwner111
+Gym created successfully with gym_id: 309993, gym_name: TestOwner111
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14845
+"GET /get_classes/ HTTP/1.1" 200 2
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4336
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16582
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'TestOwner111' successfully logged in with user_acct_id=2659873.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 14845
+"GET /add_member/ HTTP/1.1" 200 4235
+Attempting to create account for user testgoer111 (ID: 4171827) at 2024-11-15 13:47:32
+Successfully created account for user testgoer111 (ID: 4171827) and assigned to gym ID: 309993 on 2024-11-15 13:47:32
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15351
+"GET /home_owner/ HTTP/1.1" 200 15362
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /add_member/ HTTP/1.1" 200 4260
+Attempting to create account for user testgoer112 (ID: 5758167) at 2024-11-15 13:49:04
+Successfully created account for user testgoer112 (ID: 5758167) and assigned to gym ID: 309993 on 2024-11-15 13:49:04
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 15858
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 15916
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /get_classes/ HTTP/1.1" 200 2
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 17091
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /get_classes/ HTTP/1.1" 200 2
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5289
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17426
+"GET /static/styles.css HTTP/1.1" 200 594
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 200 17426
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17426
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner1000' successfully logged in with user_acct_id=6065392.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16785
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /add_member/ HTTP/1.1" 200 4235
+Attempting to create account for user testmember1000 (ID: 3154048) at 2024-11-18 03:46:20
+Successfully created account for user testmember1000 (ID: 3154048) and assigned to gym ID: 829116 on 2024-11-18 03:46:20
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17294
+"GET /get_classes/ HTTP/1.1" 200 2
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18827
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18827
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 200 18827
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 18787
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 200 20134
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20134
+"GET /home_owner/ HTTP/1.1" 200 20090
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4195
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20090
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20090
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 200 20046
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20046
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4195
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20046
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20046
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20046
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4242
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20046
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20046
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4252
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20046
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 21374
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 21374
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 21374
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 21374
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 21374
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 21374
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 21379
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 21379
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 21379
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 5523
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4322
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4322
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4353
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4353
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4326
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20301
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20301
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /home_owner/ HTTP/1.1" 200 20301
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 20301
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20301
+"GET /get_classes/ HTTP/1.1" 200 87
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 20235
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 20341
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4372
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 1 for user 'testowner9'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 1 for user 'TestOwner9'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 1 for user 'testowner5'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 2 for user 'testowner5'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 3 for user 'testowner5'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Failed login attempt 4 for user 'testowner5'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner5' locked out after multiple failed login attempts.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4047
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Locked out user 'testowner5' attempted login.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4038
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20339
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20336
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20366
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20372
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20373
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /get_classes/ HTTP/1.1" 200 87
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 4018
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20401
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20428
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20510
+"GET /home_owner/ HTTP/1.1" 200 18465
+"GET /home_owner/ HTTP/1.1" 200 18463
+"GET /login/ HTTP/1.1" 200 3789
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18450
+"GET /get_classes/ HTTP/1.1" 200 87
+"GET /login/ HTTP/1.1" 200 3789
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801

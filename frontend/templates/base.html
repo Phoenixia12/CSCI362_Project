@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inactivity Timer Test</title>
+    <script>
+        let inactivityTime = 0;
+        const timeoutLimit = 10 * 1000; // 30 seconds for testing
+        let alertShown = false; // Flag to check if the alert has been shown
+
+        // Reset inactivity timer
+        function resetTimer() {
+            inactivityTime = 0;
+            alertShown = false; // Reset alert flag
+            console.log("Activity detected, timer reset."); // Debugging line
+        }
+
+        // Increment inactivity timer
+        function timerIncrement() {
+            inactivityTime += 1000; // Increment timer by 1 second
+            console.log("Inactivity time:", inactivityTime); // Debugging line
+            if (inactivityTime >= timeoutLimit && !alertShown) {
+                alert("Your session has expired due to inactivity.");
+                alertShown = true; // Set flag to true after showing the alert
+                window.location.href = '/login/';  // Change this to your actual login URL
+            }
+        }
+
+        // Attach event listeners for user activity
+        window.onload = resetTimer; // Call on page load
+        document.onmousemove = resetTimer; // Reset on mouse movement
+        document.onkeypress = resetTimer; // Reset on key press
+        setInterval(timerIncrement, 1000); // Check inactivity every second
+    </script>
+</head>
+<body>
+    <h1>Inactivity Timer Test</h1>
+    <p>Move your mouse or press a key to reset the timer. Wait for 30 seconds for the alert to show.</p>
+</body>
+</html>
