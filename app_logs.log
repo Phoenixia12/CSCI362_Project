@@ -1693,3 +1693,66 @@ User 'testowner3' successfully logged in with user_acct_id=1059984.
 "GET /login/ HTTP/1.1" 200 3789
 "GET /login/ HTTP/1.1" 200 3789
 "GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20050
+"GET /home_owner/ HTTP/1.1" 200 20050
+- Broken pipe from ('127.0.0.1', 57593)
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /get_classes/ HTTP/1.1" 200 97
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20050
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /home_owner/getClass/?class_id=12 HTTP/1.1" 200 3450
+"GET /home_owner/getClass/?class_id=12 HTTP/1.1" 200 3450
+"GET /pay_class/ HTTP/1.1" 200 8790
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 6207
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20050
+"GET /static/styles.css HTTP/1.1" 200 594
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /pay_class/ HTTP/1.1" 200 8790
+"POST /pay_class/ HTTP/1.1" 200 95
+"GET /home_owner/ HTTP/1.1" 200 20050
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 20050
+"GET /get_classes/ HTTP/1.1" 200 97
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
