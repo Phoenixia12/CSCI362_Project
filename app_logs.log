@@ -1775,3 +1775,1475 @@ Watching for file changes with StatReloader
 "GET /static/css/styles.css HTTP/1.1" 404 1801
 C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 6207
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4619
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+"GET /pay_class/ HTTP/1.1" 200 8717
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+- Broken pipe from ('127.0.0.1', 53651)
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /static/styles.css HTTP/1.1" 304 0
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 3838
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 3838
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 3838
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 3838
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 3848
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 3838
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 3838
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 3838
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 3831
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 3831
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 3833
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4098
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4098
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4098
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 4110
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1154, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=16 HTTP/1.1" 500 73740
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 4110
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4098
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4098
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4077
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4077
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4077
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4092
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1154, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=16 HTTP/1.1" 500 73740
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1154, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=16 HTTP/1.1" 500 73740
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 4095
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 4095
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 4095
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4081
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 4095
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+Bad Request: /pay_class/
+"POST /pay_class/ HTTP/1.1" 400 63
+Bad Request: /pay_class/
+"POST /pay_class/ HTTP/1.1" 400 63
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+- Broken pipe from ('127.0.0.1', 58529)
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 4095
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+- Broken pipe from ('127.0.0.1', 59282)
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+Bad Request: /pay_class/
+"POST /pay_class/ HTTP/1.1" 400 63
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"POST /login/ HTTP/1.1" 302 0
+- Broken pipe from ('127.0.0.1', 59994)
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 200 4095
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=16 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+"GET /home_owner/ HTTP/1.1" 200 17484
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=17 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+- Broken pipe from ('127.0.0.1', 52832)
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /get_classes/ HTTP/1.1" 200 422
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72656
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+- Broken pipe from ('127.0.0.1', 60109)
+"POST /login/ HTTP/1.1" 302 0
+- Broken pipe from ('127.0.0.1', 60113)
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72691
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+- Broken pipe from ('127.0.0.1', 60379)
+"POST /login/ HTTP/1.1" 302 0
+- Broken pipe from ('127.0.0.1', 60387)
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72696
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72696
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1138, in getClass
+    taking_class = FALSE
+                   ^^^^^
+NameError: name 'FALSE' is not defined. Did you mean: 'False'?
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 72761
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+Bad Request: /pay_class/
+"POST /pay_class/ HTTP/1.1" 400 223
+"POST /pay_class/ HTTP/1.1" 200 63
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+Bad Request: /pay_class/
+"POST /pay_class/ HTTP/1.1" 400 265
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+Bad Request: /pay_class/
+"POST /pay_class/ HTTP/1.1" 400 265
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 4081
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6151
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 6153
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6151
+"GET /add_class/ HTTP/1.1" 200 5068
+Internal Server Error: /add_class/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1057, in add_class
+    cursor.execute("""
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+"POST /add_class/ HTTP/1.1" 500 122155
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /add_class/ HTTP/1.1" 200 5068
+Internal Server Error: /add_class/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1057, in add_class
+    cursor.execute("""
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+"POST /add_class/ HTTP/1.1" 500 122105
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+- Broken pipe from ('127.0.0.1', 58273)
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /add_class/ HTTP/1.1" 200 5068
+Internal Server Error: /add_class/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1057, in add_class
+    cursor.execute("""
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+"POST /add_class/ HTTP/1.1" 500 122105
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6151
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 6153
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 6153
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6151
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6151
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=19 HTTP/1.1" 200 6195
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6267
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+- Broken pipe from ('127.0.0.1', 61355)
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1174, in getClass
+    'user_id' : row[8]
+                ~~~^^^
+IndexError: row index out of range index=8 len=8
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 74128
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1174, in getClass
+    'user_id' : row[8]
+                ~~~^^^
+IndexError: row index out of range index=8 len=8
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 74128
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1174, in getClass
+    'user_id' : row[8]
+                ~~~^^^
+IndexError: row index out of range index=8 len=8
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 500 74128
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+- Broken pipe from ('127.0.0.1', 61462)
+- Broken pipe from ('127.0.0.1', 61465)
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6267
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17484
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6274
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6272
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6272
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6336
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6316
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6303
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 422
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6306
+"GET /add_class/ HTTP/1.1" 200 5068
+Internal Server Error: /add_class/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1057, in add_class
+    cursor.execute("""
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+"POST /add_class/ HTTP/1.1" 500 122165
+"GET /add_class/ HTTP/1.1" 200 5068
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6306
+Internal Server Error: /add_class/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1057, in add_class
+    cursor.execute("""
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+"POST /add_class/ HTTP/1.1" 500 122135
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6306
+"GET /add_class/ HTTP/1.1" 200 5068
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 513
+"GET /add_class/ HTTP/1.1" 200 5068
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 610
+"GET /add_class/ HTTP/1.1" 200 5068
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 708
+- Broken pipe from ('127.0.0.1', 54530)
+Internal Server Error: /add_class/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1066, in add_class
+    return render(request, 'add_class.html')   #  # Render the form on GET request
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'get_instructors' not found. 'get_instructors' is not a valid view function or pattern name.
+"GET /add_class/ HTTP/1.1" 500 121630
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /add_class/ HTTP/1.1" 200 6411
+"GET /get_instructors/ HTTP/1.1" 200 52
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 806
+"GET /home_owner/getClass/?class_id=23 HTTP/1.1" 200 6299
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+"GET /pay_class/ HTTP/1.1" 200 8717
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
