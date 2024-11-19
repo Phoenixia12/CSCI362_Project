@@ -44,5 +44,6 @@ urlpatterns = [
     path('home_owner/getClass/', getClass, name='getClass'),
     path('pay_class/', pay_class, name='pay_class'),
     path('get_user_classes/', get_user_classes, name='get_user_classes'),
+    path('get_instructors/', get_instructors, name='get_instructors')
    # path('delete-class/', delete_class, name='delete_class')
 ]

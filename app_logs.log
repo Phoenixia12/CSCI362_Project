@@ -3126,3 +3126,122 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 django.db.utils.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
 "POST /add_class/ HTTP/1.1" 500 122165
+"GET /add_class/ HTTP/1.1" 200 5068
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6306
+Internal Server Error: /add_class/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1057, in add_class
+    cursor.execute("""
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column name or number of supplied values does not match table definition. (213) (SQLExecDirectW)')
+"POST /add_class/ HTTP/1.1" 500 122135
+"GET /home_owner/getClass/?class_id=18 HTTP/1.1" 200 6306
+"GET /add_class/ HTTP/1.1" 200 5068
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 513
+"GET /add_class/ HTTP/1.1" 200 5068
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 610
+"GET /add_class/ HTTP/1.1" 200 5068
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 708
+- Broken pipe from ('127.0.0.1', 54530)
+Internal Server Error: /add_class/
+Traceback (most recent call last):
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py", line 1066, in add_class
+    return render(request, 'add_class.html')   #  # Render the form on GET request
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fluff\AppData\Roaming\Python\Python312\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'get_instructors' not found. 'get_instructors' is not a valid view function or pattern name.
+"GET /add_class/ HTTP/1.1" 500 121630
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /add_class/ HTTP/1.1" 200 6411
+"GET /get_instructors/ HTTP/1.1" 200 52
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17485
+"GET /get_classes/ HTTP/1.1" 200 806
+"GET /home_owner/getClass/?class_id=23 HTTP/1.1" 200 6299
+"GET /pay_class/ HTTP/1.1" 200 8717
+"POST /pay_class/ HTTP/1.1" 200 63
+"GET /pay_class/ HTTP/1.1" 200 8717
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader

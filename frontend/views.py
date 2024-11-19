@@ -1360,6 +1360,38 @@ def member_details(request, user_acct_id):
             cursor.close()
         if conn:
             conn.close()
+
+
+def get_instructors(request):
+    instructors = []
+    conn = None
+    cursor = None
+    gym_id = cache.get('gym_id')
+    try:
+        conn = pyodbc.connect(
+            'DRIVER={ODBC Driver 18 for SQL Server};'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
+        )
+        cursor = conn.cursor()
+        cursor.execute("SELECT user_acct_id, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?",(gym_id, 2))
+        instructors_in = cursor.fetchall()
+        print(instructors_in)
+        for instructor in instructors_in:
+            user_acct_id, first_name, last_name = instructor
+            print(user_acct_id)
+            print(first_name)
+            instructors.append({
+                'id': user_acct_id,
+                'name':first_name + " " + last_name
+            })
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
+
+    return JsonResponse(instructors, safe=False)
 ...
 
 import json
