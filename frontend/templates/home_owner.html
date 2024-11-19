@@ -173,7 +173,6 @@
             <div id="calendar"></div>
             <h3>Add a New Class</h3>
             <button onclick="window.location.href='{% url 'add_class' %}'">Add Class</button>
-            <button onclick="window.location.href='{% url 'pay_class' %}'">Pay Class Test</button>
         </div>
 
         <div id="members" class="tab-content">
@@ -259,7 +258,7 @@
             document.body.appendChild(form);
             form.submit();
         }
-
+/* CREATES A SECOND CALENDAR -- Make sure this is the one to be deleted
         document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');  
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -287,7 +286,7 @@
 
         calendar.render();
     });
-
+*/
     function showTab(tabId) {
         const tabs = document.querySelectorAll('.tab-content');
         tabs.forEach(tab => {

@@ -268,7 +268,6 @@ def login_view(request):
                 if check_password(password, stored_password_hash):
                     # Password matches, log the user in
                     request.session['user_id'] = user_id  # Store user ID in session
-                    messages.success(request, 'You are now logged in!')
                     
                     # Check if perm_id is null, if so redirect to role selection
                     if gym_id == 3:  # If perm_id is null
@@ -943,8 +942,15 @@ def add_class(request):
         data_time = request.POST.get('data_time')
         class_name = request.POST.get('class_name')
         class_type = request.POST.get('class_type')
+        price = request.POST.get('price')
+        seats_available = request.POST.get('seats_available')
     #    roster_id = request.POST.get('roster_id')
         gym_id = cache.get('gym_id')
+<<<<<<< Updated upstream
+=======
+        
+        
+>>>>>>> Stashed changes
 
         # Generating roster_id
         roster_id = str(uuid.uuid4().fields[-1])[:5]
@@ -962,8 +968,8 @@ def add_class(request):
             cursor.execute("""
                 EXEC AddClass1 @class_id = %s, @instructor_id = %s, 
                 @data_date = %s, @roster_id = %s, @class_name = %s, 
-                @data_time = %s, @class_type = %s, @gym_id = %s
-            """, [class_id, instructor_id, data_date, roster_id, class_name, data_time, class_type, gym_id])
+                @data_time = %s, @class_type = %s, @gym_id = %s, @price = %s, @seats_available = %s
+            """, [class_id, instructor_id, data_date, roster_id, class_name, data_time, class_type, gym_id, price, seats_available])
         
         print('Class added successfully!')
         return redirect('home_owner')  # Redirect to a success page or home
@@ -1035,6 +1041,48 @@ def get_gymID(request):
     else:
         return JsonResponse({'error': 'No gym_id provided'}, status=400)
 
+<<<<<<< Updated upstream
+=======
+def getClass(request):
+    if request.method == 'GET':
+        gym_id = cache.get('gym_id')
+        class_id = request.GET['class_id']
+        print(class_id)
+        try:
+            conn = pyodbc.connect(
+                'DRIVER={ODBC Driver 18 for SQL Server};'
+                'SERVER=gymassisthost2.database.windows.net;'
+                'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
+                )
+        
+            cursor = conn.cursor()
+           
+            cursor.execute("SELECT class_id, instructor_id, data_date, roster, class_name, class_type, price FROM class WHERE class_id = ?", (class_id))
+            row = cursor.fetchone()
+            print(row[0])
+            cursor.execute("EXEC GetAccount @user_acct_id = ?", (row[1]))
+            instructor = cursor.fetchone()
+            print(instructor)
+            instructorName = str(instructor[1]) + " " + str(instructor[2])
+            
+        finally:
+            if cursor:
+                cursor.close()
+            if conn:
+                conn.close()
+    return render(request, 'class_view.html', {
+                'class_id': row[0],
+                'instructor_name':instructorName,
+                'data_date': row[2],
+                'roster_id': row[3],
+                'class_name': row[4],
+                'class_type': row[5],
+                'price': row[6],
+            })
+        
+
+
+>>>>>>> Stashed changes
 # disabling CSRF security for simplicity -- security issues MAKE SURE TO FIX THIS
 #from django.views.decorators.csrf import csrf_exempt
 
@@ -1110,12 +1158,12 @@ def pay_class(request):
 
             # Example success response
             # On success, include the redirect URL in the response
+            
             return JsonResponse({
                 'success': True,
                 'message': 'Payment processed successfully!',
-                'redirect_url': '/home_owner/'
             })
-        
+            
         except json.JSONDecodeError:
             logger.error('Failed to decode JSON data')
             return JsonResponse({'success': False, 'message': 'Invalid JSON data'}, status=400)

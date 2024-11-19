@@ -138,46 +138,14 @@
 </script>
     <div class="form-container">
         
-        <h2>Add New Class</h2>
-        <form method="POST">
-            {% csrf_token %}
-            <label for="class_name">Class Name:</label>
-            <input type="text" id="class_name" name="class_name" required>
-
-            <!--
-            <input type="text" id="custom_instructor_id" name="custom_instructor_id" placeholder="Enter Custom Instructor ID" style="display:none;" />
-            -->
-
-            <label for="class_type">Class Type:</label>
-            <select id="class_type" name="class_type" required>
-                <option value="" disabled selected></option>
-                <option value="1">Spin Class</option>
-                <option value="2">Yoga</option>
-                <option value="3">Zumba</option>
-                <!-- Add more options as needed -->
-            </select>
-
-            <label for="instructor_id">Instructor ID:</label>
-            <input type="number" id="instructor_id" name="instructor_id" required>
-
-            <label for="price">Price Per Session:</label>
-            <input type="number" id="price" name="price" required>
-
-            <label for="price">Seats Available:</label>
-            <input type="number" id="seats_available" name="seats_available" required>
-
-            <div class="float-right">
-                <label for="data_date">Date:</label>
-                <input type="date"  id="data_date" name="data_date" required>
-            </div>
-
-            <div class="float-left">
-                <label for="data_time">Time:</label>
-                <input type="time" id="data_time" name="data_time" required>
-            </div>
-
-            <button type="submit">Add Class</button>
-        </form>
+        <h2>Class Details</h2>
+        <p>Class Name: {{class_name}}</p>
+        <p>Instructor Name: {{instructor_name}}</p>
+        <p>Date: {{data_date}}</p>
+        <p>Price: {{price}}</p>
+        
+        <button onclick="window.location.href='{% url 'pay_class' %}'">Pay Class</button>
+           
     </div>
 </body>
 </html>
