@@ -1759,8 +1759,6 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
 Watching for file changes with StatReloader
-<<<<<<< Updated upstream
-=======
 "GET / HTTP/1.1" 200 2524
 "GET /static/css/styles.css HTTP/1.1" 404 1801
 "GET /login/ HTTP/1.1" 200 3789
@@ -1777,4 +1775,3 @@ Watching for file changes with StatReloader
 "GET /static/css/styles.css HTTP/1.1" 404 1801
 C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
 Watching for file changes with StatReloader
->>>>>>> Stashed changes
