@@ -143,9 +143,19 @@
         <p>Instructor Name: {{instructor_name}}</p>
         <p>Date: {{data_date}}</p>
         <p>Price: {{price}}</p>
-        
-        <button onclick="window.location.href='{% url 'pay_class' %}'">Pay Class</button>
-           
+        <p>Seats Available: {{seats_available}}</p>
+        <!--
+        <script> 
+        function show_button(seats_available){
+            if(seats_available > 0){
+                <button onclick="window.location.href='{% url 'pay_class' %}'">Pay Class</button>
+                return;
+            }else{
+                return;
+            }
+        }
+        </script>
+    -->
     </div>
 </body>
 </html>

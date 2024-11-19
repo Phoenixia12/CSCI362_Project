@@ -946,11 +946,6 @@ def add_class(request):
         seats_available = request.POST.get('seats_available')
     #    roster_id = request.POST.get('roster_id')
         gym_id = cache.get('gym_id')
-<<<<<<< Updated upstream
-=======
-        
-        
->>>>>>> Stashed changes
 
         # Generating roster_id
         roster_id = str(uuid.uuid4().fields[-1])[:5]
@@ -1041,8 +1036,6 @@ def get_gymID(request):
     else:
         return JsonResponse({'error': 'No gym_id provided'}, status=400)
 
-<<<<<<< Updated upstream
-=======
 def getClass(request):
     if request.method == 'GET':
         gym_id = cache.get('gym_id')
@@ -1082,7 +1075,6 @@ def getClass(request):
         
 
 
->>>>>>> Stashed changes
 # disabling CSRF security for simplicity -- security issues MAKE SURE TO FIX THIS
 #from django.views.decorators.csrf import csrf_exempt
 
