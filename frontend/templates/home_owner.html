@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         /* General Styles */
         body {
@@ -46,6 +47,43 @@
         .navbar a.active {
             background-color: #e67c12;
             color: white;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+            padding-top: 60px;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         /* Page Content */
@@ -120,6 +158,10 @@
         button:hover {
             background-color: #d95d0f;
         }
+
+        .class_view {
+            float: right;
+        }
     </style>
 </head>
 <body>
@@ -134,10 +176,10 @@
         <a href="#notifications" onclick="showTab('notifications')">Notifications</a>
         <a href="#" style="float: right;" onclick="logout()">Logout</a>
     </div>
+
     {% csrf_token %}
-    <form id="logout-form" action="{% url 'login' %}" method="POST" style="display: none;">
-        
-    </form>
+    <form id="logout-form" action="{% url 'login' %}" method="POST" style="display: none;"></form>
+
     <div class="container">
         <div id="home" class="tab-content active">
             <h2>Welcome, {{ username }}!</h2>
@@ -154,7 +196,7 @@
                 <input type="text" name="gym_name" placeholder="Enter your Gym Name" required>
                 <button type="submit">Update Gym</button>
             </form>
-            
+            <canvas id="myChart" width="400" height="200"></canvas>
         </div>
 
         <div id="profile" class="tab-content">
@@ -165,19 +207,35 @@
 
         <div id="about" class="tab-content">
             <h2>About Us</h2>
-            <p>Information about the gym, mission, and values.</p>
+            <div class="section">
+                <p id="about-text">{{ about_content }}</p>
+                <button id="edit_about_button" onclick="toggleEdit('about')">Edit</button>
+            </div>
+        
+            <form id="edit_about_form" action="{% url 'home_owner' %}" method="POST" style="display:none;">
+                {% csrf_token %}
+                <input type="hidden" name="gym_id" value="{{ gym_id }}">  <!-- Add gym_id -->
+                <textarea name="about_content" rows="4" cols="50">{{ about_content }}</textarea>
+                <button type="submit">Save</button>
+                <button type="button" onclick="toggleEdit('about')">Cancel</button>
+            </form>
         </div>
 
         <div id="classes" class="tab-content">
             <h2>Classes</h2>
-            <div id="calendar"></div>
+            <div id="calendar">
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            </div>
+            <div id = class_view>
+                
+            </div>
             <h3>Add a New Class</h3>
             <button onclick="window.location.href='{% url 'add_class' %}'">Add Class</button>
         </div>
 
         <div id="members" class="tab-content">
             <h2>Members</h2>
-            <h3>Add a new Member</h3>
+            <h3>Add a New Member</h3>
             <button onclick="window.location.href='{% url 'add_member' %}'">Add Member</button>
             <table>
                 <thead>
@@ -185,14 +243,18 @@
                         <th>Username</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th>Email</th>
+                        <th>User ID</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for member in members_info %}
-                    <tr>
+                    <tr class="member-row" data-member-id="{{ member.user_acct_id }}" onclick="redirectToMemberDetails({{ member.user_acct_id }});">
                         <td>{{ member.username }}</td>
                         <td>{{ member.first_name }}</td>
                         <td>{{ member.last_name }}</td>
+                        <td>{{ member.email }}</td>
+                        <td>{{ member.user_acct_id }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -200,7 +262,8 @@
         </div>
 
         <div id="employees" class="tab-content">
-            <h3>Add a new Employee</h3>
+            <h2>Employees</h2>
+            <h3>Add a New Employee</h3>
             <button onclick="window.location.href='{% url 'add_employee' %}'">Add Employee</button>
             <h2>Employees</h2>
             <table>
@@ -209,6 +272,8 @@
                         <th>Username</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th>Email</th>
+                        <th>User ID</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -217,6 +282,8 @@
                         <td>{{ employee.username }}</td>
                         <td>{{ employee.first_name }}</td>
                         <td>{{ employee.last_name }}</td>
+                        <td>{{ employee.email }}</td>
+                        <td>{{ employee.user_acct_id }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -231,10 +298,17 @@
         <div id="contact" class="tab-content">
             <h2>Contact Us</h2>
             <div class="section">
-                <p>If you have any questions, feel free to reach out:</p>
-                <p><strong>Email:</strong> support@gymassist.com</p>
-                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p id="contact-text">{{ contact_content }}</p>
+                <button id="edit_contact_button" onclick="toggleEdit('contact')">Edit</button>
             </div>
+        
+            <form id="edit_contact_form" action="{% url 'home_owner' %}" method="POST" style="display:none;">
+                {% csrf_token %}
+                <input type="hidden" name="gym_id" value="{{ gym_id }}">  <!-- Add gym_id -->
+                <textarea name="contact_content" rows="4" cols="50">{{ contact_content }}</textarea>
+                <button type="submit">Save</button>
+                <button type="button" onclick="toggleEdit('contact')">Cancel</button>
+            </form>
         </div>
     </div>
 
@@ -258,35 +332,8 @@
             document.body.appendChild(form);
             form.submit();
         }
-/* CREATES A SECOND CALENDAR -- Make sure this is the one to be deleted
-        document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');  
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',  
-            events: function(fetchInfo, successCallback, failureCallback) {
-                $.ajax({
-                    url: '/get_classes/',  
-                    data: {
-                        gym_id: userGymID  
-                    },
-                    success: function(data) {
-                        print('success')
-                        successCallback(data);  
-                    },
-                    error: function() {
-                        failureCallback();
-                    }
-                });
-            },
-            eventClick: function(info){
-                // Redirect to view_class_info when clicked
-                window.location.href = info.event.extendedProps.url;
-            }
-        });
 
-        calendar.render();
-    });
-*/
+
     function showTab(tabId) {
         const tabs = document.querySelectorAll('.tab-content');
         tabs.forEach(tab => {
@@ -307,12 +354,106 @@
             initializeCalendar(); 
         }
     }
+    function redirectToMemberDetails(user_acct_id) {
+        console.log("Redirecting to member details for user_acct_id:", user_acct_id);
+        if (user_acct_id) {
+            window.location.href = '/member_details/' + user_acct_id + '/';
+        } else {
+            console.error('Invalid user_acct_id');
+        }
+    }
+    //function getEvents(){
+        //window.classevents = new Array();
+            //for(class_event in class_info){
+               // var locevent = 
+                //{'title': class_event.class_name,
+               // 'start': class_event.data_date};
+               // classevents.push(JSON.parse(locevent));
+        
+           // }
+    //}const monthlyData = {{ monthly_user_counts|safe }};
+    
+    // Extract months and counts from the monthlyData
+    const months = monthlyData.map(item => item['month']);  // Correctly access 'month'
+    const counts = monthlyData.map(item => item['count']);  // Correctly access 'count'
+
+    // Debugging Output
+    console.log("Counts:", counts);
+    console.log("Months:", months);
+
+    // Create the chart
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar', //graph type
+        data: {
+            labels: months,  // X-axis labels (months)
+            datasets: [{
+                label: 'Monthly User Count',
+                data: counts,  // Y-axis data (counts)
+                borderColor: 'rgba(75, 192, 192, 1)',  // Bar border color
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',  // Bar fill color
+                borderWidth: 1  // Bar border width
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,  // Start the Y-axis at 0
+                    ticks: {
+                        stepSize: 1,  // Set the Y-axis to only use whole numbers
+                        callback: function(value) { 
+                            return value;  // Display the value as is (whole number)
+                        }
+                    }
+                }
+            }
+        }
+    });
+    
 
     function initializeCalendar() {
         const calendarEl = document.getElementById('calendar');
         const calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
-            events: [],
+            events: function(start, callback){
+                $.ajax({
+                    url: "{% url 'get_classes' %}",
+                    dataType: 'json',
+                    data: {
+                        
+                    },
+                    success: function(data) {
+                        var events = [];
+
+                        for (var i=0; i<data.length; i++){
+                            events.push({
+                                title: data[i].title,
+                                start: data[i].start,
+                                id: data[i].id,
+                                url: "{% url 'getClass' %}"
+                                })
+                                
+                            
+                        }
+
+                   //adding the callback
+                        callback(events);
+
+                    }
+                });
+            },
+            eventClick: function(info){
+                info.jsEvent.preventDefault();
+               $.get(info.event.url, {class_id: info.event.id}, function(data){
+                    $('#class_view').html(data);
+                })
+            },
             editable: true,
             selectable: true,
             dateClick: function(info) {
@@ -322,9 +463,46 @@
         calendar.render();
     }
 
+
+    let inactivityTime = 0;
+    const timeoutLimit1 = 1800 * 1000; // 30 minutes in milliseconds
+    const timeoutLimit = 10 *1000;
+    // Reset inactivity timer
+    function resetTimer() {
+        console.log("Inactivity timer reset.");
+        inactivityTime = 0;
+    }
+
+    // Increment inactivity timer
+    function timerIncrement() {
+        inactivityTime += 1000;
+        console.log(`Inactivity time: ${inactivityTime / 1000} seconds`);
+        if (inactivityTime >= timeoutLimit) {
+            alert("Your session has expired due to inactivity.");
+            window.location.href = '/login/';  // Redirect to login
+        }
+    }
+  
+    // Listen for user activity events
+    document.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    setInterval(timerIncrement, 1000);  // Check inactivity every second
+
+
+    function toggleEdit(section) {
+            const editForm = document.getElementById(`edit_${section}_form`);
+            const displaySection = document.getElementById(section);
+            if (editForm.style.display === "none") {
+                editForm.style.display = "block";
+                displaySection.style.display = "none";
+            } else {
+                editForm.style.display = "none";
+                displaySection.style.display = "block";
+            }
+        }
+
     showTab('home');
-
-
     </script>
 </body>
 </html>

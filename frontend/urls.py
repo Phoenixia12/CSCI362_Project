@@ -37,6 +37,11 @@ urlpatterns = [
     path('get_classes/', get_classes, name='get_classes'),
     path('get_gymID/', get_gymID, name='get_gymID'),
     path('add_class/', add_class, name='add_class'),
+    
+    path('home_owner/getClass/', getClass, name='getClass'),
+    path('member_details/<int:user_acct_id>/', member_details, name='member_details'),
+    path('edit-gym/<int:gym_id>/', edit_gym_content, name='edit_gym_content'),
+    path('home_owner/getClass/', getClass, name='getClass'),
     path('pay_class/', pay_class, name='pay_class'),
    # path('delete-class/', delete_class, name='delete_class')
 ]

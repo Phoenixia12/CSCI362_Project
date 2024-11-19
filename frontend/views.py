@@ -10,6 +10,11 @@ from django.db import connection
 from django.utils.safestring import mark_safe
 import calendar
 import datetime
+import requests
+import logging
+
+logger = logging.getLogger('django')
+
 
 
 def add_account(user_acct_id, perm_id, username, email, gym_id, firstname, lastname, datejoined, password_val):
@@ -68,6 +73,7 @@ def register_account(request):
         
         )
         print('insert sucessful')
+        logger.info(f"User registered with username: {username}, email: {email}")
         #try:
             # Call the stored procedure to add user credentials to the pass table
             #cursor.execute(
@@ -83,7 +89,7 @@ def register_account(request):
         # Close the connection
         cursor.close()
         conn.close()
-
+        
         # Redirect to login or render success message
         messages.success(request, 'Account registered successfully! Please log in.')
         return redirect('login')
@@ -94,28 +100,25 @@ def register_account(request):
 
 
 def add_member(request):
-     # Connect to the database
+    # Connect to the database
     conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=gymassisthost2.database.windows.net;DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!')
     cursor = conn.cursor()
 
-    
     if request.method == 'POST':
         # Extract form data from request
         username = request.POST.get('username')
         email = request.POST.get('email')
-        perm_id = 4  # Ensure you have this in your form
-        gym_id = cache.get('gym_id') # Ensure you have this in your form
-        firstname = request.POST.get('firstname')  # Ensure you have this in your form
-        lastname = request.POST.get('lastname')  # Ensure you have this in your form
-        #datejoined = request.POST.get('datejoined')  # Ensure you have this in your form
-        password_val = request.POST.get('password')  # Ensure you have this in your form
-
-        
+        perm_id = 4  # Ensure you have this in your form (assuming a default for gym goer)
+        gym_id = cache.get('gym_id')  # Ensure you have this in your form (from session or elsewhere)
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        password_val = request.POST.get('password')
 
         # Check if username or email already exists
         cursor.execute("SELECT COUNT(*) FROM user_accounts WHERE username = ? OR email = ?", (username, email))
         count = cursor.fetchone()[0]
         if count > 0:
+            logger.warning(f"Username or email already exists: username={username}, email={email}")
             messages.error(request, 'Username or email already exists.')
             return render(request, 'add_member.html')
 
@@ -130,33 +133,38 @@ def add_member(request):
         # Hash the password before storing it
         hashed_password = make_password(password_val)
 
-        # Call the stored procedure to insert the user
-        print('inserting')
-        cursor.execute(
-            "EXEC AddAccount @user_acct_id=?, @perm_id=?, @username=?, @email=?, @gym_id=?, @firstname=?, @lastname=?, @datejoined=?, @password_val=?", 
-            (user_acct_id, perm_id, username, email, gym_id, firstname, lastname, datetime.date.today(), hashed_password)
-        
-        )
-        print('insert sucessful')
-       # try:
-            # Call the stored procedure to add user credentials to the pass table
-           # cursor.execute(
-           #     "EXEC AddUserToPass @user_acct_id=?, @password=?", 
-           #     (user_acct_id, hashed_password)  # Use the hashed password
-           # )
-        #except Exception as e:
-           # messages.error(request, f'An error occurred while adding user to pass: {str(e)}')
+        # Log the account creation attempt
+        logger.info(f"Attempting to create account for user {username} (ID: {user_acct_id}) at {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
-        # Commit the transaction
-        conn.commit()
+        try:
+            # Call the stored procedure to insert the user
+            cursor.execute(
+                "EXEC AddAccount @user_acct_id=?, @perm_id=?, @username=?, @email=?, @gym_id=?, @firstname=?, @lastname=?, @datejoined=?, @password_val=?", 
+                (user_acct_id, perm_id, username, email, gym_id, firstname, lastname, datetime.date.today(), hashed_password)
+            )
 
-        # Close the connection
-        cursor.close()
-        conn.close()
+            # Commit the transaction
+            conn.commit()
 
-        # Redirect to login or render success message
-        messages.success(request, 'Account registered successfully! Please log in.')
-        return redirect('login')
+            # Log success
+            logger.info(f"Successfully created account for user {username} (ID: {user_acct_id}) and assigned to gym ID: {gym_id} on {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+            # Close the connection
+            cursor.close()
+            conn.close()
+
+            # Redirect to login or render success message
+            messages.success(request, 'Account registered successfully! Please log in.')
+            return redirect('home_owner')
+
+        except Exception as e:
+            # Log the error if something goes wrong with the stored procedure
+            logger.error(f"Error occurred while creating account for {username} (ID: {user_acct_id}). Error: {str(e)}")
+            messages.error(request, f'An error occurred while registering: {str(e)}')
+
+            # Close the connection
+            cursor.close()
+            conn.close()
 
     return render(request, 'add_member.html')
 
@@ -224,7 +232,7 @@ def add_employee(request):
 
         # Redirect to login or render success message
         messages.success(request, 'Account registered successfully! Please log in.')
-        return redirect('login')
+        return redirect('home_owner')
 
     return render(request, 'add_employee.html')
 
@@ -239,12 +247,33 @@ import pyodbc
 from django.contrib.auth.hashers import check_password  # To compare hashed passwords
 from django.contrib import messages
 from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.core.cache import cache
+from django.utils import timezone
 
 def login_view(request):
     if request.method == 'POST':
         # Get the username and password from the form
         username = request.POST.get('username')
         password = request.POST.get('password')
+        ip_address = request.META.get('REMOTE_ADDR')
+
+        # Unique key for this user/IP pair
+        cache_key = f"login_attempts_{username}_{ip_address}"
+        lockout_key = f"lockout_{username}_{ip_address}"
+
+        # Check if user is locked out
+        lockout_until = cache.get(lockout_key)
+        if lockout_until:
+            if timezone.now() < lockout_until:
+                messages.error(request, "Account temporarily locked. Try again later.")
+                logger.warning(f"Locked out user '{username}' attempted login.")
+                return redirect('login')
+            else:
+                cache.delete(lockout_key)  # Clear lockout if expired
+
+        # Retrieve current failed attempt count
+        attempts = cache.get(cache_key, 0)
 
         # Connect to the database
         try:
@@ -268,7 +297,14 @@ def login_view(request):
                 if check_password(password, stored_password_hash):
                     # Password matches, log the user in
                     request.session['user_id'] = user_id  # Store user ID in session
+                    #messages.success(request, 'You are now logged in!')
                     
+                    # Log successful login
+                    logger.info(f"User '{username}' successfully logged in with user_acct_id={user_id}.")
+
+                    # Reset login attempts on successful login
+                    cache.delete(cache_key)
+
                     # Check if perm_id is null, if so redirect to role selection
                     if gym_id == 3:  # If perm_id is null
                         return redirect('owner_setup')
@@ -278,18 +314,34 @@ def login_view(request):
                     elif perm_id == 2:
                         return redirect('home_staff')  # Redirect to staff's home page
                     elif perm_id == 3:
-                        return redirect('home_goer')  # Redirect to goer's home pagee
+                        return redirect('home_goer')  # Redirect to goer's home page
                 else:
                     # If password doesn't match
-                    messages.error(request, 'Invalid username or password.')
+                    attempts += 1
+                    cache.set(cache_key, attempts, 1800)  # Cache failed attempts for 30 minutes
+
+                    # Lock out user if they exceed limit
+                    if attempts >= 5:
+                        lockout_duration = timezone.now() + timezone.timedelta(minutes=30)
+                        cache.set(lockout_key, lockout_duration, 1800)  # Set 30-min lockout
+                        cache.delete(cache_key)  # Reset attempts after lockout
+                        messages.error(request, "Account locked due to multiple failed login attempts.")
+                        logger.warning(f"User '{username}' locked out after multiple failed login attempts.")
+                    else:
+                        messages.error(request, "Invalid username or password.")
+                        logger.warning(f"Failed login attempt {attempts} for user '{username}'.")
+
                     return redirect('login')
             else:
                 # If no user found with the given username
                 messages.error(request, 'Invalid username or password.')
+                logger.warning(f"Failed login attempt for non-existent user '{username}'.")
                 return redirect('login')
 
         except Exception as e:
+            # Log the exception
             messages.error(request, f'An error occurred: {str(e)}')
+            logger.error(f"Error during login process for user '{username}': {str(e)}")
             return redirect('login')
 
         finally:
@@ -359,6 +411,7 @@ def create_gym(gym_name):
     # Generate a new gym_id (ensure it meets your existing constraints)
     gym_id = random.randint(1, 1000000)  # Adjust range as necessary
 
+    user_acct_id = cache.get('user_id')
     # Connect to the database and insert the new gym
     try:
         conn = pyodbc.connect(
@@ -371,7 +424,7 @@ def create_gym(gym_name):
         cursor = conn.cursor()
 
         # Insert the gym into the gym table
-        cursor.execute("INSERT INTO gym (gym_id, gym_name) VALUES (?, ?)", (gym_id, gym_name))
+        cursor.execute("INSERT INTO gym (gym_id, gym_name,owner_id) VALUES (?, ?, ?)", (gym_id, gym_name, user_acct_id))
         conn.commit()
 
         print(f'Created gym: {gym_name} with ID: {gym_id}')
@@ -406,9 +459,10 @@ def set_owner_for_gym(gym_id, owner_id):
     
         # Update the owner_id for the specified gym
         cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, owner_id))
-        
         # Commit the transaction
         conn.commit()
+        #cursor.execute("UPDATE gym SET owner_id = ? WHERE gym_id = ?", (owner_id, gym_id))
+        #conn.commit()
 
         # Check if the update was successful
         if cursor.rowcount > 0:
@@ -463,7 +517,10 @@ def owner_setup(request):
         user_acct_id = cache.get('user_id')  # Get the user_acct_id from session
         username = request.POST.get('username')
         
+        logger.info(f"Owner setup initiated for user_acct_id: {user_acct_id}, gym_name: {gym_name}")
+
         if user_acct_id is None:
+            logger.error(f"User account ID not found in session for username: {username}")
             messages.error(request, 'User account ID not found in session.')
             # No URL exists for 'error_page'
           #  return redirect('error_page')  # Redirect to an error page or handle appropriately
@@ -476,6 +533,7 @@ def owner_setup(request):
 
         # Check if gym creation was successful
         if gym_id is None:
+            logger.error(f"Failed to create gym: {gym_name} for user_acct_id: {user_acct_id}")
             messages.error(request, 'Failed to create gym. Please try again.')
             #return redirect('error_page')  # Redirect to an error page if gym creation fails
             return redirect('login')
@@ -484,7 +542,7 @@ def owner_setup(request):
         # Step 2: Set the owner_id for the created gym
         set_owner_for_gym(gym_id, user_acct_id)
 
-
+        logger.info(f"Gym created successfully with gym_id: {gym_id}, gym_name: {gym_name_created}")
         messages.success(request, 'Owner setup completed successfully!')
 
         
@@ -585,6 +643,12 @@ def goer_setup(request):
     if request.method == 'POST':
         gym_id = request.POST.get('gym')  # Get the selected gym ID from the form
         user_acct_id = request.session.get('user_acct_id')  # Get the user ID from the session
+        username = request.session.get('username')  # Assuming username is stored in the session
+        
+        if not username:
+            logger.error(f"Username not found for user_acct_id: {user_acct_id}")
+            messages.error(request, 'Username not found in session.')
+            return redirect('goer_setup')  # Redirect back to the setup page if username is missing
 
         try:
             conn = pyodbc.connect(
@@ -594,24 +658,29 @@ def goer_setup(request):
             )
             cursor = conn.cursor()
 
-            # Debugging: Check the values before updating
-            print(f"Updating gym_id: {gym_id} for user_acct_id: {user_acct_id}")
+            # Log the action before updating
+            logger.info(f"User {username} (ID: {user_acct_id}) is attempting to join gym ID: {gym_id}.")
 
             # Update the user's gym_id in the database
             cursor.execute("UPDATE user_accounts SET gym_id = ? WHERE user_acct_id = ?", (gym_id, user_acct_id))
             rows_affected = cursor.rowcount
             conn.commit()
 
-            # Debugging: Check if the update was successful
             if rows_affected > 0:
+                # Log success: user has successfully joined a gym
+                logger.info(f"User {username} (ID: {user_acct_id}) successfully joined gym ID: {gym_id} on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
                 messages.success(request, 'You have successfully joined the gym!')
                 return redirect('home')  # Redirect to the home page
             else:
+                # Log error: update failed
+                logger.error(f"Failed to update gym_id for user {username} (ID: {user_acct_id}). Gym ID: {gym_id} not found.")
                 messages.error(request, 'Update failed. Please check the user ID or gym ID.')
 
         except Exception as e:
+            # Log any exception that occurs during the process
+            logger.error(f"Error occurred while user {username} (ID: {user_acct_id}) was joining gym ID: {gym_id}. Error: {str(e)}")
             messages.error(request, f'An error occurred: {str(e)}')
-            return redirect('goer_setup')  # Redirect back to the setup page
+            return redirect('goer_setup')  # Redirect back to the setup page in case of error
 
         finally:
             if cursor:
@@ -633,7 +702,8 @@ def goer_setup(request):
         gyms = cursor.fetchall()
 
     except Exception as e:
-        messages.error(request, f'An error occurred while fetching gym: {str(e)}')
+        logger.error(f"An error occurred while fetching gyms: {str(e)}")
+        messages.error(request, f'An error occurred while fetching gyms: {str(e)}')
         gyms = []  # Set gyms to an empty list if there was an error
 
     finally:
@@ -691,6 +761,28 @@ def home_owner(request):
 
             return redirect('home_owner')  # Redirect to refresh the page
 
+        # Check if updating gym content
+        if request.method == 'POST' and 'edit_gym_content' in request.POST:
+            about_content = request.POST.get('about_content')
+            contact_content = request.POST.get('contact_content')
+            gym_id = request.POST.get('gym_id')
+
+            # Validate input
+            if not gym_id or not about_content or not contact_content:
+                messages.error(request, 'About or Contact content cannot be empty.')
+                return redirect('home_owner')
+
+            # Update the gym content in the database
+            cursor.execute("""
+                UPDATE gym
+                SET about_content = ?, contact_content = ?
+                WHERE gym_id = ?
+            """, (about_content, contact_content, gym_id))
+            conn.commit()
+
+            messages.success(request, 'Successfully updated gym content!')
+            return redirect('home_owner')  # Redirect to refresh the page
+
         # Query to fetch the user information based on user_acct_id
         cursor.execute("SELECT username, perm_id, gym_id, email FROM user_accounts WHERE user_acct_id = ?", (user_acct_id,))
         user = cursor.fetchone()
@@ -699,38 +791,40 @@ def home_owner(request):
             username, perm_id, user_gym_id, email = user  # Get the gym_id here
 
             # Fetch gym information associated with the owner
-            cursor.execute("SELECT gym_name, gym_id FROM gym WHERE owner_id = ?", (user_acct_id,))
+            cursor.execute("SELECT gym_name, gym_id, about_content, contact_content FROM gym WHERE owner_id = ?", (user_acct_id,))
             gyms = cursor.fetchall()
 
-            # Print the gym_id(s) for debugging
-            for gym in gyms:
-                print(f"Gym ID: {gym[1]}")  # This should print each gym_id
+            # Initialize variables for gym content
+            about_content = contact_content = None
 
-            # Fetch members associated with each gym
+            # Fetch monthly user counts and associated members
             gym_id = cache.get('gym_id')
+            print(gym_id)
+            monthly_user_counts = get_monthly_user_counts(gym_id)
             class_info = {}
-            cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
+            cursor.execute("SELECT username, first_name, last_name, email, user_acct_id FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
             members = cursor.fetchall()
-            cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND (perm_id = ? OR perm_id = ?)", (gym_id, 2, 3))
+            cursor.execute("SELECT username, first_name, last_name, email, user_acct_id FROM user_accounts WHERE gym_id = ? AND (perm_id = ? OR perm_id = ?)", (gym_id, 2, 3))
             employees = cursor.fetchall()
-            cursor.execute("SELECT class_name, data_date, data_time FROM class WHERE gym_id = ?", (gym_id))
+            cursor.execute("SELECT class_name, data_date, data_time FROM class WHERE gym_id = ?", (gym_id,))
             classes = cursor.fetchall()
+
             for gym in gyms:
-                gym_name, gym_id = gym
-                cursor.execute("SELECT username, first_name, last_name FROM user_accounts WHERE gym_id = ? AND perm_id = ?", (gym_id, 4))
-                employees = cursor.fetchall()
-                cursor.execute("SELECT class_name, data_date, data_time FROM class WHERE gym_id = ?", (gym_id))
-                classes = cursor.fetchall()
-                
+                gym_name, gym_id, about_content, contact_content = gym
+                print(f"Gym ID: {gym_id}, About: {about_content}, Contact: {contact_content}")
 
             return render(request, 'home_owner.html', {
                 'username': username,
                 'perm_id': perm_id,
-                'email' : email,
+                'email': email,
                 'userGymId': user_gym_id,  # Add userGymId to the context
                 'members_info': members,
                 'employee_info': employees,
                 'class_info': classes,
+                'monthly_user_counts': monthly_user_counts,
+                'about_content': about_content,
+                'contact_content': contact_content,
+                'gyms': gyms,  # Pass gyms for editing
             })
         else:
             messages.error(request, 'User not found.')
@@ -745,8 +839,6 @@ def home_owner(request):
             cursor.close()
         if conn:
             conn.close()
-
-
 
 '''
 def convert_user_to_owner(user_acct_id):
@@ -946,6 +1038,7 @@ def add_class(request):
         seats_available = request.POST.get('seats_available')
     #    roster_id = request.POST.get('roster_id')
         gym_id = cache.get('gym_id')
+        
 
         # Generating roster_id
         roster_id = str(uuid.uuid4().fields[-1])[:5]
@@ -957,6 +1050,7 @@ def add_class(request):
         with connection.cursor() as cursor:
             cursor.execute("SELECT COALESCE(MAX(class_id), 0) + 1 FROM class")
             class_id = cursor.fetchone()[0]  # Fetch the next class_id
+        
 
         # Call the stored procedure to add the class (without gym_id)
         with connection.cursor() as cursor:
@@ -1000,7 +1094,7 @@ def get_classes(request):
                 cursor = connection.cursor()
             # Fetch classes from the database based on gym_id
                 query = """
-                    SELECT class_name, data_date, data_time
+                    SELECT class_name, data_date, data_time, class_id
                     FROM class
                     WHERE gym_id = %s
                 """
@@ -1010,11 +1104,12 @@ def get_classes(request):
                 
             # Convert SQL results to the format required by FullCalendar
                 for event in sql_results:
-                    class_name, data_date, data_time = event
+                    class_name, data_date, data_time,class_id = event
                     events.append({
                         'title': class_name,
                         'start': f"{data_date}T{data_time}",  # Format for FullCalendar
-                        'end': f"{data_date}T{data_time}"    # Adjust end time if needed
+                        'end': f"{data_date}T{data_time}",    # Adjust end time if needed
+                        'id':class_id
                     })
 
                 return JsonResponse(events, safe=False)
@@ -1169,3 +1264,129 @@ def pay_class(request):
     #return JsonResponse({'success': False, 'message': 'Invalid request method'}, status=405)
         
     
+
+from django.http import Http404   
+
+...
+def member_details(request, user_acct_id):
+    # Retrieve member details based on user_acct_id from the database
+    conn = None
+    cursor = None
+    try:
+        conn = pyodbc.connect(
+            'DRIVER={ODBC Driver 18 for SQL Server};'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
+        )
+        cursor = conn.cursor()
+
+        # Query to get member details by user_acct_id
+        cursor.execute("SELECT username, first_name, last_name, email FROM user_accounts WHERE user_acct_id = ?", (user_acct_id,))
+        member = cursor.fetchone()
+
+        if member:
+            username, first_name, last_name, email = member
+            member_details = {
+                'username': username,
+                'first_name': first_name,
+                'last_name': last_name,
+                'user_acct_id': user_acct_id,
+                'email': email
+            }
+            return render(request, 'member_details.html', {'member': member_details})
+        else:
+            raise Http404("Member not found")
+    
+    except Exception as e:
+        return HttpResponse(f"Error: {str(e)}")
+
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
+...
+
+import json
+import urllib3
+
+# Disable SSL warnings
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+def get_monthly_user_counts(gym_id):
+    SPLUNK_API_URL = 'https://localhost:8089/services/search/jobs/export'
+    SPLUNK_USERNAME = 'admin_user'
+    SPLUNK_PASSWORD = 'leeward99'
+    
+    splunk_query = f"""
+    search index=* sourcetype="Gym_Assist_logs" gym_id={gym_id}
+    | timechart span=1mon count
+    | eval Month=strftime(_time, "%B %Y")
+    | table Month count
+    """
+    params = {
+        'search': splunk_query,
+        'output_mode': 'json'
+    }
+    
+    response = requests.get(SPLUNK_API_URL, auth=(SPLUNK_USERNAME, SPLUNK_PASSWORD), params=params, verify=False)
+    
+    monthly_counts = []
+    
+    # Split response by lines and parse each line as JSON
+    for line in response.text.strip().splitlines():
+        try:
+            data = json.loads(line)
+            result = data.get('result', {})
+            month = result.get('Month')
+            count = int(result.get('count', 0))
+            monthly_counts.append({'month': month, 'count': count})
+        except json.JSONDecodeError as e:
+            print(f"JSON parsing error: {e}")
+    
+    if not monthly_counts:
+        monthly_counts.append({'month': 'No Data', 'count': 0})
+    return monthly_counts
+
+
+def edit_gym_content(request, gym_id):
+    conn = None
+    cursor = None
+    try:
+        conn = pyodbc.connect(
+            'DRIVER={ODBC Driver 18 for SQL Server};'
+            'SERVER=gymassisthost2.database.windows.net;'
+            'DATABASE=gymassistdb;UID=admin_user;PWD=lamp4444!'
+        )
+        cursor = conn.cursor()
+
+        if request.method == 'POST':
+            # Get updated content from the form
+            about_content = request.POST.get('about_content')
+            contact_content = request.POST.get('contact_content')
+            
+            
+            print(about_content)
+            print(contact_content)
+            
+            if not about_content or not contact_content:
+                return HttpResponse("About or Contact content cannot be empty.", status=400)
+
+            # Update the gym content in the database
+            cursor.execute("""
+                UPDATE gym
+                SET about_content = ?, contact_content = ?
+                WHERE gym_id = ?
+            """, (about_content, contact_content, gym_id))
+            conn.commit()
+
+            return redirect('home_owner')  # Redirect after successful update
+    except Exception as e:
+        logging.error(f"Error in edit_gym_content: {str(e)}")  # Log the error for debugging
+        return HttpResponse(f"Error: {str(e)}", status=500)
+    
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
