@@ -939,7 +939,7 @@ def home_staff(request):
 
 def home_goer(request):
     user_acct_id = request.session.get('user_acct_id')
-    user_acct_id = request.session.get('user_acct_id')
+   # user_acct_id = request.session.get('user_acct_id')
 
     if not user_acct_id:
         messages.error(request, 'You need to log in to access this page.')
@@ -1036,8 +1036,8 @@ def add_class(request):
         class_type = request.POST.get('class_type')
         price = request.POST.get('price')
         seats_available = request.POST.get('seats_available')
-    #    roster_id = request.POST.get('roster_id')
         gym_id = cache.get('gym_id')
+      #  print(f"This is the Gym ID: {gym_id}")
         
 
         # Generating roster_id
@@ -1059,7 +1059,7 @@ def add_class(request):
                 @data_date = %s, @roster_id = %s, @class_name = %s, 
                 @data_time = %s, @class_type = %s, @gym_id = %s, @price = %s, @seats_available = %s
             """, [class_id, instructor_id, data_date, roster_id, class_name, data_time, class_type, gym_id, price, seats_available])
-        
+    
         print('Class added successfully!')
         return redirect('home_owner')  # Redirect to a success page or home
 
@@ -1133,9 +1133,13 @@ def get_gymID(request):
 
 def getClass(request):
     if request.method == 'GET':
+        user_id = cache.get('user_id')
         gym_id = cache.get('gym_id')
         class_id = request.GET['class_id']
-        print(class_id)
+        # needed for pay_class
+        request.session['class_id'] = class_id
+       
+        print(f"Testing getClass --> Gym ID: {gym_id}, Class ID: {class_id}")
         try:
             conn = pyodbc.connect(
                 'DRIVER={ODBC Driver 18 for SQL Server};'
@@ -1145,7 +1149,7 @@ def getClass(request):
         
             cursor = conn.cursor()
            
-            cursor.execute("SELECT class_id, instructor_id, data_date, roster, class_name, class_type, price FROM class WHERE class_id = ?", (class_id))
+            cursor.execute("SELECT class_id, instructor_id, data_date, roster, class_name, class_type, price, seats_available FROM class WHERE class_id = ?", (class_id))
             row = cursor.fetchone()
             print(row[0])
             cursor.execute("EXEC GetAccount @user_acct_id = ?", (row[1]))
@@ -1166,8 +1170,31 @@ def getClass(request):
                 'class_name': row[4],
                 'class_type': row[5],
                 'price': row[6],
+                'seats_available' : row[7],
+                'user_id' : user_id
             })
+def get_user_classes(request):
+    if request.method == 'GET':
+        user_id = request.GET.get('user_id')  # Retrieve the user_id from the GET parameters
+        if not user_id:
+            return JsonResponse({'error': 'User ID is required'}, status=400)
+
+        try:
+            with connection.cursor() as cursor:
+                cursor.execute("""
+                    SELECT class_id 
+                    FROM User_class_register
+                    WHERE user_acct_id = %s
+                """, [user_id])
+                
+                # Fetch all class_ids from the result
+                result = cursor.fetchall()
+                class_ids = [row[0] for row in result]  # Extract class_id from each row
+
+            return JsonResponse({'class_ids': class_ids})
         
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)      
 
 
 # disabling CSRF security for simplicity -- security issues MAKE SURE TO FIX THIS
@@ -1240,11 +1267,39 @@ def pay_class(request):
                 
           #  }
             )
-            # For now, we'll simulate a success response for debugging
+ 
             logger.debug(f'Token received: {token}')
+            
+            # get class_id from session. Originally retrieved in getClass(request)
+            class_id = request.session.get('class_id')
 
-            # Example success response
-            # On success, include the redirect URL in the response
+            # subtract seats_available
+            if class_id:
+                with connection.cursor() as cursor:
+                    cursor.execute("""
+                        EXEC SubClassSeat @class_id = %s""",
+                        [class_id]
+                    )
+            
+            user_acct_id = cache.get('user_id')
+            if not user_acct_id:
+                print("Error: 'user_id' not found in cache.")
+            if user_acct_id is None:
+                print("Error: user_acct_id is None. Check if 'user_id' is set in cache.")
+                # You can return an error response if needed
+                return JsonResponse({'error': "User not found in cache."}, status=400)
+
+            print(f"User acct id: {user_acct_id}")
+            has_paid = 1
+            register_id = str(uuid.uuid4().fields[-1])[:5]
+
+            # update user_class_registration db
+            if class_id and user_acct_id:
+                with connection.cursor() as cursor:
+                    cursor.execute("""
+                        EXEC AddClassRegister @register_id = %s, @user_acct_id = %s, @class_id = %s, @has_paid = %s""",
+                        [register_id, user_acct_id, class_id, has_paid]
+                    )
             
             return JsonResponse({
                 'success': True,
