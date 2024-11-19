@@ -1756,3 +1756,22 @@ Watching for file changes with StatReloader
 "POST /logout/ HTTP/1.1" 200 2524
 "GET /static/css/styles.css HTTP/1.1" 404 1801
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4619
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4619
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\fluff\Documents\GitHub\CSCI362_Project\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
