@@ -233,10 +233,9 @@
 
             if (data.success) {
                 alert('Payment processed successfully!');
-                // Redirect if a URL is provided
-                if (data.redirect_url) {
-                    window.location.href = data.redirect_url;
-                }
+                // Redirect to previous page
+               window.history.back();
+             
             } else {
                 alert('Payment failed: ' + data.message);
             }
