@@ -1790,3 +1790,1633 @@ Watching for file changes with StatReloader
 "POST /owner_setup/ HTTP/1.1" 302 0
 "GET /home_owner/ HTTP/1.1" 200 16532
 "GET /get_classes/ HTTP/1.1" 200 2
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4031
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+"GET /static/styles.css HTTP/1.1" 304 0
+"GET /get_classes/ HTTP/1.1" 200 97
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+"GET /home_owner/ HTTP/1.1" 200 19043
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+This is a test log message to the original app_logs.log.
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\encodings\utf_16_le.py first seen with mtime 1666650848.0
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0005_alter_user_last_login_null.py first seen with mtime 1728914451.5518165
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0006_require_contenttypes_0002.py first seen with mtime 1728914451.5533247
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\murmur3.py first seen with mtime 1731304373.065971
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\migrations\graph.py first seen with mtime 1728914453.0969868
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\contenttypes\migrations\0002_remove_content_type_name.py first seen with mtime 1728914451.7734592
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\messages\middleware.py first seen with mtime 1728914452.3275945
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0005_remove_accessattempt_trusted.py first seen with mtime 1731624610.834226
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\rendezvous.py first seen with mtime 1731304373.0674963
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0001_initial.py first seen with mtime 1731624610.8301885
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\migrations\0003_logentry_add_action_flag_choices.py first seen with mtime 1728914451.120681
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1728914451.5543363
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0007_alter_accessattempt_unique_together.py first seen with mtime 1731624610.836246
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1728914451.5508156
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\migrations\0002_logentry_remove_auto_add.py first seen with mtime 1728914451.1196697
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0009_add_session_hash.py first seen with mtime 1731624610.837234
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\migrations\0001_initial.py first seen with mtime 1729659944.2689273
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\migrations\loader.py first seen with mtime 1728914453.0969868
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\migrations\recorder.py first seen with mtime 1728914453.099988
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0002_auto_20151217_2044.py first seen with mtime 1731624610.831205
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py first seen with mtime 1728914453.2194934
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\serde.py first seen with mtime 1731304373.0634604
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\__init__.py first seen with mtime 1728914451.5563369
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0010_alter_group_name_max_length.py first seen with mtime 1728914451.555334
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1728914452.606147
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0003_auto_20160322_0929.py first seen with mtime 1731624610.8321981
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0004_auto_20181024_1538.py first seen with mtime 1731624610.834226
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\contenttypes\migrations\0001_initial.py first seen with mtime 1728914451.7724578
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\migrations\__init__.py first seen with mtime 1728914452.780801
+File C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\migrations\__init__.py first seen with mtime 1731378955.0992558
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\migrations\0001_initial.py first seen with mtime 1728914451.1196697
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\retrying.py first seen with mtime 1731304373.068508
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py first seen with mtime 1728914453.1347222
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0012_alter_user_first_name_max_length.py first seen with mtime 1728914451.5563369
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0003_alter_user_email_max_length.py first seen with mtime 1728914451.5518165
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1728914451.5508156
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\contenttypes\migrations\__init__.py first seen with mtime 1728914451.7734592
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0008_accessfailurelog.py first seen with mtime 1731624610.836246
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\migrations\__init__.py first seen with mtime 1728914451.121682
+File C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\wsgi.py first seen with mtime 1731378955.0826728
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\__init__.py first seen with mtime 1731624610.8382337
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\__init__.py first seen with mtime 1731304373.0644615
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\exceptions.py first seen with mtime 1728914452.6011467
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0006_remove_accesslog_trusted.py first seen with mtime 1731624610.8352332
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\hash.py first seen with mtime 1731304373.065971
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\migrations\executor.py first seen with mtime 1728914453.0959926
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\csrf.py first seen with mtime 1728914453.2932484
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\base.py first seen with mtime 1728914452.6041467
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\base.py first seen with mtime 1731304373.065971
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\clickjacking.py first seen with mtime 1728914453.218497
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\exceptions.py first seen with mtime 1731304373.0614598
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1728914451.5543363
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\mssql\compiler.py first seen with mtime 1728453084.933187
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0007_alter_validators_add_error_messages.py first seen with mtime 1728914451.5533247
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\cache\backends\memcached.py first seen with mtime 1728914452.9874003
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0011_update_proxy_permissions.py first seen with mtime 1728914451.555334
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\__init__.py first seen with mtime 1731304373.0614598
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1728914451.5518165
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\pool.py first seen with mtime 1731304373.0624607
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+This is a test log message to the original app_logs.log.
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1728914452.606147
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1728914451.5543363
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\pool.py first seen with mtime 1731304373.0624607
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1728914451.5543363
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0005_remove_accessattempt_trusted.py first seen with mtime 1731624610.834226
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0003_auto_20160322_0929.py first seen with mtime 1731624610.8321981
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\migrations\0003_logentry_add_action_flag_choices.py first seen with mtime 1728914451.120681
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\migrations\0002_logentry_remove_auto_add.py first seen with mtime 1728914451.1196697
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0007_alter_accessattempt_unique_together.py first seen with mtime 1731624610.836246
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\encodings\utf_16_le.py first seen with mtime 1666650848.0
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\messages\middleware.py first seen with mtime 1728914452.3275945
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0011_update_proxy_permissions.py first seen with mtime 1728914451.555334
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\migrations\__init__.py first seen with mtime 1728914451.121682
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\migrations\__init__.py first seen with mtime 1728914452.780801
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\murmur3.py first seen with mtime 1731304373.065971
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0002_auto_20151217_2044.py first seen with mtime 1731624610.831205
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\migrations\0001_initial.py first seen with mtime 1729659944.2689273
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\__init__.py first seen with mtime 1731304373.0644615
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\exceptions.py first seen with mtime 1731304373.0614598
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\rendezvous.py first seen with mtime 1731304373.0674963
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0006_remove_accesslog_trusted.py first seen with mtime 1731624610.8352332
+File C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\migrations\__init__.py first seen with mtime 1731378955.0992558
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\migrations\graph.py first seen with mtime 1728914453.0969868
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0004_auto_20181024_1538.py first seen with mtime 1731624610.834226
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\__init__.py first seen with mtime 1728914451.5563369
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\migrations\recorder.py first seen with mtime 1728914453.099988
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\retrying.py first seen with mtime 1731304373.068508
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\mssql\compiler.py first seen with mtime 1728453084.933187
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\cache\backends\memcached.py first seen with mtime 1728914452.9874003
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\contenttypes\migrations\__init__.py first seen with mtime 1728914451.7734592
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1728914451.5508156
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0006_require_contenttypes_0002.py first seen with mtime 1728914451.5533247
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\contenttypes\migrations\0001_initial.py first seen with mtime 1728914451.7724578
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0008_accessfailurelog.py first seen with mtime 1731624610.836246
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\migrations\0001_initial.py first seen with mtime 1728914451.1196697
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\clickjacking.py first seen with mtime 1728914453.218497
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\base.py first seen with mtime 1731304373.065971
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\client\hash.py first seen with mtime 1731304373.065971
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1728914451.5518165
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0010_alter_group_name_max_length.py first seen with mtime 1728914451.555334
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0012_alter_user_first_name_max_length.py first seen with mtime 1728914451.5563369
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\__init__.py first seen with mtime 1731304373.0614598
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\migrations\executor.py first seen with mtime 1728914453.0959926
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymemcache\serde.py first seen with mtime 1731304373.0634604
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0007_alter_validators_add_error_messages.py first seen with mtime 1728914451.5533247
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py first seen with mtime 1728914453.1347222
+File C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\wsgi.py first seen with mtime 1731378955.0826728
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\migrations\loader.py first seen with mtime 1728914453.0969868
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0003_alter_user_email_max_length.py first seen with mtime 1728914451.5518165
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\contenttypes\migrations\0002_remove_content_type_name.py first seen with mtime 1728914451.7734592
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1728914451.5508156
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0009_add_session_hash.py first seen with mtime 1731624610.837234
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\__init__.py first seen with mtime 1731624610.8382337
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\csrf.py first seen with mtime 1728914453.2932484
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\migrations\0005_alter_user_last_login_null.py first seen with mtime 1728914451.5518165
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\axes\migrations\0001_initial.py first seen with mtime 1731624610.8301885
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\staticfiles\storage.py first seen with mtime 1728914452.9672904
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\context_processors.py first seen with mtime 1728914453.2264888
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1728914452.3275945
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1728914451.391168
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1728914452.333238
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1728914452.3321097
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1728914452.6031466
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1728914452.3342376
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+(0.062) SELECT SYSDATETIME(); args=None; alias=default
+(0.047) SELECT TOP 21 [django_session].[session_key], [django_session].[session_data], [django_session].[expire_date] FROM [django_session] WHERE ([django_session].[expire_date] > 2024-11-19 18:57:50.284512+00:00 AND [django_session].[session_key] = 4magl5ufpvzir1cetqpcy62zwni1hoj4); args=(datetime.datetime(2024, 11, 19, 18, 57, 50, 284512, tzinfo=datetime.timezone.utc), '4magl5ufpvzir1cetqpcy62zwni1hoj4'); alias=default
+(0.047) BEGIN; args=None; alias=default
+(0.047) SET NOCOUNT OFF; UPDATE [django_session] SET [session_data] = eyJ1c2VyX2lkIjoxMDU5OTg0fQ:1tDTQ7:DonQjtYav0mrip3Fx1WK17ri2oqJxqvel7wsioSIK3o, [expire_date] = 2024-12-03 18:57:51.091531+00:00 WHERE [django_session].[session_key] = 4magl5ufpvzir1cetqpcy62zwni1hoj4; args=('eyJ1c2VyX2lkIjoxMDU5OTg0fQ:1tDTQ7:DonQjtYav0mrip3Fx1WK17ri2oqJxqvel7wsioSIK3o', datetime.datetime(2024, 12, 3, 18, 57, 51, 91531, tzinfo=datetime.timezone.utc), '4magl5ufpvzir1cetqpcy62zwni1hoj4'); alias=default
+(0.047) COMMIT; args=None; alias=default
+"POST /login/ HTTP/1.1" 302 0
+Exception while resolving variable 'gym_info' in template 'home_owner.html'.
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'gym_info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'gym_info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'gym_info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [gym_info] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'yH3ROENU8vELJoRcybF09NtruCE6ldXfOtAMNTd43fLETDQgNohGjMZzNnT2VVZG'>, 'request': <WSGIRequest: GET '/home_owner/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBD68180>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBD68180>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/home_owner/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'username': 'testowner3', 'perm_id': 1, 'email': 'testowner3@gmail.com', 'userGymId': 297577, 'members_info': [('testgoer8', 'tesgoer8', 'C', 'testgoer8@gmail.com', 488482), ('testmember1', 'D', 'C', 'testmember1@gmail.com', 1392325), ('testgoer7', 'test', 'goer', 'testgoer7@gmail.com', 1827919), ('testgoer5', 'd', 'c', 'testgoer5@gmail.com', 4306665), ('testmember3', 'd', 'c', 'testmember3@gmail.com', 7478765), ('testgoer6', 'd', 'c', 'testgoer6@gmail.com', 9155279)], 'employee_info': [('testemployee1', 'F', 'C', 'testemployee1@gmail.com', 9101705)], 'class_info': [('Zacks Yoga', datetime.date(2024, 11, 12), datetime.time(12, 39))], 'monthly_user_counts': [{'month': 'October 2024', 'count': 6}, {'month': 'November 2024', 'count': 49}, {'month': 'December 2024', 'count': 1}], 'about_content': 'content about your gym', 'contact_content': 'content about contact info', 'gyms': [("testowner3's gym", 297577, 'content about your gym', 'content about contact info')]}, {}]
+Exception while resolving variable 'gym_id' in template 'home_owner.html'.
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [gym_id] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'yH3ROENU8vELJoRcybF09NtruCE6ldXfOtAMNTd43fLETDQgNohGjMZzNnT2VVZG'>, 'request': <WSGIRequest: GET '/home_owner/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBD68180>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBD68180>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/home_owner/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'username': 'testowner3', 'perm_id': 1, 'email': 'testowner3@gmail.com', 'userGymId': 297577, 'members_info': [('testgoer8', 'tesgoer8', 'C', 'testgoer8@gmail.com', 488482), ('testmember1', 'D', 'C', 'testmember1@gmail.com', 1392325), ('testgoer7', 'test', 'goer', 'testgoer7@gmail.com', 1827919), ('testgoer5', 'd', 'c', 'testgoer5@gmail.com', 4306665), ('testmember3', 'd', 'c', 'testmember3@gmail.com', 7478765), ('testgoer6', 'd', 'c', 'testgoer6@gmail.com', 9155279)], 'employee_info': [('testemployee1', 'F', 'C', 'testemployee1@gmail.com', 9101705)], 'class_info': [('Zacks Yoga', datetime.date(2024, 11, 12), datetime.time(12, 39))], 'monthly_user_counts': [{'month': 'October 2024', 'count': 6}, {'month': 'November 2024', 'count': 49}, {'month': 'December 2024', 'count': 1}], 'about_content': 'content about your gym', 'contact_content': 'content about contact info', 'gyms': [("testowner3's gym", 297577, 'content about your gym', 'content about contact info')]}]
+Exception while resolving variable 'gym_id' in template 'home_owner.html'.
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [gym_id] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'yH3ROENU8vELJoRcybF09NtruCE6ldXfOtAMNTd43fLETDQgNohGjMZzNnT2VVZG'>, 'request': <WSGIRequest: GET '/home_owner/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBD68180>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBD68180>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/home_owner/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'username': 'testowner3', 'perm_id': 1, 'email': 'testowner3@gmail.com', 'userGymId': 297577, 'members_info': [('testgoer8', 'tesgoer8', 'C', 'testgoer8@gmail.com', 488482), ('testmember1', 'D', 'C', 'testmember1@gmail.com', 1392325), ('testgoer7', 'test', 'goer', 'testgoer7@gmail.com', 1827919), ('testgoer5', 'd', 'c', 'testgoer5@gmail.com', 4306665), ('testmember3', 'd', 'c', 'testmember3@gmail.com', 7478765), ('testgoer6', 'd', 'c', 'testgoer6@gmail.com', 9155279)], 'employee_info': [('testemployee1', 'F', 'C', 'testemployee1@gmail.com', 9101705)], 'class_info': [('Zacks Yoga', datetime.date(2024, 11, 12), datetime.time(12, 39))], 'monthly_user_counts': [{'month': 'October 2024', 'count': 6}, {'month': 'November 2024', 'count': 49}, {'month': 'December 2024', 'count': 1}], 'about_content': 'content about your gym', 'contact_content': 'content about contact info', 'gyms': [("testowner3's gym", 297577, 'content about your gym', 'content about contact info')]}]
+"GET /home_owner/ HTTP/1.1" 200 19043
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\conf\locale\en\formats.py first seen with mtime 1728914450.642871
+File C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\conf\locale\en\__init__.py first seen with mtime 1728914450.642871
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+(0.047) SELECT SYSDATETIME(); args=None; alias=default
+(0.031) SELECT TOP 21 [django_session].[session_key], [django_session].[session_data], [django_session].[expire_date] FROM [django_session] WHERE ([django_session].[expire_date] > 2024-11-19 18:59:37.757264+00:00 AND [django_session].[session_key] = 4magl5ufpvzir1cetqpcy62zwni1hoj4); args=(datetime.datetime(2024, 11, 19, 18, 59, 37, 757264, tzinfo=datetime.timezone.utc), '4magl5ufpvzir1cetqpcy62zwni1hoj4'); alias=default
+(0.047) BEGIN; args=None; alias=default
+(0.047) SET NOCOUNT OFF; UPDATE [django_session] SET [session_data] = eyJ1c2VyX2lkIjoxMDU5OTg0fQ:1tDTRq:gldw-Jg7M6j3WaezA0JpaO_Q0eq_eZe-fweXpXI0Ujc, [expire_date] = 2024-12-03 18:59:38.564372+00:00 WHERE [django_session].[session_key] = 4magl5ufpvzir1cetqpcy62zwni1hoj4; args=('eyJ1c2VyX2lkIjoxMDU5OTg0fQ:1tDTRq:gldw-Jg7M6j3WaezA0JpaO_Q0eq_eZe-fweXpXI0Ujc', datetime.datetime(2024, 12, 3, 18, 59, 38, 564372, tzinfo=datetime.timezone.utc), '4magl5ufpvzir1cetqpcy62zwni1hoj4'); alias=default
+(0.062) COMMIT; args=None; alias=default
+"POST /login/ HTTP/1.1" 302 0
+Exception while resolving variable 'gym_info' in template 'home_owner.html'.
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'gym_info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'gym_info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'gym_info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [gym_info] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'SqXOvu1zUi5AoGf30pj5MQwSj7XaoXYi8cuJuJrJP2ctyVe7fCVLWP20CSc6YF0J'>, 'request': <WSGIRequest: GET '/home_owner/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBE3C360>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBE3C360>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/home_owner/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'username': 'testowner3', 'perm_id': 1, 'email': 'testowner3@gmail.com', 'userGymId': 297577, 'members_info': [('testgoer8', 'tesgoer8', 'C', 'testgoer8@gmail.com', 488482), ('testmember1', 'D', 'C', 'testmember1@gmail.com', 1392325), ('testgoer7', 'test', 'goer', 'testgoer7@gmail.com', 1827919), ('testgoer5', 'd', 'c', 'testgoer5@gmail.com', 4306665), ('testmember3', 'd', 'c', 'testmember3@gmail.com', 7478765), ('testgoer6', 'd', 'c', 'testgoer6@gmail.com', 9155279)], 'employee_info': [('testemployee1', 'F', 'C', 'testemployee1@gmail.com', 9101705)], 'class_info': [('Zacks Yoga', datetime.date(2024, 11, 12), datetime.time(12, 39))], 'monthly_user_counts': [{'month': 'October 2024', 'count': 6}, {'month': 'November 2024', 'count': 49}, {'month': 'December 2024', 'count': 1}], 'about_content': 'content about your gym', 'contact_content': 'content about contact info', 'gyms': [("testowner3's gym", 297577, 'content about your gym', 'content about contact info')]}, {}]
+Exception while resolving variable 'gym_id' in template 'home_owner.html'.
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [gym_id] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'SqXOvu1zUi5AoGf30pj5MQwSj7XaoXYi8cuJuJrJP2ctyVe7fCVLWP20CSc6YF0J'>, 'request': <WSGIRequest: GET '/home_owner/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBE3C360>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBE3C360>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/home_owner/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'username': 'testowner3', 'perm_id': 1, 'email': 'testowner3@gmail.com', 'userGymId': 297577, 'members_info': [('testgoer8', 'tesgoer8', 'C', 'testgoer8@gmail.com', 488482), ('testmember1', 'D', 'C', 'testmember1@gmail.com', 1392325), ('testgoer7', 'test', 'goer', 'testgoer7@gmail.com', 1827919), ('testgoer5', 'd', 'c', 'testgoer5@gmail.com', 4306665), ('testmember3', 'd', 'c', 'testmember3@gmail.com', 7478765), ('testgoer6', 'd', 'c', 'testgoer6@gmail.com', 9155279)], 'employee_info': [('testemployee1', 'F', 'C', 'testemployee1@gmail.com', 9101705)], 'class_info': [('Zacks Yoga', datetime.date(2024, 11, 12), datetime.time(12, 39))], 'monthly_user_counts': [{'month': 'October 2024', 'count': 6}, {'month': 'November 2024', 'count': 49}, {'month': 'December 2024', 'count': 1}], 'about_content': 'content about your gym', 'contact_content': 'content about contact info', 'gyms': [("testowner3's gym", 297577, 'content about your gym', 'content about contact info')]}]
+Exception while resolving variable 'gym_id' in template 'home_owner.html'.
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'gym_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [gym_id] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'SqXOvu1zUi5AoGf30pj5MQwSj7XaoXYi8cuJuJrJP2ctyVe7fCVLWP20CSc6YF0J'>, 'request': <WSGIRequest: GET '/home_owner/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBE3C360>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x00000178BBE3C360>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/home_owner/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'username': 'testowner3', 'perm_id': 1, 'email': 'testowner3@gmail.com', 'userGymId': 297577, 'members_info': [('testgoer8', 'tesgoer8', 'C', 'testgoer8@gmail.com', 488482), ('testmember1', 'D', 'C', 'testmember1@gmail.com', 1392325), ('testgoer7', 'test', 'goer', 'testgoer7@gmail.com', 1827919), ('testgoer5', 'd', 'c', 'testgoer5@gmail.com', 4306665), ('testmember3', 'd', 'c', 'testmember3@gmail.com', 7478765), ('testgoer6', 'd', 'c', 'testgoer6@gmail.com', 9155279)], 'employee_info': [('testemployee1', 'F', 'C', 'testemployee1@gmail.com', 9101705)], 'class_info': [('Zacks Yoga', datetime.date(2024, 11, 12), datetime.time(12, 39))], 'monthly_user_counts': [{'month': 'October 2024', 'count': 6}, {'month': 'November 2024', 'count': 49}, {'month': 'December 2024', 'count': 1}], 'about_content': 'content about your gym', 'contact_content': 'content about contact info', 'gyms': [("testowner3's gym", 297577, 'content about your gym', 'content about contact info')]}]
+"GET /home_owner/ HTTP/1.1" 200 19043
+File C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py previous mtime: 1732042650.6673923, current mtime: 1732043021.1165574
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py notified as changed. Signal results: [(<function template_changed at 0x00000178B9A7F6A0>, None), (<function translation_file_changed at 0x00000178BACC9800>, None)].
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\GymAssist\settings.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is a test log message to the original app_logs.log.
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+This is a test log message to the original app_logs.log.
+This is app is gay
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+This is app is the bane of my existence.
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+This is app is the bane of my existence.
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+User registered with username: testowner66, email: testowner66@gmail.com
+"POST /register/test_reg/ HTTP/1.1" 302 0
+This is app is the bane of my existence.
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+This is app is the bane of my existence.
+Login attempt for user: testowner66, IP: 127.0.0.1
+User 'testowner66' successfully logged in with user_acct_id=6404729.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 3194
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Owner setup initiated for user_acct_id: 6404729, gym_name: testowner66
+Gym created successfully with gym_id: 410973, gym_name: testowner66
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16532
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4031
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19043
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /get_classes/ HTTP/1.1" 200 97
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 19043
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 19043
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19222
+"GET /home_owner/ HTTP/1.1" 200 19222
+"GET /home_owner/ HTTP/1.1" 200 19224
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /home_owner/ HTTP/1.1" 200 19082
+"GET /home_owner/ HTTP/1.1" 200 19081
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner77, IP: 127.0.0.1
+User 'testowner77' successfully logged in with user_acct_id=1503688.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16570
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16570
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 16570
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4050
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19081
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 19081
+"GET /login/ HTTP/1.1" 200 4050
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18922
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18922
+"GET /get_classes/ HTTP/1.1" 200 97
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4050
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18922
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18922
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4050
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18922
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18922
+"GET /get_classes/ HTTP/1.1" 200 97
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4050
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4050
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4050
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4050
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+- Broken pipe from ('127.0.0.1', 49383)
+"GET /home_owner/ HTTP/1.1" 200 18882
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18882
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4050
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"GET /get_classes/ HTTP/1.1" 200 97
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4035
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"GET /get_classes/ HTTP/1.1" 200 97
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4015
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4015
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4015
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4015
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+user_acct_id: 1059984
+Fetched user info: testowner3, Gym ID: 297577
+Retrieved from cache: About: None, Contact: None
+Cached gym_id: 297577
+"GET /home_owner/ HTTP/1.1" 200 18842
+"GET /get_classes/ HTTP/1.1" 200 97
+user_acct_id: 1059984
+Fetched user info: testowner3, Gym ID: 297577
+Retrieved from cache: About: None, Contact: None
+Cached gym_id: 297577
+"POST /home_owner/ HTTP/1.1" 302 0
+user_acct_id: 1059984
+Fetched user info: testowner3, Gym ID: 297577
+Retrieved from cache: About: None, Contact: None
+Cached gym_id: 297577
+"GET /home_owner/ HTTP/1.1" 200 18842
+"GET /get_classes/ HTTP/1.1" 200 97
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4157
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4015
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18991
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18991
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_owner/ HTTP/1.1" 200 18930
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18930
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 18946
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 25662
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 5442
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Login attempt for user: testgoer8, IP: 127.0.0.1
+User 'testgoer8' successfully logged in with user_acct_id=488482.
+"POST /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testgoer8, IP: 127.0.0.1
+User 'testgoer8' successfully logged in with user_acct_id=488482.
+"POST /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 25662
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testmember1, IP: 127.0.0.1
+User 'testmember1' successfully logged in with user_acct_id=1392325.
+"POST /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner3, IP: 127.0.0.1
+User 'testowner3' successfully logged in with user_acct_id=1059984.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 25662
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testemployee1, IP: 127.0.0.1
+User 'testemployee1' successfully logged in with user_acct_id=9101705.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_staff/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4033
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: TestOwner11, IP: 127.0.0.1
+Failed login attempt for non-existent user 'TestOwner11'.
+"POST /login/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4023
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner1000, IP: 127.0.0.1
+User 'testowner1000' successfully logged in with user_acct_id=6065392.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16791
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+"POST /register/test_reg/ HTTP/1.1" 200 4366
+User registered with username: testowner98, email: testowner98@gmail.com
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner98, IP: 127.0.0.1
+User 'testowner98' successfully logged in with user_acct_id=211467.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 3194
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Owner setup initiated for user_acct_id: 211467, gym_name: testowner98's gym
+Gym created successfully with gym_id: 90022, gym_name: testowner98's gym
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16411
+"GET /get_classes/ HTTP/1.1" 200 2
+"POST /home_owner/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16403
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /add_member/ HTTP/1.1" 200 4248
+Attempting to create account for user testmember98 (ID: 559613) at 2024-11-20 01:12:28
+Successfully created account for user testmember98 (ID: 559613) and assigned to gym ID: 90022 on 2024-11-20 01:12:29
+"POST /add_member/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16785
+"GET /add_employee/ HTTP/1.1" 200 4604
+"POST /add_employee/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17074
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testmember98, IP: 127.0.0.1
+User 'testmember98' successfully logged in with user_acct_id=559613.
+"POST /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Login attempt for user: testmember98, IP: 127.0.0.1
+User 'testmember98' successfully logged in with user_acct_id=559613.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_goer/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4033
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testemployee98, IP: 127.0.0.1
+User 'testemployee98' successfully logged in with user_acct_id=9206130.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_staff/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4033
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Login attempt for user: testmember98, IP: 127.0.0.1
+User 'testmember98' successfully logged in with user_acct_id=559613.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_goer/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4033
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /register/test_reg/ HTTP/1.1" 200 4180
+User registered with username: testowner97, email: testowner97@gm
+"POST /register/test_reg/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4043
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner97, IP: 127.0.0.1
+User 'testowner97' successfully logged in with user_acct_id=4612344.
+"POST /login/ HTTP/1.1" 302 0
+"GET /owner_setup/ HTTP/1.1" 200 3194
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Owner setup initiated for user_acct_id: 4612344, gym_name: testowner97's gym
+Gym created successfully with gym_id: 890414, gym_name: testowner97's gym
+"POST /owner_setup/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 16404
+"GET /get_classes/ HTTP/1.1" 200 2
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 4031
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testmember98, IP: 127.0.0.1
+User 'testmember98' successfully logged in with user_acct_id=559613.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_goer/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4033
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Login attempt for user: testmember98, IP: 127.0.0.1
+User 'testmember98' successfully logged in with user_acct_id=559613.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_goer/ HTTP/1.1" 302 0
+"GET /login/ HTTP/1.1" 200 4033
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+Login attempt for user: testmember98, IP: 127.0.0.1
+User 'testmember98' successfully logged in with user_acct_id=559613.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_goer/ HTTP/1.1" 200 6056
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_goer/ HTTP/1.1" 200 5929
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /home_goer/ HTTP/1.1" 200 5964
+"GET /home_goer/ HTTP/1.1" 200 6015
+"GET /home_goer/ HTTP/1.1" 200 6162
+"GET /home_goer/ HTTP/1.1" 200 6162
+"GET /home_goer/ HTTP/1.1" 200 6162
+"GET /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testmember98, IP: 127.0.0.1
+User 'testmember98' successfully logged in with user_acct_id=559613.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_goer/ HTTP/1.1" 200 6162
+"GET /home_goer/ HTTP/1.1" 200 6158
+"GET /home_goer/ HTTP/1.1" 200 6158
+"GET /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner98, IP: 127.0.0.1
+User 'testowner98' successfully logged in with user_acct_id=211467.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17074
+"GET /get_classes/ HTTP/1.1" 200 2
+"GET /add_class/ HTTP/1.1" 200 4924
+"POST /add_class/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17074
+"GET /get_classes/ HTTP/1.1" 200 97
+"POST /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testmember98, IP: 127.0.0.1
+User 'testmember98' successfully logged in with user_acct_id=559613.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_goer/ HTTP/1.1" 200 6158
+"GET /home_goer/ HTTP/1.1" 200 7354
+"GET /home_goer/ HTTP/1.1" 200 7432
+"GET /get_classes/ HTTP/1.1" 200 97
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 1130, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=24 HTTP/1.1" 500 73704
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 1130, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=24 HTTP/1.1" 500 73704
+"GET /logout/ HTTP/1.1" 200 2524
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+"GET /login/ HTTP/1.1" 200 3789
+"GET /static/css/styles.css HTTP/1.1" 404 1801
+Login attempt for user: testowner98, IP: 127.0.0.1
+User 'testowner98' successfully logged in with user_acct_id=211467.
+"POST /login/ HTTP/1.1" 302 0
+"GET /home_owner/ HTTP/1.1" 200 17074
+"GET /get_classes/ HTTP/1.1" 200 97
+"GET /get_classes/ HTTP/1.1" 200 97
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 1130, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=24 HTTP/1.1" 500 73705
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 1130, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=24 HTTP/1.1" 500 73705
+"GET /pay_class/ HTTP/1.1" 200 8790
+"GET /home_goer/ HTTP/1.1" 200 7554
+"GET /get_classes/ HTTP/1.1" 200 97
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 1130, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=24 HTTP/1.1" 500 73704
+Internal Server Error: /home_owner/getClass/
+Traceback (most recent call last):
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diego\Downloads\CSCI362_Project-main (2)\CSCI362_Project-main\frontend\views.py", line 1130, in getClass
+    instructorName = str(instructor[1]) + " " + str(instructor[2])
+                         ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+"GET /home_owner/getClass/?class_id=24 HTTP/1.1" 500 73705
+"GET /pay_class/ HTTP/1.1" 200 8790

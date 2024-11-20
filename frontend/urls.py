@@ -15,7 +15,7 @@ urlpatterns = [
     path('home/', home_goer, name = 'home' ),
     path('', index),
     path('login/', login_view, name='login'),  
-    path('select_role/', select_role, name='select_role'),
+
     
     path('owner_setup/', owner_setup, name='owner_setup'),
     path('staff_setup/', staff_setup, name='staff_setup'),

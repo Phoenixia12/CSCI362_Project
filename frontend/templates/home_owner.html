@@ -372,12 +372,12 @@
                // classevents.push(JSON.parse(locevent));
         
            // }
-    //}const monthlyData = {{ monthly_user_counts|safe }};
+    const monthlyData = {{ monthly_user_counts|safe }};
     
-    // Extract months and counts from the monthlyData
+    
     const months = monthlyData.map(item => item['month']);  // Correctly access 'month'
     const counts = monthlyData.map(item => item['count']);  // Correctly access 'count'
-
+    //const monthlyData = = [{month: 'January', count: 10}, {month: 'Febuary', count: 15}]
     // Debugging Output
     console.log("Counts:", counts);
     console.log("Months:", months);
@@ -466,8 +466,7 @@
 
 
     let inactivityTime = 0;
-    const timeoutLimit1 = 1800 * 1000; // 30 minutes in milliseconds
-    const timeoutLimit = 10 *1000;
+    const timeoutLimit = 1800 * 1000; // 30 minutes in milliseconds
     // Reset inactivity timer
     function resetTimer() {
         console.log("Inactivity timer reset.");
@@ -492,16 +491,11 @@
 
 
     function toggleEdit(section) {
-            const editForm = document.getElementById(`edit_${section}_form`);
-            const displaySection = document.getElementById(section);
-            if (editForm.style.display === "none") {
-                editForm.style.display = "block";
-                displaySection.style.display = "none";
-            } else {
-                editForm.style.display = "none";
-                displaySection.style.display = "block";
-            }
-        }
+        const editForm = document.getElementById(`edit_${section}_form`);
+        const sectionText = document.getElementById(`${section}-text`);
+        editForm.style.display = editForm.style.display === 'none' ? 'block' : 'none';
+        sectionText.style.display = sectionText.style.display === 'none' ? 'block' : 'none';
+    }
 
     showTab('home');
     </script>

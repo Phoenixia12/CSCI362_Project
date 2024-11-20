@@ -109,21 +109,31 @@
             <h2>Your Profile</h2>
             <p><strong>Username:</strong> {{ username }}</p>
             <p><strong>Email:</strong> {{ email }}</p>
-            <p>First Name: {{ first_name }}</p>
-            <p>Last Name: {{ last_name }}</p>
+            <p><strong>First Name:</strong> {{ first_name }}</p>
+            <p><strong>Last Name:</strong> {{ last_name }}</p>
+            <p><strong>User ID:</strong> {{ user_acct_id }}</p>
             <!-- Additional profile information can be added here -->
         </div>
         <div id="about" class="tab-content">
             <h2>About Us</h2>
-            <p>Welcome to GymAssist! We are dedicated to helping you achieve your fitness goals. Our mission is to provide a supportive community and top-notch facilities.</p>
+            <p id="about-text">{{ about_content }}</p>
         </div>
         <div id="classes" class="tab-content">
             <h2>Classes Schedule</h2>
-            <div id="calendar"></div> <!-- Calendar will be rendered here -->
+            <div id="calendar">
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            </div>
+            <div>
+            <button onclick="window.location.href='{% url 'pay_class' %}'">Pay Class</button>
+            </div>
         </div>
         <div id="contact" class="tab-content">
             <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out to us via email at support@gymassist.com.</p>
+            <p id="contact-text">{{ contact_content }}</p>
+        </div>
+        <div id="notifications" class="tab-content">
+            <h2>Notifications</h2>
+            <h3>notifications text</h3>
         </div>
     </div>
 
@@ -157,15 +167,48 @@
             const calendarEl = document.getElementById('calendar');
             const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
-                headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: '' // Remove the right section for now
+                events: function(start, callback){
+                    $.ajax({
+                        url: "{% url 'get_classes' %}",
+                        dataType: 'json',
+                        data: {
+                            
+                        },
+                        success: function(data) {
+                            var events = [];
+    
+                            for (var i=0; i<data.length; i++){
+                                events.push({
+                                    title: data[i].title,
+                                    start: data[i].start,
+                                    id: data[i].id,
+                                    url: "{% url 'getClass' %}"
+                                    })
+                                    
+                                
+                            }
+    
+                       //adding the callback
+                            callback(events);
+    
+                        }
+                    });
                 },
-                events: [] // Load your events here (could fetch from backend)
+                eventClick: function(info){
+                    info.jsEvent.preventDefault();
+                   $.get(info.event.url, {class_id: info.event.id}, function(data){
+                        $('#class_view').html(data);
+                    })
+                },
+                editable: true,
+                selectable: true,
+                dateClick: function(info) {
+                    alert('Selected Date: ' + info.dateStr);
+                }
             });
             calendar.render();
         }
+    
 
         // Initial setup to display only the home tab on load
         document.addEventListener('DOMContentLoaded', function() {
